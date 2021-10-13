@@ -15,6 +15,7 @@ class ForgotpasswordWidget extends StatefulWidget {
 
 class _ForgotpasswordWidgetState extends State<ForgotpasswordWidget> {
   TextEditingController phoneNumberController;
+  bool _loadingButton = false;
   final scaffoldKey = GlobalKey<ScaffoldState>();
 
   @override
@@ -74,21 +75,6 @@ class _ForgotpasswordWidgetState extends State<ForgotpasswordWidget> {
         child: Column(
           mainAxisSize: MainAxisSize.max,
           children: [
-            Padding(
-              padding: EdgeInsetsDirectional.fromSTEB(20, 16, 20, 0),
-              child: Row(
-                mainAxisSize: MainAxisSize.max,
-                children: [
-                  Text(
-                    'Hello World',
-                    style: FlutterFlowTheme.bodyText1.override(
-                      fontFamily: 'Poppins',
-                      color: Color(0xE7FFFFFF),
-                    ),
-                  )
-                ],
-              ),
-            ),
             Padding(
               padding: EdgeInsetsDirectional.fromSTEB(20, 20, 20, 0),
               child: TextFormField(
@@ -165,6 +151,7 @@ class _ForgotpasswordWidgetState extends State<ForgotpasswordWidget> {
                   ),
                   borderRadius: 8,
                 ),
+                loading: _loadingButton,
               ),
             )
           ],

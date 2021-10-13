@@ -15,6 +15,7 @@ class VerifyWidget extends StatefulWidget {
 
 class _VerifyWidgetState extends State<VerifyWidget> {
   TextEditingController otpCodeController;
+  bool _loadingButton = false;
   final scaffoldKey = GlobalKey<ScaffoldState>();
 
   @override
@@ -125,8 +126,18 @@ class _VerifyWidgetState extends State<VerifyWidget> {
             Padding(
               padding: EdgeInsetsDirectional.fromSTEB(0, 24, 0, 0),
               child: FFButtonWidget(
-                onPressed: () {
-                  print('Button-Verify pressed ...');
+                onPressed: () async {
+                  setState(() => _loadingButton = true);
+                  try {
+                    await Navigator.push(
+                      context,
+                      MaterialPageRoute(
+                        builder: (context) => AuthWidget(),
+                      ),
+                    );
+                  } finally {
+                    setState(() => _loadingButton = false);
+                  }
                 },
                 text: 'Verify Code',
                 options: FFButtonOptions(
@@ -146,6 +157,7 @@ class _VerifyWidgetState extends State<VerifyWidget> {
                   ),
                   borderRadius: 8,
                 ),
+                loading: _loadingButton,
               ),
             )
           ],
