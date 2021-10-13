@@ -8,14 +8,14 @@ import 'package:flutter/material.dart';
 import 'package:flutter_spinkit/flutter_spinkit.dart';
 import 'package:google_fonts/google_fonts.dart';
 
-class AuthCopyWidget extends StatefulWidget {
-  AuthCopyWidget({Key key}) : super(key: key);
+class AuthenticationWidget extends StatefulWidget {
+  AuthenticationWidget({Key key}) : super(key: key);
 
   @override
-  _AuthCopyWidgetState createState() => _AuthCopyWidgetState();
+  _AuthenticationWidgetState createState() => _AuthenticationWidgetState();
 }
 
-class _AuthCopyWidgetState extends State<AuthCopyWidget> {
+class _AuthenticationWidgetState extends State<AuthenticationWidget> {
   TextEditingController confirmPasswordController;
   bool confirmPasswordVisibility;
   TextEditingController createEmailController;

@@ -1,4 +1,4 @@
-import '../auth/auth_widget.dart';
+import '../authentication/authentication_widget.dart';
 import '../flutter_flow/flutter_flow_animations.dart';
 import '../flutter_flow/flutter_flow_theme.dart';
 import '../flutter_flow/flutter_flow_util.dart';
@@ -57,7 +57,7 @@ class _SplashScreenWidgetState extends State<SplashScreenWidget>
           await Navigator.push(
             context,
             MaterialPageRoute(
-              builder: (context) => AuthWidget(),
+              builder: (context) => AuthenticationWidget(),
             ),
           );
         },

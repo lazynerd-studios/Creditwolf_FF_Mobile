@@ -1,4 +1,4 @@
-import '../auth/auth_widget.dart';
+import '../authentication/authentication_widget.dart';
 import '../flutter_flow/flutter_flow_theme.dart';
 import '../flutter_flow/flutter_flow_util.dart';
 import '../flutter_flow/flutter_flow_widgets.dart';
@@ -36,7 +36,7 @@ class _VerifyWidgetState extends State<VerifyWidget> {
             await Navigator.push(
               context,
               MaterialPageRoute(
-                builder: (context) => AuthWidget(),
+                builder: (context) => AuthenticationWidget(),
               ),
             );
           },
@@ -132,7 +132,7 @@ class _VerifyWidgetState extends State<VerifyWidget> {
                     await Navigator.push(
                       context,
                       MaterialPageRoute(
-                        builder: (context) => AuthWidget(),
+                        builder: (context) => AuthenticationWidget(),
                       ),
                     );
                   } finally {
