@@ -1,4 +1,4 @@
-import '../auth/auth_widget.dart';
+import '../authentication/authentication_widget.dart';
 import '../flutter_flow/flutter_flow_theme.dart';
 import '../flutter_flow/flutter_flow_util.dart';
 import '../flutter_flow/flutter_flow_widgets.dart';
@@ -15,6 +15,7 @@ class ForgotpasswordWidget extends StatefulWidget {
 
 class _ForgotpasswordWidgetState extends State<ForgotpasswordWidget> {
   TextEditingController phoneNumberController;
+  bool _loadingButton = false;
   final scaffoldKey = GlobalKey<ScaffoldState>();
 
   @override
@@ -35,7 +36,7 @@ class _ForgotpasswordWidgetState extends State<ForgotpasswordWidget> {
             await Navigator.push(
               context,
               MaterialPageRoute(
-                builder: (context) => AuthWidget(),
+                builder: (context) => AuthenticationWidget(),
               ),
             );
           },
@@ -74,21 +75,6 @@ class _ForgotpasswordWidgetState extends State<ForgotpasswordWidget> {
         child: Column(
           mainAxisSize: MainAxisSize.max,
           children: [
-            Padding(
-              padding: EdgeInsetsDirectional.fromSTEB(20, 16, 20, 0),
-              child: Row(
-                mainAxisSize: MainAxisSize.max,
-                children: [
-                  Text(
-                    'Hello World',
-                    style: FlutterFlowTheme.bodyText1.override(
-                      fontFamily: 'Poppins',
-                      color: Color(0xE7FFFFFF),
-                    ),
-                  )
-                ],
-              ),
-            ),
             Padding(
               padding: EdgeInsetsDirectional.fromSTEB(20, 20, 20, 0),
               child: TextFormField(
@@ -165,6 +151,7 @@ class _ForgotpasswordWidgetState extends State<ForgotpasswordWidget> {
                   ),
                   borderRadius: 8,
                 ),
+                loading: _loadingButton,
               ),
             )
           ],
