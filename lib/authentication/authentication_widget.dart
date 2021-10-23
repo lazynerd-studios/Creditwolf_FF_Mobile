@@ -80,7 +80,8 @@ class _AuthenticationWidgetState extends State<AuthenticationWidget> {
                     TabBar(
                       labelColor: Color(0xFFEF5E5E),
                       labelStyle: GoogleFonts.getFont(
-                        'Roboto',
+                        'Lexend Deca',
+                        fontWeight: FontWeight.w500,
                       ),
                       indicatorColor: Colors.white,
                       tabs: [
