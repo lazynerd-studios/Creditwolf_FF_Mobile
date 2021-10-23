@@ -25,7 +25,7 @@ class _SettingsWidgetState extends State<SettingsWidget> {
     return Scaffold(
       key: scaffoldKey,
       appBar: AppBar(
-        backgroundColor: Color(0xFF090F13),
+        backgroundColor: Color(0xFFEF5E5E),
         automaticallyImplyLeading: false,
         leading: FlutterFlowIconButton(
           borderColor: Colors.transparent,
@@ -41,7 +41,7 @@ class _SettingsWidgetState extends State<SettingsWidget> {
           },
         ),
         title: Text(
-          'Settings Page',
+          'Settings',
           style: FlutterFlowTheme.bodyText1.override(
             fontFamily: 'Lexend Deca',
             color: Colors.white,
@@ -174,7 +174,7 @@ class _SettingsWidgetState extends State<SettingsWidget> {
                   setState(() => _loadingButton = false);
                 }
               },
-              text: 'Change Changes',
+              text: 'Save Changes',
               options: FFButtonOptions(
                 width: 190,
                 height: 50,

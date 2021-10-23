@@ -16,16 +16,14 @@ class _ProfileWidgetState extends State<ProfileWidget> {
   TextEditingController emailAddressController;
   TextEditingController textController1;
   bool _loadingButton1 = false;
-  TextEditingController myBioController;
   bool _loadingButton2 = false;
   final scaffoldKey = GlobalKey<ScaffoldState>();
 
   @override
   void initState() {
     super.initState();
-    emailAddressController = TextEditingController(text: '[display_name]');
+    emailAddressController = TextEditingController(text: '[display_email]');
     textController1 = TextEditingController(text: '[display_name]');
-    myBioController = TextEditingController(text: '[bio]');
   }
 
   @override
@@ -83,8 +81,8 @@ class _ProfileWidgetState extends State<ProfileWidget> {
                       decoration: BoxDecoration(
                         shape: BoxShape.circle,
                       ),
-                      child: Image.network(
-                        'https://images.unsplash.com/photo-1536164261511-3a17e671d380?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=630&q=80',
+                      child: Image.asset(
+                        'assets/images/pexels-cottonbro-6626903.jpg',
                         fit: BoxFit.fitWidth,
                       ),
                     ),
@@ -109,7 +107,7 @@ class _ProfileWidgetState extends State<ProfileWidget> {
                       color: Colors.white,
                       textStyle: FlutterFlowTheme.bodyText1.override(
                         fontFamily: 'Lexend Deca',
-                        color: Color(0xFF39D2C0),
+                        color: Color(0xFFEF5E5E),
                         fontSize: 14,
                         fontWeight: FontWeight.normal,
                       ),
@@ -217,54 +215,6 @@ class _ProfileWidgetState extends State<ProfileWidget> {
                 ),
               ),
             ),
-            Padding(
-              padding: EdgeInsetsDirectional.fromSTEB(20, 0, 20, 12),
-              child: TextFormField(
-                controller: myBioController,
-                obscureText: false,
-                decoration: InputDecoration(
-                  labelText: 'Bio',
-                  labelStyle: FlutterFlowTheme.bodyText1.override(
-                    fontFamily: 'Lexend Deca',
-                    color: Color(0xFF95A1AC),
-                    fontSize: 14,
-                    fontWeight: FontWeight.normal,
-                  ),
-                  hintText: 'A little about you...',
-                  hintStyle: FlutterFlowTheme.bodyText1.override(
-                    fontFamily: 'Lexend Deca',
-                    color: Color(0xFF95A1AC),
-                    fontSize: 14,
-                    fontWeight: FontWeight.normal,
-                  ),
-                  enabledBorder: OutlineInputBorder(
-                    borderSide: BorderSide(
-                      color: Color(0xFFDBE2E7),
-                      width: 2,
-                    ),
-                    borderRadius: BorderRadius.circular(8),
-                  ),
-                  focusedBorder: OutlineInputBorder(
-                    borderSide: BorderSide(
-                      color: Color(0xFFDBE2E7),
-                      width: 2,
-                    ),
-                    borderRadius: BorderRadius.circular(8),
-                  ),
-                  filled: true,
-                  fillColor: Colors.white,
-                  contentPadding: EdgeInsetsDirectional.fromSTEB(20, 24, 0, 24),
-                ),
-                style: FlutterFlowTheme.bodyText1.override(
-                  fontFamily: 'Lexend Deca',
-                  color: Color(0xFF14181B),
-                  fontSize: 14,
-                  fontWeight: FontWeight.normal,
-                ),
-                textAlign: TextAlign.start,
-                maxLines: 3,
-              ),
-            ),
             Align(
               alignment: AlignmentDirectional(0, 0.05),
               child: Padding(
@@ -277,7 +227,7 @@ class _ProfileWidgetState extends State<ProfileWidget> {
                   options: FFButtonOptions(
                     width: 340,
                     height: 60,
-                    color: Color(0xFF39D2C0),
+                    color: Color(0xFFEF5E5E),
                     textStyle: FlutterFlowTheme.subtitle2.override(
                       fontFamily: 'Lexend Deca',
                       color: Colors.white,
