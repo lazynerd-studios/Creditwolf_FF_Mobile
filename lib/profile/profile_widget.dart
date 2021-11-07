@@ -267,9 +267,7 @@ class _ProfileWidgetState extends State<ProfileWidget> {
               obscureText: false,
               decoration: InputDecoration(
                 hintText: '[display_address]',
-                hintStyle: FlutterFlowTheme.bodyText1.override(
-                  fontFamily: 'Poppins',
-                ),
+                hintStyle: FlutterFlowTheme.bodyText1,
                 enabledBorder: UnderlineInputBorder(
                   borderSide: BorderSide(
                     color: Color(0x00000000),
@@ -291,18 +289,14 @@ class _ProfileWidgetState extends State<ProfileWidget> {
                   ),
                 ),
               ),
-              style: FlutterFlowTheme.bodyText1.override(
-                fontFamily: 'Poppins',
-              ),
+              style: FlutterFlowTheme.bodyText1,
             ),
             TextFormField(
               controller: textController5,
               obscureText: false,
               decoration: InputDecoration(
                 hintText: '[display_state]',
-                hintStyle: FlutterFlowTheme.bodyText1.override(
-                  fontFamily: 'Poppins',
-                ),
+                hintStyle: FlutterFlowTheme.bodyText1,
                 enabledBorder: UnderlineInputBorder(
                   borderSide: BorderSide(
                     color: Color(0x00000000),
@@ -324,9 +318,7 @@ class _ProfileWidgetState extends State<ProfileWidget> {
                   ),
                 ),
               ),
-              style: FlutterFlowTheme.bodyText1.override(
-                fontFamily: 'Poppins',
-              ),
+              style: FlutterFlowTheme.bodyText1,
             ),
             Align(
               alignment: AlignmentDirectional(0, 0.05),
