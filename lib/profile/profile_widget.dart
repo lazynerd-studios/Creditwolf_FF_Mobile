@@ -13,11 +13,11 @@ class ProfileWidget extends StatefulWidget {
 }
 
 class _ProfileWidgetState extends State<ProfileWidget> {
+  TextEditingController childrenNumberController;
   TextEditingController emailAddressController;
   TextEditingController fullNameController;
   bool _loadingButton1 = false;
   TextEditingController phoneNumberController;
-  TextEditingController textController4;
   TextEditingController textController5;
   bool _loadingButton2 = false;
   final scaffoldKey = GlobalKey<ScaffoldState>();
@@ -25,10 +25,11 @@ class _ProfileWidgetState extends State<ProfileWidget> {
   @override
   void initState() {
     super.initState();
+    childrenNumberController =
+        TextEditingController(text: '[display_children]');
     emailAddressController = TextEditingController(text: '[display_email]');
     fullNameController = TextEditingController(text: '[display_name]');
     phoneNumberController = TextEditingController(text: '[display_number]');
-    textController4 = TextEditingController();
     textController5 = TextEditingController();
   }
 
@@ -262,34 +263,50 @@ class _ProfileWidgetState extends State<ProfileWidget> {
                 keyboardType: TextInputType.number,
               ),
             ),
-            TextFormField(
-              controller: textController4,
-              obscureText: false,
-              decoration: InputDecoration(
-                hintText: '[display_address]',
-                hintStyle: FlutterFlowTheme.bodyText1,
-                enabledBorder: UnderlineInputBorder(
-                  borderSide: BorderSide(
-                    color: Color(0x00000000),
-                    width: 1,
+            Padding(
+              padding: EdgeInsetsDirectional.fromSTEB(20, 0, 20, 12),
+              child: TextFormField(
+                controller: childrenNumberController,
+                obscureText: false,
+                decoration: InputDecoration(
+                  labelText: 'Number of Children',
+                  labelStyle: FlutterFlowTheme.bodyText1.override(
+                    fontFamily: 'Lexend Deca',
+                    color: Color(0xFF14181B),
                   ),
-                  borderRadius: const BorderRadius.only(
-                    topLeft: Radius.circular(4.0),
-                    topRight: Radius.circular(4.0),
+                  hintText: 'Number of Children',
+                  hintStyle: FlutterFlowTheme.bodyText1.override(
+                    fontFamily: 'Lexend Deca',
+                    color: Color(0xFF14181B),
                   ),
+                  enabledBorder: OutlineInputBorder(
+                    borderSide: BorderSide(
+                      color: Color(0xFF9B6D6D),
+                      width: 1,
+                    ),
+                    borderRadius: const BorderRadius.only(
+                      topLeft: Radius.circular(4.0),
+                      topRight: Radius.circular(4.0),
+                    ),
+                  ),
+                  focusedBorder: OutlineInputBorder(
+                    borderSide: BorderSide(
+                      color: Color(0xFF9B6D6D),
+                      width: 1,
+                    ),
+                    borderRadius: const BorderRadius.only(
+                      topLeft: Radius.circular(4.0),
+                      topRight: Radius.circular(4.0),
+                    ),
+                  ),
+                  filled: true,
+                  fillColor: Colors.white,
                 ),
-                focusedBorder: UnderlineInputBorder(
-                  borderSide: BorderSide(
-                    color: Color(0x00000000),
-                    width: 1,
-                  ),
-                  borderRadius: const BorderRadius.only(
-                    topLeft: Radius.circular(4.0),
-                    topRight: Radius.circular(4.0),
-                  ),
+                style: FlutterFlowTheme.bodyText1.override(
+                  fontFamily: 'Lexend Deca',
+                  color: Color(0xFF14181B),
                 ),
               ),
-              style: FlutterFlowTheme.bodyText1,
             ),
             TextFormField(
               controller: textController5,
