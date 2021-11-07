@@ -79,6 +79,10 @@ class _AuthenticationWidgetState extends State<AuthenticationWidget> {
                   children: [
                     TabBar(
                       labelColor: Color(0xFFEF5E5E),
+                      labelStyle: GoogleFonts.getFont(
+                        'Lexend Deca',
+                        fontWeight: FontWeight.w500,
+                      ),
                       indicatorColor: Colors.white,
                       tabs: [
                         Tab(

@@ -13,19 +13,24 @@ class ProfileWidget extends StatefulWidget {
 }
 
 class _ProfileWidgetState extends State<ProfileWidget> {
+  TextEditingController childrenNumberController;
   TextEditingController emailAddressController;
-  TextEditingController textController1;
+  TextEditingController fullNameController;
   bool _loadingButton1 = false;
-  TextEditingController myBioController;
+  TextEditingController phoneNumberController;
+  TextEditingController textController5;
   bool _loadingButton2 = false;
   final scaffoldKey = GlobalKey<ScaffoldState>();
 
   @override
   void initState() {
     super.initState();
-    emailAddressController = TextEditingController(text: '[display_name]');
-    textController1 = TextEditingController(text: '[display_name]');
-    myBioController = TextEditingController(text: '[bio]');
+    childrenNumberController =
+        TextEditingController(text: '[display_children]');
+    emailAddressController = TextEditingController(text: '[display_email]');
+    fullNameController = TextEditingController(text: '[display_name]');
+    phoneNumberController = TextEditingController(text: '[display_number]');
+    textController5 = TextEditingController();
   }
 
   @override
@@ -83,8 +88,8 @@ class _ProfileWidgetState extends State<ProfileWidget> {
                       decoration: BoxDecoration(
                         shape: BoxShape.circle,
                       ),
-                      child: Image.network(
-                        'https://images.unsplash.com/photo-1536164261511-3a17e671d380?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=630&q=80',
+                      child: Image.asset(
+                        'assets/images/pexels-cottonbro-6626903.jpg',
                         fit: BoxFit.fitWidth,
                       ),
                     ),
@@ -109,7 +114,7 @@ class _ProfileWidgetState extends State<ProfileWidget> {
                       color: Colors.white,
                       textStyle: FlutterFlowTheme.bodyText1.override(
                         fontFamily: 'Lexend Deca',
-                        color: Color(0xFF39D2C0),
+                        color: Color(0xFFEF5E5E),
                         fontSize: 14,
                         fontWeight: FontWeight.normal,
                       ),
@@ -128,7 +133,7 @@ class _ProfileWidgetState extends State<ProfileWidget> {
             Padding(
               padding: EdgeInsetsDirectional.fromSTEB(20, 0, 20, 16),
               child: TextFormField(
-                controller: textController1,
+                controller: fullNameController,
                 obscureText: false,
                 decoration: InputDecoration(
                   labelText: 'Full Name',
@@ -147,14 +152,14 @@ class _ProfileWidgetState extends State<ProfileWidget> {
                   ),
                   enabledBorder: OutlineInputBorder(
                     borderSide: BorderSide(
-                      color: Color(0xFFDBE2E7),
+                      color: Color(0xFF9B6D6D),
                       width: 2,
                     ),
                     borderRadius: BorderRadius.circular(8),
                   ),
                   focusedBorder: OutlineInputBorder(
                     borderSide: BorderSide(
-                      color: Color(0xFFDBE2E7),
+                      color: Color(0xFF9B6D6D),
                       width: 2,
                     ),
                     borderRadius: BorderRadius.circular(8),
@@ -193,14 +198,14 @@ class _ProfileWidgetState extends State<ProfileWidget> {
                   ),
                   enabledBorder: OutlineInputBorder(
                     borderSide: BorderSide(
-                      color: Color(0xFFDBE2E7),
+                      color: Color(0xFF9B6D6D),
                       width: 2,
                     ),
                     borderRadius: BorderRadius.circular(8),
                   ),
                   focusedBorder: OutlineInputBorder(
                     borderSide: BorderSide(
-                      color: Color(0xFFDBE2E7),
+                      color: Color(0xFF9B6D6D),
                       width: 2,
                     ),
                     borderRadius: BorderRadius.circular(8),
@@ -220,33 +225,29 @@ class _ProfileWidgetState extends State<ProfileWidget> {
             Padding(
               padding: EdgeInsetsDirectional.fromSTEB(20, 0, 20, 12),
               child: TextFormField(
-                controller: myBioController,
+                controller: phoneNumberController,
                 obscureText: false,
                 decoration: InputDecoration(
-                  labelText: 'Bio',
+                  labelText: 'Phone Number',
                   labelStyle: FlutterFlowTheme.bodyText1.override(
                     fontFamily: 'Lexend Deca',
-                    color: Color(0xFF95A1AC),
-                    fontSize: 14,
-                    fontWeight: FontWeight.normal,
+                    color: Color(0xFF14181B),
                   ),
-                  hintText: 'A little about you...',
+                  hintText: 'Your number...',
                   hintStyle: FlutterFlowTheme.bodyText1.override(
                     fontFamily: 'Lexend Deca',
-                    color: Color(0xFF95A1AC),
-                    fontSize: 14,
-                    fontWeight: FontWeight.normal,
+                    color: Color(0xFF14181B),
                   ),
                   enabledBorder: OutlineInputBorder(
                     borderSide: BorderSide(
-                      color: Color(0xFFDBE2E7),
+                      color: Color(0xFF9B6D6D),
                       width: 2,
                     ),
                     borderRadius: BorderRadius.circular(8),
                   ),
                   focusedBorder: OutlineInputBorder(
                     borderSide: BorderSide(
-                      color: Color(0xFFDBE2E7),
+                      color: Color(0xFF9B6D6D),
                       width: 2,
                     ),
                     borderRadius: BorderRadius.circular(8),
@@ -258,12 +259,83 @@ class _ProfileWidgetState extends State<ProfileWidget> {
                 style: FlutterFlowTheme.bodyText1.override(
                   fontFamily: 'Lexend Deca',
                   color: Color(0xFF14181B),
-                  fontSize: 14,
-                  fontWeight: FontWeight.normal,
                 ),
-                textAlign: TextAlign.start,
-                maxLines: 3,
+                keyboardType: TextInputType.number,
               ),
+            ),
+            Padding(
+              padding: EdgeInsetsDirectional.fromSTEB(20, 0, 20, 12),
+              child: TextFormField(
+                controller: childrenNumberController,
+                obscureText: false,
+                decoration: InputDecoration(
+                  labelText: 'Number of Children',
+                  labelStyle: FlutterFlowTheme.bodyText1.override(
+                    fontFamily: 'Lexend Deca',
+                    color: Color(0xFF14181B),
+                  ),
+                  hintText: 'Number of Children',
+                  hintStyle: FlutterFlowTheme.bodyText1.override(
+                    fontFamily: 'Lexend Deca',
+                    color: Color(0xFF14181B),
+                  ),
+                  enabledBorder: OutlineInputBorder(
+                    borderSide: BorderSide(
+                      color: Color(0xFF9B6D6D),
+                      width: 1,
+                    ),
+                    borderRadius: const BorderRadius.only(
+                      topLeft: Radius.circular(4.0),
+                      topRight: Radius.circular(4.0),
+                    ),
+                  ),
+                  focusedBorder: OutlineInputBorder(
+                    borderSide: BorderSide(
+                      color: Color(0xFF9B6D6D),
+                      width: 1,
+                    ),
+                    borderRadius: const BorderRadius.only(
+                      topLeft: Radius.circular(4.0),
+                      topRight: Radius.circular(4.0),
+                    ),
+                  ),
+                  filled: true,
+                  fillColor: Colors.white,
+                ),
+                style: FlutterFlowTheme.bodyText1.override(
+                  fontFamily: 'Lexend Deca',
+                  color: Color(0xFF14181B),
+                ),
+              ),
+            ),
+            TextFormField(
+              controller: textController5,
+              obscureText: false,
+              decoration: InputDecoration(
+                hintText: '[display_state]',
+                hintStyle: FlutterFlowTheme.bodyText1,
+                enabledBorder: UnderlineInputBorder(
+                  borderSide: BorderSide(
+                    color: Color(0x00000000),
+                    width: 1,
+                  ),
+                  borderRadius: const BorderRadius.only(
+                    topLeft: Radius.circular(4.0),
+                    topRight: Radius.circular(4.0),
+                  ),
+                ),
+                focusedBorder: UnderlineInputBorder(
+                  borderSide: BorderSide(
+                    color: Color(0x00000000),
+                    width: 1,
+                  ),
+                  borderRadius: const BorderRadius.only(
+                    topLeft: Radius.circular(4.0),
+                    topRight: Radius.circular(4.0),
+                  ),
+                ),
+              ),
+              style: FlutterFlowTheme.bodyText1,
             ),
             Align(
               alignment: AlignmentDirectional(0, 0.05),
@@ -277,7 +349,7 @@ class _ProfileWidgetState extends State<ProfileWidget> {
                   options: FFButtonOptions(
                     width: 340,
                     height: 60,
-                    color: Color(0xFF39D2C0),
+                    color: Color(0xFFEF5E5E),
                     textStyle: FlutterFlowTheme.subtitle2.override(
                       fontFamily: 'Lexend Deca',
                       color: Colors.white,
