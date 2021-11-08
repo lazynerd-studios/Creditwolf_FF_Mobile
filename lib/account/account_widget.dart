@@ -69,7 +69,7 @@ class _AccountWidgetState extends State<AccountWidget> {
                         crossAxisAlignment: CrossAxisAlignment.start,
                         children: [
                           Text(
-                            '[Username]',
+                            '[display_name]',
                             style: FlutterFlowTheme.title3.override(
                               fontFamily: 'Lexend Deca',
                               color: Colors.white,
@@ -131,33 +131,43 @@ class _AccountWidgetState extends State<AccountWidget> {
                       ),
                       child: Padding(
                         padding: EdgeInsetsDirectional.fromSTEB(16, 0, 4, 0),
-                        child: Row(
-                          mainAxisSize: MainAxisSize.max,
-                          mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                          children: [
-                            Text(
-                              'Edit Profile',
-                              style: FlutterFlowTheme.bodyText1.override(
-                                fontFamily: 'Lexend Deca',
-                                color: Colors.white,
-                                fontSize: 14,
-                                fontWeight: FontWeight.normal,
+                        child: InkWell(
+                          onTap: () async {
+                            await Navigator.push(
+                              context,
+                              MaterialPageRoute(
+                                builder: (context) => ProfileWidget(),
                               ),
-                            ),
-                            FlutterFlowIconButton(
-                              borderColor: Colors.transparent,
-                              borderRadius: 30,
-                              buttonSize: 46,
-                              icon: Icon(
-                                Icons.chevron_right_rounded,
-                                color: Colors.white,
-                                size: 20,
+                            );
+                          },
+                          child: Row(
+                            mainAxisSize: MainAxisSize.max,
+                            mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                            children: [
+                              Text(
+                                'Edit Profile',
+                                style: FlutterFlowTheme.bodyText1.override(
+                                  fontFamily: 'Lexend Deca',
+                                  color: Colors.white,
+                                  fontSize: 14,
+                                  fontWeight: FontWeight.normal,
+                                ),
                               ),
-                              onPressed: () {
-                                print('IconButton pressed ...');
-                              },
-                            )
-                          ],
+                              FlutterFlowIconButton(
+                                borderColor: Colors.transparent,
+                                borderRadius: 30,
+                                buttonSize: 46,
+                                icon: Icon(
+                                  Icons.chevron_right_rounded,
+                                  color: Colors.white,
+                                  size: 20,
+                                ),
+                                onPressed: () {
+                                  print('IconButton pressed ...');
+                                },
+                              )
+                            ],
+                          ),
                         ),
                       ),
                     ),

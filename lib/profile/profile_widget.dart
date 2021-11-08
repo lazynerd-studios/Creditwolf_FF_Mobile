@@ -18,7 +18,6 @@ class _ProfileWidgetState extends State<ProfileWidget> {
   TextEditingController fullNameController;
   bool _loadingButton1 = false;
   TextEditingController phoneNumberController;
-  TextEditingController textController5;
   bool _loadingButton2 = false;
   final scaffoldKey = GlobalKey<ScaffoldState>();
 
@@ -30,7 +29,6 @@ class _ProfileWidgetState extends State<ProfileWidget> {
     emailAddressController = TextEditingController(text: '[display_email]');
     fullNameController = TextEditingController(text: '[display_name]');
     phoneNumberController = TextEditingController(text: '[display_number]');
-    textController5 = TextEditingController();
   }
 
   @override
@@ -282,60 +280,26 @@ class _ProfileWidgetState extends State<ProfileWidget> {
                   enabledBorder: OutlineInputBorder(
                     borderSide: BorderSide(
                       color: Color(0xFF9B6D6D),
-                      width: 1,
+                      width: 2,
                     ),
-                    borderRadius: const BorderRadius.only(
-                      topLeft: Radius.circular(4.0),
-                      topRight: Radius.circular(4.0),
-                    ),
+                    borderRadius: BorderRadius.circular(8),
                   ),
                   focusedBorder: OutlineInputBorder(
                     borderSide: BorderSide(
                       color: Color(0xFF9B6D6D),
-                      width: 1,
+                      width: 2,
                     ),
-                    borderRadius: const BorderRadius.only(
-                      topLeft: Radius.circular(4.0),
-                      topRight: Radius.circular(4.0),
-                    ),
+                    borderRadius: BorderRadius.circular(8),
                   ),
                   filled: true,
                   fillColor: Colors.white,
+                  contentPadding: EdgeInsetsDirectional.fromSTEB(20, 24, 0, 24),
                 ),
                 style: FlutterFlowTheme.bodyText1.override(
                   fontFamily: 'Lexend Deca',
                   color: Color(0xFF14181B),
                 ),
               ),
-            ),
-            TextFormField(
-              controller: textController5,
-              obscureText: false,
-              decoration: InputDecoration(
-                hintText: '[display_state]',
-                hintStyle: FlutterFlowTheme.bodyText1,
-                enabledBorder: UnderlineInputBorder(
-                  borderSide: BorderSide(
-                    color: Color(0x00000000),
-                    width: 1,
-                  ),
-                  borderRadius: const BorderRadius.only(
-                    topLeft: Radius.circular(4.0),
-                    topRight: Radius.circular(4.0),
-                  ),
-                ),
-                focusedBorder: UnderlineInputBorder(
-                  borderSide: BorderSide(
-                    color: Color(0x00000000),
-                    width: 1,
-                  ),
-                  borderRadius: const BorderRadius.only(
-                    topLeft: Radius.circular(4.0),
-                    topRight: Radius.circular(4.0),
-                  ),
-                ),
-              ),
-              style: FlutterFlowTheme.bodyText1,
             ),
             Align(
               alignment: AlignmentDirectional(0, 0.05),
