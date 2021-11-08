@@ -17,6 +17,8 @@ class _ChangepasswordWidgetState extends State<ChangepasswordWidget> {
   TextEditingController oldpasswordController;
   bool oldpasswordVisibility;
   bool _loadingButton = false;
+  TextEditingController textController2;
+  TextEditingController textController3;
   final scaffoldKey = GlobalKey<ScaffoldState>();
 
   @override
@@ -24,6 +26,8 @@ class _ChangepasswordWidgetState extends State<ChangepasswordWidget> {
     super.initState();
     oldpasswordController = TextEditingController();
     oldpasswordVisibility = false;
+    textController2 = TextEditingController();
+    textController3 = TextEditingController();
   }
 
   @override
@@ -162,6 +166,64 @@ class _ChangepasswordWidgetState extends State<ChangepasswordWidget> {
                 ),
                 loading: _loadingButton,
               ),
+            ),
+            TextFormField(
+              controller: textController2,
+              obscureText: false,
+              decoration: InputDecoration(
+                hintText: '[Some hint text...]',
+                hintStyle: FlutterFlowTheme.bodyText1,
+                enabledBorder: UnderlineInputBorder(
+                  borderSide: BorderSide(
+                    color: Color(0x00000000),
+                    width: 1,
+                  ),
+                  borderRadius: const BorderRadius.only(
+                    topLeft: Radius.circular(4.0),
+                    topRight: Radius.circular(4.0),
+                  ),
+                ),
+                focusedBorder: UnderlineInputBorder(
+                  borderSide: BorderSide(
+                    color: Color(0x00000000),
+                    width: 1,
+                  ),
+                  borderRadius: const BorderRadius.only(
+                    topLeft: Radius.circular(4.0),
+                    topRight: Radius.circular(4.0),
+                  ),
+                ),
+              ),
+              style: FlutterFlowTheme.bodyText1,
+            ),
+            TextFormField(
+              controller: textController3,
+              obscureText: false,
+              decoration: InputDecoration(
+                hintText: '[Some hint text...]',
+                hintStyle: FlutterFlowTheme.bodyText1,
+                enabledBorder: UnderlineInputBorder(
+                  borderSide: BorderSide(
+                    color: Color(0x00000000),
+                    width: 1,
+                  ),
+                  borderRadius: const BorderRadius.only(
+                    topLeft: Radius.circular(4.0),
+                    topRight: Radius.circular(4.0),
+                  ),
+                ),
+                focusedBorder: UnderlineInputBorder(
+                  borderSide: BorderSide(
+                    color: Color(0x00000000),
+                    width: 1,
+                  ),
+                  borderRadius: const BorderRadius.only(
+                    topLeft: Radius.circular(4.0),
+                    topRight: Radius.circular(4.0),
+                  ),
+                ),
+              ),
+              style: FlutterFlowTheme.bodyText1,
             )
           ],
         ),

@@ -128,7 +128,7 @@ class _AmountWidgetState extends State<AmountWidget> {
                     options: FFButtonOptions(
                       width: 230,
                       height: 50,
-                      color: Color(0xFFF08C8C),
+                      color: Color(0xFFEF5E5E),
                       textStyle: FlutterFlowTheme.subtitle2.override(
                         fontFamily: 'Lexend Deca',
                         color: Colors.white,
