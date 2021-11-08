@@ -17,6 +17,7 @@ class _ChangepasswordWidgetState extends State<ChangepasswordWidget> {
   TextEditingController oldpasswordController;
   bool oldpasswordVisibility;
   TextEditingController textController2;
+  bool passwordVisibility;
   TextEditingController textController3;
   bool _loadingButton = false;
   final scaffoldKey = GlobalKey<ScaffoldState>();
@@ -27,6 +28,7 @@ class _ChangepasswordWidgetState extends State<ChangepasswordWidget> {
     oldpasswordController = TextEditingController();
     oldpasswordVisibility = false;
     textController2 = TextEditingController();
+    passwordVisibility = false;
     textController3 = TextEditingController();
   }
 
@@ -89,7 +91,7 @@ class _ChangepasswordWidgetState extends State<ChangepasswordWidget> {
                     fontSize: 14,
                     fontWeight: FontWeight.normal,
                   ),
-                  hintText: 'Please enter a valid email...',
+                  hintText: 'Please enter old password...',
                   hintStyle: FlutterFlowTheme.bodyText1.override(
                     fontFamily: 'Lexend Deca',
                     color: Color(0x98FFFFFF),
@@ -136,34 +138,56 @@ class _ChangepasswordWidgetState extends State<ChangepasswordWidget> {
                 keyboardType: TextInputType.visiblePassword,
               ),
             ),
-            TextFormField(
-              controller: textController2,
-              obscureText: false,
-              decoration: InputDecoration(
-                hintText: '[Some hint text...]',
-                hintStyle: FlutterFlowTheme.bodyText1,
-                enabledBorder: UnderlineInputBorder(
-                  borderSide: BorderSide(
-                    color: Color(0x00000000),
-                    width: 1,
+            Padding(
+              padding: EdgeInsetsDirectional.fromSTEB(20, 20, 20, 0),
+              child: TextFormField(
+                controller: textController2,
+                obscureText: !passwordVisibility,
+                decoration: InputDecoration(
+                  isDense: true,
+                  labelText: 'Enter New Password',
+                  labelStyle: FlutterFlowTheme.bodyText1.override(
+                    fontFamily: 'Poppins',
+                    color: Color(0xFFEF5E5E),
                   ),
-                  borderRadius: const BorderRadius.only(
-                    topLeft: Radius.circular(4.0),
-                    topRight: Radius.circular(4.0),
+                  hintText: '[Some hint text...]',
+                  hintStyle: FlutterFlowTheme.bodyText1,
+                  enabledBorder: OutlineInputBorder(
+                    borderSide: BorderSide(
+                      color: Color(0xFFEF5E5E),
+                      width: 2,
+                    ),
+                    borderRadius: BorderRadius.circular(8),
+                  ),
+                  focusedBorder: OutlineInputBorder(
+                    borderSide: BorderSide(
+                      color: Color(0xFFEF5E5E),
+                      width: 2,
+                    ),
+                    borderRadius: BorderRadius.circular(8),
+                  ),
+                  filled: true,
+                  fillColor: Colors.white,
+                  contentPadding: EdgeInsetsDirectional.fromSTEB(20, 24, 0, 24),
+                  suffixIcon: InkWell(
+                    onTap: () => setState(
+                      () => passwordVisibility = !passwordVisibility,
+                    ),
+                    child: Icon(
+                      passwordVisibility
+                          ? Icons.visibility_outlined
+                          : Icons.visibility_off_outlined,
+                      color: Color(0xFFEF5E5E),
+                      size: 22,
+                    ),
                   ),
                 ),
-                focusedBorder: UnderlineInputBorder(
-                  borderSide: BorderSide(
-                    color: Color(0x00000000),
-                    width: 1,
-                  ),
-                  borderRadius: const BorderRadius.only(
-                    topLeft: Radius.circular(4.0),
-                    topRight: Radius.circular(4.0),
-                  ),
+                style: FlutterFlowTheme.bodyText1.override(
+                  fontFamily: 'Lexend Deca',
+                  color: Color(0xFFEF5E5E),
                 ),
+                keyboardType: TextInputType.visiblePassword,
               ),
-              style: FlutterFlowTheme.bodyText1,
             ),
             TextFormField(
               controller: textController3,
