@@ -16,9 +16,9 @@ class ChangepasswordWidget extends StatefulWidget {
 class _ChangepasswordWidgetState extends State<ChangepasswordWidget> {
   TextEditingController oldpasswordController;
   bool oldpasswordVisibility;
-  bool _loadingButton = false;
   TextEditingController textController2;
   TextEditingController textController3;
+  bool _loadingButton = false;
   final scaffoldKey = GlobalKey<ScaffoldState>();
 
   @override
@@ -136,37 +136,6 @@ class _ChangepasswordWidgetState extends State<ChangepasswordWidget> {
                 keyboardType: TextInputType.visiblePassword,
               ),
             ),
-            Padding(
-              padding: EdgeInsetsDirectional.fromSTEB(0, 15, 0, 0),
-              child: FFButtonWidget(
-                onPressed: () {
-                  print('change-password pressed ...');
-                },
-                text: 'Change Password',
-                icon: Icon(
-                  Icons.lock_outlined,
-                  size: 15,
-                ),
-                options: FFButtonOptions(
-                  width: 230,
-                  height: 60,
-                  color: Color(0xFFEF5E5E),
-                  textStyle: FlutterFlowTheme.subtitle2.override(
-                    fontFamily: 'Lexend Deca',
-                    color: Colors.white,
-                    fontSize: 16,
-                    fontWeight: FontWeight.w500,
-                  ),
-                  elevation: 3,
-                  borderSide: BorderSide(
-                    color: Colors.transparent,
-                    width: 1,
-                  ),
-                  borderRadius: 8,
-                ),
-                loading: _loadingButton,
-              ),
-            ),
             TextFormField(
               controller: textController2,
               obscureText: false,
@@ -224,6 +193,37 @@ class _ChangepasswordWidgetState extends State<ChangepasswordWidget> {
                 ),
               ),
               style: FlutterFlowTheme.bodyText1,
+            ),
+            Padding(
+              padding: EdgeInsetsDirectional.fromSTEB(0, 15, 0, 0),
+              child: FFButtonWidget(
+                onPressed: () {
+                  print('change-password pressed ...');
+                },
+                text: 'Change Password',
+                icon: Icon(
+                  Icons.lock_outlined,
+                  size: 15,
+                ),
+                options: FFButtonOptions(
+                  width: 230,
+                  height: 60,
+                  color: Color(0xFFEF5E5E),
+                  textStyle: FlutterFlowTheme.subtitle2.override(
+                    fontFamily: 'Lexend Deca',
+                    color: Colors.white,
+                    fontSize: 16,
+                    fontWeight: FontWeight.w500,
+                  ),
+                  elevation: 3,
+                  borderSide: BorderSide(
+                    color: Colors.transparent,
+                    width: 1,
+                  ),
+                  borderRadius: 8,
+                ),
+                loading: _loadingButton,
+              ),
             )
           ],
         ),
