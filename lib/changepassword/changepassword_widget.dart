@@ -181,7 +181,7 @@ class _ChangepasswordWidgetState extends State<ChangepasswordWidget> {
                     filled: true,
                     fillColor: Colors.white,
                     contentPadding:
-                        EdgeInsetsDirectional.fromSTEB(20, 24, 0, 24),
+                        EdgeInsetsDirectional.fromSTEB(20, 24, 20, 24),
                     suffixIcon: InkWell(
                       onTap: () => setState(
                         () => passwordVisibility1 = !passwordVisibility1,
@@ -233,7 +233,7 @@ class _ChangepasswordWidgetState extends State<ChangepasswordWidget> {
                     filled: true,
                     fillColor: Colors.white,
                     contentPadding:
-                        EdgeInsetsDirectional.fromSTEB(20, 24, 0, 24),
+                        EdgeInsetsDirectional.fromSTEB(20, 24, 20, 24),
                     suffixIcon: InkWell(
                       onTap: () => setState(
                         () => passwordVisibility2 = !passwordVisibility2,
