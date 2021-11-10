@@ -71,11 +71,22 @@ class _SplashScreenWidgetState extends State<SplashScreenWidget>
             mainAxisSize: MainAxisSize.max,
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
-              Image.asset(
-                'assets/images/ic_logo.png',
-                width: 180,
-                height: 160,
-                fit: BoxFit.fitHeight,
+              InkWell(
+                onTap: () async {
+                  await Navigator.pushAndRemoveUntil(
+                    context,
+                    MaterialPageRoute(
+                      builder: (context) => AuthenticationWidget(),
+                    ),
+                    (r) => false,
+                  );
+                },
+                child: Image.asset(
+                  'assets/images/ic_logo.png',
+                  width: 180,
+                  height: 160,
+                  fit: BoxFit.fitHeight,
+                ),
               ).animated([animationsMap['imageOnPageLoadAnimation']])
             ],
           ).animated([animationsMap['columnOnPageLoadAnimation']]),

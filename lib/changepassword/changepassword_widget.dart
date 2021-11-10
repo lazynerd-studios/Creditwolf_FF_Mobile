@@ -257,8 +257,19 @@ class _ChangepasswordWidgetState extends State<ChangepasswordWidget> {
               Padding(
                 padding: EdgeInsetsDirectional.fromSTEB(0, 15, 0, 0),
                 child: FFButtonWidget(
-                  onPressed: () {
-                    print('change-password pressed ...');
+                  onPressed: () async {
+                    setState(() => _loadingButton = true);
+                    try {
+                      await Navigator.push(
+                        context,
+                        MaterialPageRoute(
+                          builder: (context) =>
+                              NavBarPage(initialPage: 'Account'),
+                        ),
+                      );
+                    } finally {
+                      setState(() => _loadingButton = false);
+                    }
                   },
                   text: 'Change Password',
                   icon: Icon(
