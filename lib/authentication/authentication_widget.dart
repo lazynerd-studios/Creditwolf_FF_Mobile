@@ -9,7 +9,7 @@ import 'package:flutter_spinkit/flutter_spinkit.dart';
 import 'package:google_fonts/google_fonts.dart';
 
 class AuthenticationWidget extends StatefulWidget {
-  AuthenticationWidget({Key key}) : super(key: key);
+  const AuthenticationWidget({Key key}) : super(key: key);
 
   @override
   _AuthenticationWidgetState createState() => _AuthenticationWidgetState();
@@ -23,12 +23,9 @@ class _AuthenticationWidgetState extends State<AuthenticationWidget> {
   TextEditingController createPasswordController;
   bool createPasswordVisibility;
   bool termSwitchListValue;
-  bool _loadingButton3 = false;
   TextEditingController loginEmailAddressController;
   TextEditingController loginPasswordController;
   bool loginPasswordVisibility;
-  bool _loadingButton1 = false;
-  bool _loadingButton2 = false;
   final formKey = GlobalKey<FormState>();
   final scaffoldKey = GlobalKey<ScaffoldState>();
 
@@ -67,7 +64,7 @@ class _AuthenticationWidgetState extends State<AuthenticationWidget> {
                     width: 200,
                     height: 100,
                     fit: BoxFit.fitHeight,
-                  )
+                  ),
                 ],
               ),
             ),
@@ -90,7 +87,7 @@ class _AuthenticationWidgetState extends State<AuthenticationWidget> {
                         ),
                         Tab(
                           text: 'Sign up',
-                        )
+                        ),
                       ],
                     ),
                     Expanded(
@@ -123,7 +120,7 @@ class _AuthenticationWidgetState extends State<AuthenticationWidget> {
                                             fontSize: 24,
                                             fontWeight: FontWeight.bold,
                                           ),
-                                        )
+                                        ),
                                       ],
                                     ),
                                   ),
@@ -145,7 +142,7 @@ class _AuthenticationWidgetState extends State<AuthenticationWidget> {
                                             fontSize: 14,
                                             fontWeight: FontWeight.normal,
                                           ),
-                                        )
+                                        ),
                                       ],
                                     ),
                                   ),
@@ -209,7 +206,7 @@ class _AuthenticationWidgetState extends State<AuthenticationWidget> {
                                               fontWeight: FontWeight.normal,
                                             ),
                                           ),
-                                        )
+                                        ),
                                       ],
                                     ),
                                   ),
@@ -288,7 +285,7 @@ class _AuthenticationWidgetState extends State<AuthenticationWidget> {
                                               fontWeight: FontWeight.normal,
                                             ),
                                           ),
-                                        )
+                                        ),
                                       ],
                                     ),
                                   ),
@@ -297,19 +294,13 @@ class _AuthenticationWidgetState extends State<AuthenticationWidget> {
                                         0, 16, 0, 0),
                                     child: FFButtonWidget(
                                       onPressed: () async {
-                                        setState(() => _loadingButton1 = true);
-                                        try {
-                                          await Navigator.push(
-                                            context,
-                                            MaterialPageRoute(
-                                              builder: (context) => NavBarPage(
-                                                  initialPage: 'Home'),
-                                            ),
-                                          );
-                                        } finally {
-                                          setState(
-                                              () => _loadingButton1 = false);
-                                        }
+                                        await Navigator.push(
+                                          context,
+                                          MaterialPageRoute(
+                                            builder: (context) =>
+                                                NavBarPage(initialPage: 'Home'),
+                                          ),
+                                        );
                                       },
                                       text: 'Login',
                                       options: FFButtonOptions(
@@ -330,7 +321,6 @@ class _AuthenticationWidgetState extends State<AuthenticationWidget> {
                                         ),
                                         borderRadius: 8,
                                       ),
-                                      loading: _loadingButton1,
                                     ),
                                   ),
                                   Padding(
@@ -338,20 +328,14 @@ class _AuthenticationWidgetState extends State<AuthenticationWidget> {
                                         0, 20, 0, 0),
                                     child: FFButtonWidget(
                                       onPressed: () async {
-                                        setState(() => _loadingButton2 = true);
-                                        try {
-                                          await Navigator.pushAndRemoveUntil(
-                                            context,
-                                            MaterialPageRoute(
-                                              builder: (context) =>
-                                                  ForgotpasswordWidget(),
-                                            ),
-                                            (r) => false,
-                                          );
-                                        } finally {
-                                          setState(
-                                              () => _loadingButton2 = false);
-                                        }
+                                        await Navigator.pushAndRemoveUntil(
+                                          context,
+                                          MaterialPageRoute(
+                                            builder: (context) =>
+                                                ForgotpasswordWidget(),
+                                          ),
+                                          (r) => false,
+                                        );
                                       },
                                       text: 'Forgot Password?',
                                       options: FFButtonOptions(
@@ -372,9 +356,8 @@ class _AuthenticationWidgetState extends State<AuthenticationWidget> {
                                         ),
                                         borderRadius: 0,
                                       ),
-                                      loading: _loadingButton2,
                                     ),
-                                  )
+                                  ),
                                 ],
                               ),
                             ),
@@ -406,7 +389,7 @@ class _AuthenticationWidgetState extends State<AuthenticationWidget> {
                                             fontSize: 24,
                                             fontWeight: FontWeight.bold,
                                           ),
-                                        )
+                                        ),
                                       ],
                                     ),
                                   ),
@@ -428,7 +411,7 @@ class _AuthenticationWidgetState extends State<AuthenticationWidget> {
                                             fontSize: 14,
                                             fontWeight: FontWeight.normal,
                                           ),
-                                        )
+                                        ),
                                       ],
                                     ),
                                   ),
@@ -493,7 +476,7 @@ class _AuthenticationWidgetState extends State<AuthenticationWidget> {
                                               return null;
                                             },
                                           ),
-                                        )
+                                        ),
                                       ],
                                     ),
                                   ),
@@ -565,7 +548,7 @@ class _AuthenticationWidgetState extends State<AuthenticationWidget> {
                                               return null;
                                             },
                                           ),
-                                        )
+                                        ),
                                       ],
                                     ),
                                   ),
@@ -644,7 +627,7 @@ class _AuthenticationWidgetState extends State<AuthenticationWidget> {
                                               fontWeight: FontWeight.normal,
                                             ),
                                           ),
-                                        )
+                                        ),
                                       ],
                                     ),
                                   ),
@@ -724,7 +707,7 @@ class _AuthenticationWidgetState extends State<AuthenticationWidget> {
                                               fontWeight: FontWeight.normal,
                                             ),
                                           ),
-                                        )
+                                        ),
                                       ],
                                     ),
                                   ),
@@ -760,7 +743,7 @@ class _AuthenticationWidgetState extends State<AuthenticationWidget> {
                                             controlAffinity:
                                                 ListTileControlAffinity.leading,
                                           ),
-                                        )
+                                        ),
                                       ],
                                     ),
                                   ),
@@ -769,19 +752,13 @@ class _AuthenticationWidgetState extends State<AuthenticationWidget> {
                                         0, 15, 0, 0),
                                     child: FFButtonWidget(
                                       onPressed: () async {
-                                        setState(() => _loadingButton3 = true);
-                                        try {
-                                          await Navigator.push(
-                                            context,
-                                            MaterialPageRoute(
-                                              builder: (context) =>
-                                                  VerifyWidget(),
-                                            ),
-                                          );
-                                        } finally {
-                                          setState(
-                                              () => _loadingButton3 = false);
-                                        }
+                                        await Navigator.push(
+                                          context,
+                                          MaterialPageRoute(
+                                            builder: (context) =>
+                                                VerifyWidget(),
+                                          ),
+                                        );
                                       },
                                       text: 'Create Account',
                                       options: FFButtonOptions(
@@ -802,20 +779,19 @@ class _AuthenticationWidgetState extends State<AuthenticationWidget> {
                                         ),
                                         borderRadius: 8,
                                       ),
-                                      loading: _loadingButton3,
                                     ),
-                                  )
+                                  ),
                                 ],
                               ),
                             ),
-                          )
+                          ),
                         ],
                       ),
                     ),
                   ],
                 ),
               ),
-            )
+            ),
           ],
         ),
       ),

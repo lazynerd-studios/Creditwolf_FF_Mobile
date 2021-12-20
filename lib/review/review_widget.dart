@@ -6,14 +6,13 @@ import 'package:flutter_spinkit/flutter_spinkit.dart';
 import 'package:google_fonts/google_fonts.dart';
 
 class ReviewWidget extends StatefulWidget {
-  ReviewWidget({Key key}) : super(key: key);
+  const ReviewWidget({Key key}) : super(key: key);
 
   @override
   _ReviewWidgetState createState() => _ReviewWidgetState();
 }
 
 class _ReviewWidgetState extends State<ReviewWidget> {
-  bool _loadingButton = false;
   final scaffoldKey = GlobalKey<ScaffoldState>();
 
   @override
@@ -100,12 +99,11 @@ class _ReviewWidgetState extends State<ReviewWidget> {
                           ),
                           borderRadius: 40,
                         ),
-                        loading: _loadingButton,
-                      )
+                      ),
                     ],
                   ),
                 ),
-              )
+              ),
             ],
           ),
         ),

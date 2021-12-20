@@ -6,7 +6,7 @@ import 'package:flutter_spinkit/flutter_spinkit.dart';
 import 'package:google_fonts/google_fonts.dart';
 
 class DepositWebWidget extends StatefulWidget {
-  DepositWebWidget({Key key}) : super(key: key);
+  const DepositWebWidget({Key key}) : super(key: key);
 
   @override
   _DepositWebWidgetState createState() => _DepositWebWidgetState();

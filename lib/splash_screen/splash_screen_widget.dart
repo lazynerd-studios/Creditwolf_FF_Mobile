@@ -7,7 +7,7 @@ import 'package:flutter_spinkit/flutter_spinkit.dart';
 import 'package:google_fonts/google_fonts.dart';
 
 class SplashScreenWidget extends StatefulWidget {
-  SplashScreenWidget({Key key}) : super(key: key);
+  const SplashScreenWidget({Key key}) : super(key: key);
 
   @override
   _SplashScreenWidgetState createState() => _SplashScreenWidgetState();
@@ -87,7 +87,7 @@ class _SplashScreenWidgetState extends State<SplashScreenWidget>
                   height: 160,
                   fit: BoxFit.fitHeight,
                 ),
-              ).animated([animationsMap['imageOnPageLoadAnimation']])
+              ).animated([animationsMap['imageOnPageLoadAnimation']]),
             ],
           ).animated([animationsMap['columnOnPageLoadAnimation']]),
         ),

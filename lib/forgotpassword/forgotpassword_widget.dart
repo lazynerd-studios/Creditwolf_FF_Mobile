@@ -7,7 +7,7 @@ import 'package:flutter_spinkit/flutter_spinkit.dart';
 import 'package:google_fonts/google_fonts.dart';
 
 class ForgotpasswordWidget extends StatefulWidget {
-  ForgotpasswordWidget({Key key}) : super(key: key);
+  const ForgotpasswordWidget({Key key}) : super(key: key);
 
   @override
   _ForgotpasswordWidgetState createState() => _ForgotpasswordWidgetState();
@@ -15,7 +15,6 @@ class ForgotpasswordWidget extends StatefulWidget {
 
 class _ForgotpasswordWidgetState extends State<ForgotpasswordWidget> {
   TextEditingController phoneNumberController;
-  bool _loadingButton = false;
   final scaffoldKey = GlobalKey<ScaffoldState>();
 
   @override
@@ -151,9 +150,8 @@ class _ForgotpasswordWidgetState extends State<ForgotpasswordWidget> {
                   ),
                   borderRadius: 8,
                 ),
-                loading: _loadingButton,
               ),
-            )
+            ),
           ],
         ),
       ),

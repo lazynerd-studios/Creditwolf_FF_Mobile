@@ -6,7 +6,7 @@ import 'package:flutter_spinkit/flutter_spinkit.dart';
 import 'package:google_fonts/google_fonts.dart';
 
 class AmountWidget extends StatefulWidget {
-  AmountWidget({Key key}) : super(key: key);
+  const AmountWidget({Key key}) : super(key: key);
 
   @override
   _AmountWidgetState createState() => _AmountWidgetState();
@@ -14,7 +14,6 @@ class AmountWidget extends StatefulWidget {
 
 class _AmountWidgetState extends State<AmountWidget> {
   TextEditingController textController;
-  bool _loadingButton = false;
   final scaffoldKey = GlobalKey<ScaffoldState>();
 
   @override
@@ -109,10 +108,10 @@ class _AmountWidgetState extends State<AmountWidget> {
                           ),
                           textAlign: TextAlign.center,
                         ),
-                      )
+                      ),
                     ],
                   ),
-                )
+                ),
               ],
             ),
             Row(
@@ -142,11 +141,10 @@ class _AmountWidgetState extends State<AmountWidget> {
                       ),
                       borderRadius: 8,
                     ),
-                    loading: _loadingButton,
                   ),
-                )
+                ),
               ],
-            )
+            ),
           ],
         ),
       ),

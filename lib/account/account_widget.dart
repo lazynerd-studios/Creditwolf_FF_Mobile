@@ -9,14 +9,13 @@ import 'package:flutter_spinkit/flutter_spinkit.dart';
 import 'package:google_fonts/google_fonts.dart';
 
 class AccountWidget extends StatefulWidget {
-  AccountWidget({Key key}) : super(key: key);
+  const AccountWidget({Key key}) : super(key: key);
 
   @override
   _AccountWidgetState createState() => _AccountWidgetState();
 }
 
 class _AccountWidgetState extends State<AccountWidget> {
-  bool _loadingButton = false;
   final scaffoldKey = GlobalKey<ScaffoldState>();
 
   @override
@@ -88,11 +87,11 @@ class _AccountWidgetState extends State<AccountWidget> {
                                 fontWeight: FontWeight.normal,
                               ),
                             ),
-                          )
+                          ),
                         ],
                       ),
                     ),
-                  )
+                  ),
                 ],
               ),
             ),
@@ -165,14 +164,14 @@ class _AccountWidgetState extends State<AccountWidget> {
                                 onPressed: () {
                                   print('IconButton pressed ...');
                                 },
-                              )
+                              ),
                             ],
                           ),
                         ),
                       ),
                     ),
                   ),
-                )
+                ),
               ],
             ),
           ),
@@ -226,12 +225,12 @@ class _AccountWidgetState extends State<AccountWidget> {
                             onPressed: () {
                               print('IconButton pressed ...');
                             },
-                          )
+                          ),
                         ],
                       ),
                     ),
                   ),
-                )
+                ),
               ],
             ),
           ),
@@ -283,12 +282,12 @@ class _AccountWidgetState extends State<AccountWidget> {
                             onPressed: () {
                               print('IconButton pressed ...');
                             },
-                          )
+                          ),
                         ],
                       ),
                     ),
                   ),
-                )
+                ),
               ],
             ),
           ),
@@ -342,12 +341,12 @@ class _AccountWidgetState extends State<AccountWidget> {
                             onPressed: () {
                               print('IconButton pressed ...');
                             },
-                          )
+                          ),
                         ],
                       ),
                     ),
                   ),
-                )
+                ),
               ],
             ),
           ),
@@ -406,13 +405,13 @@ class _AccountWidgetState extends State<AccountWidget> {
                               onPressed: () {
                                 print('IconButton pressed ...');
                               },
-                            )
+                            ),
                           ],
                         ),
                       ),
                     ),
                   ),
-                )
+                ),
               ],
             ),
           ),
@@ -420,17 +419,12 @@ class _AccountWidgetState extends State<AccountWidget> {
             padding: EdgeInsetsDirectional.fromSTEB(0, 24, 0, 40),
             child: FFButtonWidget(
               onPressed: () async {
-                setState(() => _loadingButton = true);
-                try {
-                  await Navigator.push(
-                    context,
-                    MaterialPageRoute(
-                      builder: (context) => AuthenticationWidget(),
-                    ),
-                  );
-                } finally {
-                  setState(() => _loadingButton = false);
-                }
+                await Navigator.push(
+                  context,
+                  MaterialPageRoute(
+                    builder: (context) => AuthenticationWidget(),
+                  ),
+                );
               },
               text: 'Log Out',
               options: FFButtonOptions(
@@ -450,9 +444,8 @@ class _AccountWidgetState extends State<AccountWidget> {
                 ),
                 borderRadius: 8,
               ),
-              loading: _loadingButton,
             ),
-          )
+          ),
         ],
       ),
     );

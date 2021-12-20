@@ -9,14 +9,13 @@ import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:google_fonts/google_fonts.dart';
 
 class HomeWidget extends StatefulWidget {
-  HomeWidget({Key key}) : super(key: key);
+  const HomeWidget({Key key}) : super(key: key);
 
   @override
   _HomeWidgetState createState() => _HomeWidgetState();
 }
 
 class _HomeWidgetState extends State<HomeWidget> {
-  bool _loadingButton = false;
   final scaffoldKey = GlobalKey<ScaffoldState>();
 
   @override
@@ -72,7 +71,7 @@ class _HomeWidgetState extends State<HomeWidget> {
                               ),
                             ),
                           ),
-                        )
+                        ),
                       ],
                     ),
                     Padding(
@@ -106,12 +105,12 @@ class _HomeWidgetState extends State<HomeWidget> {
                                     fontWeight: FontWeight.bold,
                                   ),
                                 ),
-                              )
+                              ),
                             ],
-                          )
+                          ),
                         ],
                       ),
-                    )
+                    ),
                   ],
                 ),
               ),
@@ -149,7 +148,7 @@ class _HomeWidgetState extends State<HomeWidget> {
                                 fontFamily: 'Lexend Deca',
                                 color: Colors.white,
                               ),
-                            )
+                            ),
                           ],
                         ),
                       ),
@@ -166,7 +165,7 @@ class _HomeWidgetState extends State<HomeWidget> {
                                 fontSize: 14,
                                 fontWeight: FontWeight.normal,
                               ),
-                            )
+                            ),
                           ],
                         ),
                       ),
@@ -192,7 +191,7 @@ class _HomeWidgetState extends State<HomeWidget> {
                                 color: Colors.white,
                                 size: 24,
                               ),
-                            )
+                            ),
                           ],
                         ),
                       ),
@@ -204,18 +203,12 @@ class _HomeWidgetState extends State<HomeWidget> {
                           children: [
                             FFButtonWidget(
                               onPressed: () async {
-                                setState(() => _loadingButton = true);
-                                try {
-                                  await Navigator.push(
-                                    context,
-                                    MaterialPageRoute(
-                                      builder: (context) =>
-                                          SelectPaymentWidget(),
-                                    ),
-                                  );
-                                } finally {
-                                  setState(() => _loadingButton = false);
-                                }
+                                await Navigator.push(
+                                  context,
+                                  MaterialPageRoute(
+                                    builder: (context) => SelectPaymentWidget(),
+                                  ),
+                                );
                               },
                               text: 'Fund',
                               options: FFButtonOptions(
@@ -234,11 +227,10 @@ class _HomeWidgetState extends State<HomeWidget> {
                                 ),
                                 borderRadius: 8,
                               ),
-                              loading: _loadingButton,
-                            )
+                            ),
                           ],
                         ),
-                      )
+                      ),
                     ],
                   ),
                 ),
@@ -279,7 +271,7 @@ class _HomeWidgetState extends State<HomeWidget> {
                                 fontSize: 14,
                                 fontWeight: FontWeight.normal,
                               ),
-                            )
+                            ),
                           ],
                         ),
                       ),
@@ -328,7 +320,7 @@ class _HomeWidgetState extends State<HomeWidget> {
                                           fontWeight: FontWeight.normal,
                                         ),
                                       ),
-                                    )
+                                    ),
                                   ],
                                 ),
                               ),
@@ -372,7 +364,7 @@ class _HomeWidgetState extends State<HomeWidget> {
                                           fontWeight: FontWeight.normal,
                                         ),
                                       ),
-                                    )
+                                    ),
                                   ],
                                 ),
                               ),
@@ -426,12 +418,12 @@ class _HomeWidgetState extends State<HomeWidget> {
                                             fontWeight: FontWeight.normal,
                                           ),
                                         ),
-                                      )
+                                      ),
                                     ],
                                   ),
                                 ),
                               ),
-                            )
+                            ),
                           ],
                         ),
                       ),
@@ -448,7 +440,7 @@ class _HomeWidgetState extends State<HomeWidget> {
                                 fontSize: 14,
                                 fontWeight: FontWeight.normal,
                               ),
-                            )
+                            ),
                           ],
                         ),
                       ),
@@ -514,7 +506,7 @@ class _HomeWidgetState extends State<HomeWidget> {
                                           fontWeight: FontWeight.normal,
                                         ),
                                       ),
-                                    )
+                                    ),
                                   ],
                                 ),
                               ),
@@ -551,10 +543,10 @@ class _HomeWidgetState extends State<HomeWidget> {
                                         fontWeight: FontWeight.normal,
                                       ),
                                     ),
-                                  )
+                                  ),
                                 ],
                               ),
-                            )
+                            ),
                           ],
                         ),
                       ),
@@ -623,7 +615,7 @@ class _HomeWidgetState extends State<HomeWidget> {
                                             fontWeight: FontWeight.normal,
                                           ),
                                         ),
-                                      )
+                                      ),
                                     ],
                                   ),
                                 ),
@@ -661,10 +653,10 @@ class _HomeWidgetState extends State<HomeWidget> {
                                           fontWeight: FontWeight.normal,
                                         ),
                                       ),
-                                    )
+                                    ),
                                   ],
                                 ),
-                              )
+                              ),
                             ],
                           ),
                         ),
@@ -734,7 +726,7 @@ class _HomeWidgetState extends State<HomeWidget> {
                                             fontWeight: FontWeight.normal,
                                           ),
                                         ),
-                                      )
+                                      ),
                                     ],
                                   ),
                                 ),
@@ -772,18 +764,18 @@ class _HomeWidgetState extends State<HomeWidget> {
                                           fontWeight: FontWeight.normal,
                                         ),
                                       ),
-                                    )
+                                    ),
                                   ],
                                 ),
-                              )
+                              ),
                             ],
                           ),
                         ),
-                      )
+                      ),
                     ],
                   ),
                 ),
-              )
+              ),
             ],
           ),
         ),

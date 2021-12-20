@@ -7,7 +7,7 @@ import 'package:flutter_spinkit/flutter_spinkit.dart';
 import 'package:google_fonts/google_fonts.dart';
 
 class VerifyWidget extends StatefulWidget {
-  VerifyWidget({Key key}) : super(key: key);
+  const VerifyWidget({Key key}) : super(key: key);
 
   @override
   _VerifyWidgetState createState() => _VerifyWidgetState();
@@ -15,7 +15,6 @@ class VerifyWidget extends StatefulWidget {
 
 class _VerifyWidgetState extends State<VerifyWidget> {
   TextEditingController otpCodeController;
-  bool _loadingButton = false;
   final scaffoldKey = GlobalKey<ScaffoldState>();
 
   @override
@@ -127,17 +126,12 @@ class _VerifyWidgetState extends State<VerifyWidget> {
               padding: EdgeInsetsDirectional.fromSTEB(0, 24, 0, 0),
               child: FFButtonWidget(
                 onPressed: () async {
-                  setState(() => _loadingButton = true);
-                  try {
-                    await Navigator.push(
-                      context,
-                      MaterialPageRoute(
-                        builder: (context) => AuthenticationWidget(),
-                      ),
-                    );
-                  } finally {
-                    setState(() => _loadingButton = false);
-                  }
+                  await Navigator.push(
+                    context,
+                    MaterialPageRoute(
+                      builder: (context) => AuthenticationWidget(),
+                    ),
+                  );
                 },
                 text: 'Verify Code',
                 options: FFButtonOptions(
@@ -157,9 +151,8 @@ class _VerifyWidgetState extends State<VerifyWidget> {
                   ),
                   borderRadius: 8,
                 ),
-                loading: _loadingButton,
               ),
-            )
+            ),
           ],
         ),
       ),

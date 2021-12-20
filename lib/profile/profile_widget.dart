@@ -6,7 +6,7 @@ import 'package:flutter_spinkit/flutter_spinkit.dart';
 import 'package:google_fonts/google_fonts.dart';
 
 class ProfileWidget extends StatefulWidget {
-  ProfileWidget({Key key}) : super(key: key);
+  const ProfileWidget({Key key}) : super(key: key);
 
   @override
   _ProfileWidgetState createState() => _ProfileWidgetState();
@@ -16,9 +16,7 @@ class _ProfileWidgetState extends State<ProfileWidget> {
   TextEditingController childrenNumberController;
   TextEditingController emailAddressController;
   TextEditingController fullNameController;
-  bool _loadingButton1 = false;
   TextEditingController phoneNumberController;
-  bool _loadingButton2 = false;
   final scaffoldKey = GlobalKey<ScaffoldState>();
 
   @override
@@ -92,7 +90,7 @@ class _ProfileWidgetState extends State<ProfileWidget> {
                       ),
                     ),
                   ),
-                )
+                ),
               ],
             ),
             Padding(
@@ -123,8 +121,7 @@ class _ProfileWidgetState extends State<ProfileWidget> {
                       ),
                       borderRadius: 8,
                     ),
-                    loading: _loadingButton1,
-                  )
+                  ),
                 ],
               ),
             ),
@@ -327,10 +324,9 @@ class _ProfileWidgetState extends State<ProfileWidget> {
                     ),
                     borderRadius: 8,
                   ),
-                  loading: _loadingButton2,
                 ),
               ),
-            )
+            ),
           ],
         ),
       ),

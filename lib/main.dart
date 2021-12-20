@@ -7,12 +7,17 @@ import 'home/home_widget.dart';
 import 'account/account_widget.dart';
 import 'package:flutter_spinkit/flutter_spinkit.dart';
 
-void main() {
+void main() async {
   runApp(MyApp());
 }
 
-class MyApp extends StatelessWidget {
+class MyApp extends StatefulWidget {
   // This widget is the root of your application.
+  @override
+  State<MyApp> createState() => _MyAppState();
+}
+
+class _MyAppState extends State<MyApp> {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(

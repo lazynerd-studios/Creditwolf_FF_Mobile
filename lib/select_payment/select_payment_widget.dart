@@ -7,7 +7,7 @@ import 'package:flutter_spinkit/flutter_spinkit.dart';
 import 'package:google_fonts/google_fonts.dart';
 
 class SelectPaymentWidget extends StatefulWidget {
-  SelectPaymentWidget({Key key}) : super(key: key);
+  const SelectPaymentWidget({Key key}) : super(key: key);
 
   @override
   _SelectPaymentWidgetState createState() => _SelectPaymentWidgetState();
@@ -113,19 +113,19 @@ class _SelectPaymentWidgetState extends State<SelectPaymentWidget> {
                                           fontSize: 15,
                                           fontWeight: FontWeight.normal,
                                         ),
-                                      )
+                                      ),
                                     ],
                                   ),
                                 ),
-                              )
+                              ),
                             ],
                           ),
                         ),
                       ),
                     ),
-                  )
+                  ),
                 ],
-              )
+              ),
             ],
           ),
         ),

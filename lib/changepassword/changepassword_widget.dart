@@ -7,7 +7,7 @@ import 'package:flutter_spinkit/flutter_spinkit.dart';
 import 'package:google_fonts/google_fonts.dart';
 
 class ChangepasswordWidget extends StatefulWidget {
-  ChangepasswordWidget({Key key}) : super(key: key);
+  const ChangepasswordWidget({Key key}) : super(key: key);
 
   @override
   _ChangepasswordWidgetState createState() => _ChangepasswordWidgetState();
@@ -20,7 +20,6 @@ class _ChangepasswordWidgetState extends State<ChangepasswordWidget> {
   bool passwordVisibility1;
   TextEditingController textController3;
   bool passwordVisibility2;
-  bool _loadingButton = false;
   final formKey = GlobalKey<FormState>();
   final scaffoldKey = GlobalKey<ScaffoldState>();
 
@@ -258,18 +257,13 @@ class _ChangepasswordWidgetState extends State<ChangepasswordWidget> {
                 padding: EdgeInsetsDirectional.fromSTEB(0, 15, 0, 0),
                 child: FFButtonWidget(
                   onPressed: () async {
-                    setState(() => _loadingButton = true);
-                    try {
-                      await Navigator.push(
-                        context,
-                        MaterialPageRoute(
-                          builder: (context) =>
-                              NavBarPage(initialPage: 'Account'),
-                        ),
-                      );
-                    } finally {
-                      setState(() => _loadingButton = false);
-                    }
+                    await Navigator.push(
+                      context,
+                      MaterialPageRoute(
+                        builder: (context) =>
+                            NavBarPage(initialPage: 'Account'),
+                      ),
+                    );
                   },
                   text: 'Change Password',
                   icon: Icon(
@@ -293,9 +287,8 @@ class _ChangepasswordWidgetState extends State<ChangepasswordWidget> {
                     ),
                     borderRadius: 8,
                   ),
-                  loading: _loadingButton,
                 ),
-              )
+              ),
             ],
           ),
         ),
