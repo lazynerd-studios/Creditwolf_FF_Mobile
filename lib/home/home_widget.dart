@@ -698,7 +698,7 @@ class _HomeWidgetState extends State<HomeWidget> {
                                     padding: EdgeInsetsDirectional.fromSTEB(
                                         8, 8, 8, 8),
                                     child: FaIcon(
-                                      FontAwesomeIcons.times,
+                                      FontAwesomeIcons.timesCircle,
                                       color: Colors.white,
                                       size: 24,
                                     ),

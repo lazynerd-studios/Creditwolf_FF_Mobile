@@ -28,7 +28,7 @@ class _PhoneVerificationWidgetState extends State<PhoneVerificationWidget> {
     return Scaffold(
       key: scaffoldKey,
       appBar: AppBar(
-        backgroundColor: Color(0xFF4B39EF),
+        backgroundColor: Color(0xFFEF5E5E),
         automaticallyImplyLeading: false,
         leading: Icon(
           Icons.chevron_left_rounded,
@@ -36,7 +36,7 @@ class _PhoneVerificationWidgetState extends State<PhoneVerificationWidget> {
           size: 32,
         ),
         title: Text(
-          'Phone Sign In',
+          'Phone Verification',
           style: FlutterFlowTheme.title2.override(
             fontFamily: 'Lexend Deca',
             color: Colors.white,
@@ -48,18 +48,12 @@ class _PhoneVerificationWidgetState extends State<PhoneVerificationWidget> {
         centerTitle: false,
         elevation: 0,
       ),
-      backgroundColor: Color(0xFF4B39EF),
+      backgroundColor: Colors.white,
       body: Container(
         width: MediaQuery.of(context).size.width,
         height: MediaQuery.of(context).size.height * 1,
         decoration: BoxDecoration(
-          color: Color(0xFF4B39EF),
-          image: DecorationImage(
-            fit: BoxFit.fitWidth,
-            image: Image.asset(
-              'assets/images/wavesMiddle@3x.png',
-            ).image,
-          ),
+          color: Colors.white,
         ),
         child: Column(
           mainAxisSize: MainAxisSize.max,
@@ -70,45 +64,44 @@ class _PhoneVerificationWidgetState extends State<PhoneVerificationWidget> {
                 controller: phoneNumberController,
                 obscureText: false,
                 decoration: InputDecoration(
-                  labelText: 'Your Phone Number',
+                  labelText: '+2348012345678',
                   labelStyle: FlutterFlowTheme.bodyText1.override(
                     fontFamily: 'Lexend Deca',
-                    color: Color(0x98FFFFFF),
+                    color: Color(0xFFEF5E5E),
                     fontSize: 14,
                     fontWeight: FontWeight.normal,
                   ),
                   hintText: 'Please enter a valid number...',
                   hintStyle: FlutterFlowTheme.bodyText1.override(
                     fontFamily: 'Lexend Deca',
-                    color: Color(0x98FFFFFF),
+                    color: Color(0xFFEF5E5E),
                     fontSize: 14,
                     fontWeight: FontWeight.normal,
                   ),
                   enabledBorder: OutlineInputBorder(
                     borderSide: BorderSide(
-                      color: Color(0x00000000),
-                      width: 1,
+                      color: Color(0xFFEF5E5E),
+                      width: 2,
                     ),
                     borderRadius: BorderRadius.circular(8),
                   ),
                   focusedBorder: OutlineInputBorder(
                     borderSide: BorderSide(
-                      color: Color(0x00000000),
-                      width: 1,
+                      color: Color(0xFFEF5E5E),
+                      width: 2,
                     ),
                     borderRadius: BorderRadius.circular(8),
                   ),
-                  filled: true,
-                  fillColor: Color(0xFF3124A1),
                   contentPadding:
                       EdgeInsetsDirectional.fromSTEB(20, 24, 20, 24),
                 ),
                 style: FlutterFlowTheme.bodyText1.override(
                   fontFamily: 'Lexend Deca',
-                  color: Colors.white,
+                  color: Color(0xFFEF5E5E),
                   fontSize: 14,
                   fontWeight: FontWeight.normal,
                 ),
+                keyboardType: TextInputType.phone,
               ),
             ),
             Padding(
@@ -117,14 +110,14 @@ class _PhoneVerificationWidgetState extends State<PhoneVerificationWidget> {
                 onPressed: () {
                   print('Button-Login pressed ...');
                 },
-                text: 'Sign In with Phone',
+                text: 'Submit',
                 options: FFButtonOptions(
                   width: 230,
                   height: 60,
-                  color: Colors.white,
+                  color: Color(0xFFEF5E5E),
                   textStyle: FlutterFlowTheme.subtitle2.override(
                     fontFamily: 'Lexend Deca',
-                    color: Color(0xFF4B39EF),
+                    color: Colors.white,
                     fontSize: 16,
                     fontWeight: FontWeight.w500,
                   ),

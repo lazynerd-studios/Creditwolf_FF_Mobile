@@ -104,7 +104,7 @@ class _AmountWidgetState extends State<AmountWidget> {
                           style: GoogleFonts.getFont(
                             'DM Sans',
                             color: Color(0xFF4B39EF),
-                            fontSize: 35,
+                            fontSize: 40,
                           ),
                           textAlign: TextAlign.center,
                         ),

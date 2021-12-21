@@ -27,7 +27,7 @@ class _PhoneOTPWidgetState extends State<PhoneOTPWidget> {
     return Scaffold(
       key: scaffoldKey,
       appBar: AppBar(
-        backgroundColor: Color(0xFF4B39EF),
+        backgroundColor: Color(0xFFEF5E5E),
         automaticallyImplyLeading: false,
         leading: Icon(
           Icons.chevron_left_rounded,
@@ -35,7 +35,7 @@ class _PhoneOTPWidgetState extends State<PhoneOTPWidget> {
           size: 32,
         ),
         title: Text(
-          'Code Verification',
+          'OTP Verification',
           style: FlutterFlowTheme.title2.override(
             fontFamily: 'Lexend Deca',
             color: Colors.white,
@@ -52,13 +52,7 @@ class _PhoneOTPWidgetState extends State<PhoneOTPWidget> {
         width: MediaQuery.of(context).size.width,
         height: MediaQuery.of(context).size.height * 1,
         decoration: BoxDecoration(
-          color: Color(0xFF4B39EF),
-          image: DecorationImage(
-            fit: BoxFit.fitWidth,
-            image: Image.asset(
-              'assets/images/wavesMiddle@3x.png',
-            ).image,
-          ),
+          color: Colors.white,
         ),
         child: Column(
           mainAxisSize: MainAxisSize.max,
@@ -85,20 +79,20 @@ class _PhoneOTPWidgetState extends State<PhoneOTPWidget> {
                   ),
                   enabledBorder: OutlineInputBorder(
                     borderSide: BorderSide(
-                      color: Color(0x00000000),
-                      width: 1,
+                      color: Color(0xFFEF5E5E),
+                      width: 2,
                     ),
                     borderRadius: BorderRadius.circular(8),
                   ),
                   focusedBorder: OutlineInputBorder(
                     borderSide: BorderSide(
-                      color: Color(0x00000000),
-                      width: 1,
+                      color: Color(0xFFEF5E5E),
+                      width: 2,
                     ),
                     borderRadius: BorderRadius.circular(8),
                   ),
                   filled: true,
-                  fillColor: Color(0xFF3124A1),
+                  fillColor: Colors.white,
                   contentPadding:
                       EdgeInsetsDirectional.fromSTEB(20, 24, 20, 24),
                 ),
@@ -120,10 +114,10 @@ class _PhoneOTPWidgetState extends State<PhoneOTPWidget> {
                 options: FFButtonOptions(
                   width: 230,
                   height: 60,
-                  color: Colors.white,
+                  color: Color(0xFFEF5E5E),
                   textStyle: FlutterFlowTheme.subtitle2.override(
                     fontFamily: 'Lexend Deca',
-                    color: Color(0xFF4B39EF),
+                    color: Colors.white,
                     fontSize: 16,
                     fontWeight: FontWeight.w500,
                   ),
