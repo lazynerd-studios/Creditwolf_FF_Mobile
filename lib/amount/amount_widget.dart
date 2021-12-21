@@ -40,7 +40,7 @@ class _AmountWidgetState extends State<AmountWidget> {
           ),
         ),
         title: Text(
-          'Add Transaction',
+          'Deposit',
           style: FlutterFlowTheme.subtitle1.override(
             fontFamily: 'Lexend Deca',
             color: Color(0xFF151B1E),
@@ -104,7 +104,7 @@ class _AmountWidgetState extends State<AmountWidget> {
                           style: GoogleFonts.getFont(
                             'DM Sans',
                             color: Color(0xFF4B39EF),
-                            fontSize: 42,
+                            fontSize: 35,
                           ),
                           textAlign: TextAlign.center,
                         ),

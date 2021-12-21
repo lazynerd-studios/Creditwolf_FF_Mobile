@@ -79,10 +79,10 @@ class _AccountWidgetState extends State<AccountWidget> {
                           Padding(
                             padding: EdgeInsetsDirectional.fromSTEB(0, 4, 0, 0),
                             child: Text(
-                              '[Email_Address]',
+                              'BVN (unverified)',
                               style: FlutterFlowTheme.bodyText1.override(
                                 fontFamily: 'Lexend Deca',
-                                color: Color(0xB4FFFFFF),
+                                color: Colors.white,
                                 fontSize: 14,
                                 fontWeight: FontWeight.normal,
                               ),
