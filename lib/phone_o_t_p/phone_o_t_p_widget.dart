@@ -66,7 +66,7 @@ class _PhoneOTPWidgetState extends State<PhoneOTPWidget> {
                   labelText: 'Enter the 6 digit code',
                   labelStyle: FlutterFlowTheme.bodyText1.override(
                     fontFamily: 'Lexend Deca',
-                    color: Color(0x98FFFFFF),
+                    color: Color(0xFFEF5E5E),
                     fontSize: 14,
                     fontWeight: FontWeight.normal,
                   ),
@@ -98,7 +98,7 @@ class _PhoneOTPWidgetState extends State<PhoneOTPWidget> {
                 ),
                 style: FlutterFlowTheme.bodyText1.override(
                   fontFamily: 'Lexend Deca',
-                  color: Colors.white,
+                  color: Color(0xFFEF5E5E),
                   fontSize: 14,
                   fontWeight: FontWeight.normal,
                 ),
