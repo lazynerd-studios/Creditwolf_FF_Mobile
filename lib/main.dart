@@ -1,7 +1,7 @@
 import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_localizations/flutter_localizations.dart';
-import 'package:creditwolf/splash_screen/splash_screen_widget.dart';
+import 'package:creditwolf/account/account_widget.dart';
 import 'flutter_flow/flutter_flow_theme.dart';
 import 'home/home_widget.dart';
 import 'account/account_widget.dart';

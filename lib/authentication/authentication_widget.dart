@@ -3,7 +3,6 @@ import '../flutter_flow/flutter_flow_util.dart';
 import '../flutter_flow/flutter_flow_widgets.dart';
 import '../forgotpassword/forgotpassword_widget.dart';
 import '../main.dart';
-import '../verify/verify_widget.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_spinkit/flutter_spinkit.dart';
 import 'package:google_fonts/google_fonts.dart';
@@ -20,6 +19,7 @@ class _AuthenticationWidgetState extends State<AuthenticationWidget> {
   bool confirmPasswordVisibility;
   TextEditingController createEmailController;
   TextEditingController createFullnameController;
+  TextEditingController textController5;
   TextEditingController createPasswordController;
   bool createPasswordVisibility;
   bool termSwitchListValue;
@@ -36,6 +36,7 @@ class _AuthenticationWidgetState extends State<AuthenticationWidget> {
     confirmPasswordVisibility = false;
     createEmailController = TextEditingController();
     createFullnameController = TextEditingController();
+    textController5 = TextEditingController();
     createPasswordController = TextEditingController();
     createPasswordVisibility = false;
     loginEmailAddressController = TextEditingController();
@@ -562,6 +563,63 @@ class _AuthenticationWidgetState extends State<AuthenticationWidget> {
                                       children: [
                                         Expanded(
                                           child: TextFormField(
+                                            controller: textController5,
+                                            obscureText: false,
+                                            decoration: InputDecoration(
+                                              labelText: 'Phone Number',
+                                              labelStyle: FlutterFlowTheme
+                                                  .bodyText1
+                                                  .override(
+                                                fontFamily: 'Lexend Deca',
+                                                color: Color(0xFF95A1AC),
+                                              ),
+                                              hintText:
+                                                  'Enter yhour phone number here...',
+                                              hintStyle: FlutterFlowTheme
+                                                  .bodyText1
+                                                  .override(
+                                                fontFamily: 'Lexend Deca',
+                                                color: Color(0xFF2B343A),
+                                              ),
+                                              enabledBorder: OutlineInputBorder(
+                                                borderSide: BorderSide(
+                                                  color: Color(0xFFDBE2E7),
+                                                  width: 2,
+                                                ),
+                                                borderRadius:
+                                                    BorderRadius.circular(8),
+                                              ),
+                                              focusedBorder: OutlineInputBorder(
+                                                borderSide: BorderSide(
+                                                  color: Color(0xFFDBE2E7),
+                                                  width: 2,
+                                                ),
+                                                borderRadius:
+                                                    BorderRadius.circular(8),
+                                              ),
+                                              filled: true,
+                                              fillColor: Colors.white,
+                                            ),
+                                            style: FlutterFlowTheme.bodyText1
+                                                .override(
+                                              fontFamily: 'Lexend Deca',
+                                              color: Color(0xFF2B343A),
+                                            ),
+                                          ),
+                                        ),
+                                      ],
+                                    ),
+                                  ),
+                                  Padding(
+                                    padding: EdgeInsetsDirectional.fromSTEB(
+                                        20, 16, 20, 0),
+                                    child: Row(
+                                      mainAxisSize: MainAxisSize.max,
+                                      mainAxisAlignment:
+                                          MainAxisAlignment.center,
+                                      children: [
+                                        Expanded(
+                                          child: TextFormField(
                                             controller:
                                                 createPasswordController,
                                             obscureText:
@@ -751,14 +809,8 @@ class _AuthenticationWidgetState extends State<AuthenticationWidget> {
                                     padding: EdgeInsetsDirectional.fromSTEB(
                                         0, 15, 0, 0),
                                     child: FFButtonWidget(
-                                      onPressed: () async {
-                                        await Navigator.push(
-                                          context,
-                                          MaterialPageRoute(
-                                            builder: (context) =>
-                                                VerifyWidget(),
-                                          ),
-                                        );
+                                      onPressed: () {
+                                        print('loginButton pressed ...');
                                       },
                                       text: 'Create Account',
                                       options: FFButtonOptions(
