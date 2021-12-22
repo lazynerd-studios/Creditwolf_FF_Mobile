@@ -68,46 +68,50 @@ class _WithdrawalWidgetState extends State<WithdrawalWidget> {
                   ),
                   child: Row(
                     mainAxisSize: MainAxisSize.min,
+                    mainAxisAlignment: MainAxisAlignment.start,
                     children: [
                       Expanded(
-                        child: Padding(
-                          padding:
-                              EdgeInsetsDirectional.fromSTEB(24, 16, 24, 8),
-                          child: TextFormField(
-                            controller: textController,
-                            obscureText: false,
-                            decoration: InputDecoration(
-                              labelText: 'Amount',
-                              labelStyle: FlutterFlowTheme.bodyText2.override(
+                        child: Align(
+                          alignment: AlignmentDirectional(0, 0),
+                          child: Padding(
+                            padding:
+                                EdgeInsetsDirectional.fromSTEB(24, 16, 24, 8),
+                            child: TextFormField(
+                              controller: textController,
+                              obscureText: false,
+                              decoration: InputDecoration(
+                                labelText: 'Amount',
+                                labelStyle: FlutterFlowTheme.bodyText2.override(
+                                  fontFamily: 'Lexend Deca',
+                                  color: Color(0xFF0F181F),
+                                  fontSize: 14,
+                                  fontWeight: FontWeight.normal,
+                                ),
+                                enabledBorder: OutlineInputBorder(
+                                  borderSide: BorderSide(
+                                    color: Color(0xFFDCE0E4),
+                                    width: 2,
+                                  ),
+                                  borderRadius: BorderRadius.circular(8),
+                                ),
+                                focusedBorder: OutlineInputBorder(
+                                  borderSide: BorderSide(
+                                    color: Color(0xFFDCE0E4),
+                                    width: 2,
+                                  ),
+                                  borderRadius: BorderRadius.circular(8),
+                                ),
+                              ),
+                              style: FlutterFlowTheme.bodyText2.override(
                                 fontFamily: 'Lexend Deca',
                                 color: Color(0xFF0F181F),
                                 fontSize: 14,
                                 fontWeight: FontWeight.normal,
                               ),
-                              enabledBorder: OutlineInputBorder(
-                                borderSide: BorderSide(
-                                  color: Color(0xFFDCE0E4),
-                                  width: 2,
-                                ),
-                                borderRadius: BorderRadius.circular(8),
-                              ),
-                              focusedBorder: OutlineInputBorder(
-                                borderSide: BorderSide(
-                                  color: Color(0xFFDCE0E4),
-                                  width: 2,
-                                ),
-                                borderRadius: BorderRadius.circular(8),
-                              ),
+                              textAlign: TextAlign.center,
+                              maxLines: 4,
+                              keyboardType: TextInputType.number,
                             ),
-                            style: FlutterFlowTheme.bodyText2.override(
-                              fontFamily: 'Lexend Deca',
-                              color: Color(0xFF0F181F),
-                              fontSize: 14,
-                              fontWeight: FontWeight.normal,
-                            ),
-                            textAlign: TextAlign.center,
-                            maxLines: 4,
-                            keyboardType: TextInputType.number,
                           ),
                         ),
                       ),

@@ -13,17 +13,13 @@ class LoanWidget extends StatefulWidget {
 }
 
 class _LoanWidgetState extends State<LoanWidget> {
-  TextEditingController textController1;
-  TextEditingController textController2;
-  TextEditingController textController3;
+  TextEditingController textController;
   final scaffoldKey = GlobalKey<ScaffoldState>();
 
   @override
   void initState() {
     super.initState();
-    textController1 = TextEditingController();
-    textController2 = TextEditingController();
-    textController3 = TextEditingController();
+    textController = TextEditingController();
   }
 
   @override
@@ -44,7 +40,7 @@ class _LoanWidgetState extends State<LoanWidget> {
           ),
         ),
         title: Text(
-          'Add Transaction',
+          'Loan',
           style: FlutterFlowTheme.subtitle1.override(
             fontFamily: 'Lexend Deca',
             color: Color(0xFF151B1E),
@@ -75,10 +71,10 @@ class _LoanWidgetState extends State<LoanWidget> {
                     children: [
                       Expanded(
                         child: TextFormField(
-                          controller: textController1,
+                          controller: textController,
                           obscureText: false,
                           decoration: InputDecoration(
-                            hintText: '\$ Amount',
+                            hintText: ' Amount',
                             hintStyle: GoogleFonts.getFont(
                               'DM Sans',
                               color: Color(0xFF8B97A2),
@@ -107,138 +103,10 @@ class _LoanWidgetState extends State<LoanWidget> {
                           ),
                           style: GoogleFonts.getFont(
                             'DM Sans',
-                            color: Color(0xFF4B39EF),
-                            fontSize: 42,
+                            color: Color(0xE9AFABAB),
+                            fontSize: 32,
                           ),
                           textAlign: TextAlign.center,
-                        ),
-                      ),
-                    ],
-                  ),
-                ),
-              ],
-            ),
-            Row(
-              mainAxisSize: MainAxisSize.max,
-              children: [
-                Container(
-                  width: MediaQuery.of(context).size.width,
-                  height: 70,
-                  decoration: BoxDecoration(
-                    color: Colors.white,
-                  ),
-                  child: Row(
-                    mainAxisSize: MainAxisSize.min,
-                    children: [
-                      Expanded(
-                        child: Padding(
-                          padding:
-                              EdgeInsetsDirectional.fromSTEB(24, 16, 24, 8),
-                          child: TextFormField(
-                            controller: textController2,
-                            obscureText: false,
-                            decoration: InputDecoration(
-                              labelText: 'Businesss Name',
-                              labelStyle: FlutterFlowTheme.bodyText2.override(
-                                fontFamily: 'Lexend Deca',
-                                color: Color(0xFF8B97A2),
-                                fontSize: 14,
-                                fontWeight: FontWeight.normal,
-                              ),
-                              hintText: 'Where did you spend the money?',
-                              hintStyle: FlutterFlowTheme.bodyText2.override(
-                                fontFamily: 'Lexend Deca',
-                                color: Color(0xFF8B97A2),
-                                fontSize: 14,
-                                fontWeight: FontWeight.normal,
-                              ),
-                              enabledBorder: OutlineInputBorder(
-                                borderSide: BorderSide(
-                                  color: Color(0xFFDCE0E4),
-                                  width: 2,
-                                ),
-                                borderRadius: BorderRadius.circular(8),
-                              ),
-                              focusedBorder: OutlineInputBorder(
-                                borderSide: BorderSide(
-                                  color: Color(0xFFDCE0E4),
-                                  width: 2,
-                                ),
-                                borderRadius: BorderRadius.circular(8),
-                              ),
-                            ),
-                            style: FlutterFlowTheme.bodyText2.override(
-                              fontFamily: 'Lexend Deca',
-                              color: Color(0xFF0F181F),
-                              fontSize: 14,
-                              fontWeight: FontWeight.normal,
-                            ),
-                            textAlign: TextAlign.start,
-                          ),
-                        ),
-                      ),
-                    ],
-                  ),
-                ),
-              ],
-            ),
-            Row(
-              mainAxisSize: MainAxisSize.max,
-              children: [
-                Container(
-                  width: MediaQuery.of(context).size.width,
-                  height: 80,
-                  decoration: BoxDecoration(
-                    color: Colors.white,
-                  ),
-                  child: Row(
-                    mainAxisSize: MainAxisSize.min,
-                    children: [
-                      Expanded(
-                        child: Padding(
-                          padding:
-                              EdgeInsetsDirectional.fromSTEB(24, 0, 24, 24),
-                          child: TextFormField(
-                            controller: textController3,
-                            obscureText: false,
-                            decoration: InputDecoration(
-                              labelText: 'Date',
-                              labelStyle: FlutterFlowTheme.bodyText2.override(
-                                fontFamily: 'Lexend Deca',
-                                color: Color(0xFF8B97A2),
-                                fontSize: 14,
-                                fontWeight: FontWeight.normal,
-                              ),
-                              hintText: 'When did you spend this?',
-                              hintStyle: FlutterFlowTheme.bodyText2.override(
-                                fontFamily: 'Lexend Deca',
-                                color: Color(0xFF8B97A2),
-                                fontSize: 14,
-                                fontWeight: FontWeight.normal,
-                              ),
-                              enabledBorder: OutlineInputBorder(
-                                borderSide: BorderSide(
-                                  color: Color(0xFFDCE0E4),
-                                  width: 2,
-                                ),
-                                borderRadius: BorderRadius.circular(8),
-                              ),
-                              focusedBorder: OutlineInputBorder(
-                                borderSide: BorderSide(
-                                  color: Color(0xFFDCE0E4),
-                                  width: 2,
-                                ),
-                                borderRadius: BorderRadius.circular(8),
-                              ),
-                            ),
-                            style: FlutterFlowTheme.bodyText2.override(
-                              fontFamily: 'Lexend Deca',
-                              color: Color(0xFF0F181F),
-                              fontSize: 14,
-                              fontWeight: FontWeight.normal,
-                            ),
-                            textAlign: TextAlign.start,
-                          ),
                         ),
                       ),
                     ],
@@ -255,11 +123,11 @@ class _LoanWidgetState extends State<LoanWidget> {
                     onPressed: () {
                       print('Button pressed ...');
                     },
-                    text: 'Create Transaction',
+                    text: 'Submit',
                     options: FFButtonOptions(
                       width: 230,
                       height: 50,
-                      color: Color(0xFF4B39EF),
+                      color: Color(0xFFEF5E5E),
                       textStyle: FlutterFlowTheme.subtitle2.override(
                         fontFamily: 'Lexend Deca',
                         color: Colors.white,
