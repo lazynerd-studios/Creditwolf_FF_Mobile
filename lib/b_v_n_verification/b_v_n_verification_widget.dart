@@ -1,4 +1,3 @@
-import '../flutter_flow/flutter_flow_icon_button.dart';
 import '../flutter_flow/flutter_flow_theme.dart';
 import '../flutter_flow/flutter_flow_util.dart';
 import '../flutter_flow/flutter_flow_widgets.dart';
@@ -14,16 +13,13 @@ class BVNVerificationWidget extends StatefulWidget {
 }
 
 class _BVNVerificationWidgetState extends State<BVNVerificationWidget> {
-  TextEditingController textController1;
-  TextEditingController textController2;
-  bool switchListTileValue;
+  TextEditingController textController;
   final scaffoldKey = GlobalKey<ScaffoldState>();
 
   @override
   void initState() {
     super.initState();
-    textController1 = TextEditingController(text: '[User Name]');
-    textController2 = TextEditingController(text: '[User Email]');
+    textController = TextEditingController(text: '[BVN]');
   }
 
   @override
@@ -31,7 +27,7 @@ class _BVNVerificationWidgetState extends State<BVNVerificationWidget> {
     return Scaffold(
       key: scaffoldKey,
       appBar: AppBar(
-        backgroundColor: Colors.white,
+        backgroundColor: Color(0xFFEF5E5E),
         automaticallyImplyLeading: false,
         leading: InkWell(
           onTap: () async {
@@ -39,15 +35,15 @@ class _BVNVerificationWidgetState extends State<BVNVerificationWidget> {
           },
           child: Icon(
             Icons.chevron_left_rounded,
-            color: Color(0xFF8B97A2),
+            color: Colors.white,
             size: 24,
           ),
         ),
         title: Text(
-          'Edit Profile',
+          'BVN Verification',
           style: FlutterFlowTheme.subtitle1.override(
             fontFamily: 'Lexend Deca',
-            color: Color(0xFF8B97A2),
+            color: Colors.white,
             fontSize: 18,
             fontWeight: FontWeight.w500,
           ),
@@ -62,113 +58,6 @@ class _BVNVerificationWidgetState extends State<BVNVerificationWidget> {
           mainAxisSize: MainAxisSize.max,
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
-            Row(
-              mainAxisSize: MainAxisSize.max,
-              children: [
-                Container(
-                  width: MediaQuery.of(context).size.width,
-                  height: 270,
-                  decoration: BoxDecoration(
-                    color: Colors.white,
-                    borderRadius: BorderRadius.circular(0),
-                  ),
-                  child: Column(
-                    mainAxisSize: MainAxisSize.max,
-                    children: [
-                      Row(
-                        mainAxisSize: MainAxisSize.max,
-                        crossAxisAlignment: CrossAxisAlignment.start,
-                        children: [
-                          Expanded(
-                            child: Stack(
-                              children: [
-                                Align(
-                                  alignment: AlignmentDirectional(0, 0),
-                                  child: Image.asset(
-                                    'assets/images/card_header@2x.png',
-                                    width: MediaQuery.of(context).size.width,
-                                    height: 130,
-                                    fit: BoxFit.cover,
-                                  ),
-                                ),
-                                Align(
-                                  alignment: AlignmentDirectional(0, 0),
-                                  child: Container(
-                                    width: MediaQuery.of(context).size.width,
-                                    height: 130,
-                                    decoration: BoxDecoration(
-                                      color: Color(0x77090F13),
-                                    ),
-                                    child: Column(
-                                      mainAxisSize: MainAxisSize.max,
-                                      mainAxisAlignment:
-                                          MainAxisAlignment.center,
-                                      children: [
-                                        FlutterFlowIconButton(
-                                          borderColor: Colors.transparent,
-                                          borderRadius: 30,
-                                          buttonSize: 48,
-                                          icon: Icon(
-                                            Icons.photo_camera,
-                                            color: Colors.white,
-                                            size: 30,
-                                          ),
-                                          onPressed: () {
-                                            print('IconButton pressed ...');
-                                          },
-                                        ),
-                                        Text(
-                                          'Change Cover Photo',
-                                          style: GoogleFonts.getFont(
-                                            'DM Sans',
-                                            color: Colors.white,
-                                            fontWeight: FontWeight.w500,
-                                            fontSize: 10,
-                                          ),
-                                        ),
-                                      ],
-                                    ),
-                                  ),
-                                ),
-                              ],
-                            ),
-                          ),
-                        ],
-                      ),
-                      Align(
-                        alignment: AlignmentDirectional(0, 0),
-                        child: Padding(
-                          padding: EdgeInsetsDirectional.fromSTEB(0, 20, 0, 0),
-                          child: Container(
-                            width: 80,
-                            height: 80,
-                            clipBehavior: Clip.antiAlias,
-                            decoration: BoxDecoration(
-                              shape: BoxShape.circle,
-                            ),
-                            child: Image.asset(
-                              'assets/images/UI_avatar@2x.png',
-                            ),
-                          ),
-                        ),
-                      ),
-                      Padding(
-                        padding: EdgeInsetsDirectional.fromSTEB(0, 8, 0, 0),
-                        child: Text(
-                          'Edit Image',
-                          style: GoogleFonts.getFont(
-                            'DM Sans',
-                            color: Color(0xFF4B39EF),
-                            fontWeight: FontWeight.w500,
-                            fontSize: 10,
-                          ),
-                        ),
-                      ),
-                    ],
-                  ),
-                ),
-              ],
-            ),
             Padding(
               padding: EdgeInsetsDirectional.fromSTEB(0, 1, 0, 0),
               child: Container(
@@ -190,10 +79,10 @@ class _BVNVerificationWidgetState extends State<BVNVerificationWidget> {
                           children: [
                             Expanded(
                               child: TextFormField(
-                                controller: textController1,
+                                controller: textController,
                                 obscureText: false,
                                 decoration: InputDecoration(
-                                  labelText: 'Your Nam',
+                                  labelText: 'Your BVN',
                                   labelStyle:
                                       FlutterFlowTheme.bodyText1.override(
                                     fontFamily: 'Lexend Deca',
@@ -212,14 +101,14 @@ class _BVNVerificationWidgetState extends State<BVNVerificationWidget> {
                                   enabledBorder: OutlineInputBorder(
                                     borderSide: BorderSide(
                                       color: Color(0xFFDBE2E7),
-                                      width: 1,
+                                      width: 2,
                                     ),
                                     borderRadius: BorderRadius.circular(8),
                                   ),
                                   focusedBorder: OutlineInputBorder(
                                     borderSide: BorderSide(
                                       color: Color(0xFFDBE2E7),
-                                      width: 1,
+                                      width: 2,
                                     ),
                                     borderRadius: BorderRadius.circular(8),
                                   ),
@@ -234,86 +123,6 @@ class _BVNVerificationWidgetState extends State<BVNVerificationWidget> {
                             ),
                           ],
                         ),
-                      ),
-                      Padding(
-                        padding: EdgeInsetsDirectional.fromSTEB(8, 8, 8, 8),
-                        child: Row(
-                          mainAxisSize: MainAxisSize.max,
-                          children: [
-                            Expanded(
-                              child: TextFormField(
-                                controller: textController2,
-                                obscureText: false,
-                                decoration: InputDecoration(
-                                  labelText: 'Email Address',
-                                  labelStyle:
-                                      FlutterFlowTheme.bodyText1.override(
-                                    fontFamily: 'Lexend Deca',
-                                    color: Color(0xFF090F13),
-                                    fontSize: 14,
-                                    fontWeight: FontWeight.normal,
-                                  ),
-                                  hintText: 'Enter a new email',
-                                  hintStyle:
-                                      FlutterFlowTheme.bodyText1.override(
-                                    fontFamily: 'Lexend Deca',
-                                    color: Color(0xFF8B97A2),
-                                    fontSize: 14,
-                                    fontWeight: FontWeight.normal,
-                                  ),
-                                  enabledBorder: OutlineInputBorder(
-                                    borderSide: BorderSide(
-                                      color: Color(0xFFDBE2E7),
-                                      width: 1,
-                                    ),
-                                    borderRadius: BorderRadius.circular(8),
-                                  ),
-                                  focusedBorder: OutlineInputBorder(
-                                    borderSide: BorderSide(
-                                      color: Color(0xFFDBE2E7),
-                                      width: 1,
-                                    ),
-                                    borderRadius: BorderRadius.circular(8),
-                                  ),
-                                ),
-                                style: FlutterFlowTheme.bodyText1.override(
-                                  fontFamily: 'Lexend Deca',
-                                  color: Color(0xFF090F13),
-                                  fontSize: 14,
-                                  fontWeight: FontWeight.normal,
-                                ),
-                              ),
-                            ),
-                          ],
-                        ),
-                      ),
-                      SwitchListTile(
-                        value: switchListTileValue ??= true,
-                        onChanged: (newValue) =>
-                            setState(() => switchListTileValue = newValue),
-                        title: Text(
-                          'Recieve Notifications',
-                          style: FlutterFlowTheme.subtitle2.override(
-                            fontFamily: 'Lexend Deca',
-                            color: Color(0xFF151B1E),
-                            fontSize: 16,
-                            fontWeight: FontWeight.w500,
-                          ),
-                        ),
-                        subtitle: Text(
-                          'Turn on notifications.',
-                          style: FlutterFlowTheme.bodyText2.override(
-                            fontFamily: 'Lexend Deca',
-                            color: Color(0xFF8B97A2),
-                            fontSize: 14,
-                            fontWeight: FontWeight.normal,
-                          ),
-                        ),
-                        tileColor: Colors.white,
-                        activeColor: Color(0xFF4B39EF),
-                        activeTrackColor: Color(0x8D4B39EF),
-                        dense: false,
-                        controlAffinity: ListTileControlAffinity.trailing,
                       ),
                       Padding(
                         padding: EdgeInsetsDirectional.fromSTEB(0, 20, 0, 0),
@@ -329,7 +138,7 @@ class _BVNVerificationWidgetState extends State<BVNVerificationWidget> {
                               options: FFButtonOptions(
                                 width: 230,
                                 height: 50,
-                                color: Color(0xFF4B39EF),
+                                color: Color(0xFFEF5E5E),
                                 textStyle: FlutterFlowTheme.bodyText2.override(
                                   fontFamily: 'Lexend Deca',
                                   color: Colors.white,
