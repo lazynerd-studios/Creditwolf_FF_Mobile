@@ -1,18 +1,17 @@
 import '../flutter_flow/flutter_flow_theme.dart';
 import '../flutter_flow/flutter_flow_util.dart';
-import '../flutter_flow/flutter_flow_web_view.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_spinkit/flutter_spinkit.dart';
 import 'package:google_fonts/google_fonts.dart';
 
-class DepositWebWidget extends StatefulWidget {
-  const DepositWebWidget({Key key}) : super(key: key);
+class TermsWidget extends StatefulWidget {
+  const TermsWidget({Key key}) : super(key: key);
 
   @override
-  _DepositWebWidgetState createState() => _DepositWebWidgetState();
+  _TermsWidgetState createState() => _TermsWidgetState();
 }
 
-class _DepositWebWidgetState extends State<DepositWebWidget> {
+class _TermsWidgetState extends State<TermsWidget> {
   final scaffoldKey = GlobalKey<ScaffoldState>();
 
   @override
@@ -23,18 +22,10 @@ class _DepositWebWidgetState extends State<DepositWebWidget> {
         backgroundColor: Color(0xFFEF5E5E),
         automaticallyImplyLeading: true,
         actions: [],
-        centerTitle: false,
+        centerTitle: true,
         elevation: 4,
       ),
       backgroundColor: Color(0xFFF5F5F5),
-      body: SafeArea(
-        child: FlutterFlowWebView(
-          url: 'https://flutter.dev',
-          bypass: false,
-          verticalScroll: false,
-          horizontalScroll: false,
-        ),
-      ),
     );
   }
 }

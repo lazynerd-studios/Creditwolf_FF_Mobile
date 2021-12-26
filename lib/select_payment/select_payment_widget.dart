@@ -21,7 +21,7 @@ class _SelectPaymentWidgetState extends State<SelectPaymentWidget> {
     return Scaffold(
       key: scaffoldKey,
       appBar: AppBar(
-        backgroundColor: Colors.white,
+        backgroundColor: Color(0xFFEF5E5E),
         automaticallyImplyLeading: false,
         leading: FlutterFlowIconButton(
           borderColor: Colors.transparent,
@@ -29,7 +29,7 @@ class _SelectPaymentWidgetState extends State<SelectPaymentWidget> {
           buttonSize: 46,
           icon: Icon(
             Icons.arrow_back_rounded,
-            color: Color(0xFF95A1AC),
+            color: Colors.white,
             size: 24,
           ),
           onPressed: () async {
@@ -40,7 +40,7 @@ class _SelectPaymentWidgetState extends State<SelectPaymentWidget> {
           'Fund Account',
           style: FlutterFlowTheme.subtitle1.override(
             fontFamily: 'Lexend Deca',
-            color: Color(0xFF151B1E),
+            color: Colors.white,
             fontSize: 18,
             fontWeight: FontWeight.w500,
           ),

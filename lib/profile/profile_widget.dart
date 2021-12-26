@@ -34,7 +34,7 @@ class _ProfileWidgetState extends State<ProfileWidget> {
     return Scaffold(
       key: scaffoldKey,
       appBar: AppBar(
-        backgroundColor: Colors.white,
+        backgroundColor: Color(0xFFEF5E5E),
         automaticallyImplyLeading: false,
         leading: InkWell(
           onTap: () async {
@@ -42,7 +42,7 @@ class _ProfileWidgetState extends State<ProfileWidget> {
           },
           child: Icon(
             Icons.arrow_back_rounded,
-            color: Colors.black,
+            color: Colors.white,
             size: 24,
           ),
         ),
@@ -50,13 +50,13 @@ class _ProfileWidgetState extends State<ProfileWidget> {
           'Edit Profile',
           style: FlutterFlowTheme.bodyText1.override(
             fontFamily: 'Lexend Deca',
-            color: Color(0xFF14181B),
-            fontSize: 14,
+            color: Colors.white,
+            fontSize: 18,
             fontWeight: FontWeight.w500,
           ),
         ),
         actions: [],
-        centerTitle: true,
+        centerTitle: false,
         elevation: 0,
       ),
       backgroundColor: Colors.white,
@@ -64,34 +64,37 @@ class _ProfileWidgetState extends State<ProfileWidget> {
         child: Column(
           mainAxisSize: MainAxisSize.max,
           children: [
-            Row(
-              mainAxisSize: MainAxisSize.max,
-              mainAxisAlignment: MainAxisAlignment.center,
-              children: [
-                Container(
-                  width: 100,
-                  height: 100,
-                  decoration: BoxDecoration(
-                    color: Color(0xFFDBE2E7),
-                    shape: BoxShape.circle,
-                  ),
-                  child: Padding(
-                    padding: EdgeInsetsDirectional.fromSTEB(2, 2, 2, 2),
-                    child: Container(
-                      width: 90,
-                      height: 90,
-                      clipBehavior: Clip.antiAlias,
-                      decoration: BoxDecoration(
-                        shape: BoxShape.circle,
-                      ),
-                      child: Image.asset(
-                        'assets/images/pexels-cottonbro-6626903.jpg',
-                        fit: BoxFit.fitWidth,
+            Padding(
+              padding: EdgeInsetsDirectional.fromSTEB(0, 20, 0, 0),
+              child: Row(
+                mainAxisSize: MainAxisSize.max,
+                mainAxisAlignment: MainAxisAlignment.center,
+                children: [
+                  Container(
+                    width: 100,
+                    height: 100,
+                    decoration: BoxDecoration(
+                      color: Color(0xFFDBE2E7),
+                      shape: BoxShape.circle,
+                    ),
+                    child: Padding(
+                      padding: EdgeInsetsDirectional.fromSTEB(2, 2, 2, 2),
+                      child: Container(
+                        width: 90,
+                        height: 90,
+                        clipBehavior: Clip.antiAlias,
+                        decoration: BoxDecoration(
+                          shape: BoxShape.circle,
+                        ),
+                        child: Image.asset(
+                          'assets/images/pexels-cottonbro-6626903.jpg',
+                          fit: BoxFit.fitWidth,
+                        ),
                       ),
                     ),
                   ),
-                ),
-              ],
+                ],
+              ),
             ),
             Padding(
               padding: EdgeInsetsDirectional.fromSTEB(0, 12, 0, 16),

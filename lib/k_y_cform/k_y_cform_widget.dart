@@ -15,7 +15,13 @@ class KYCformWidget extends StatefulWidget {
 class _KYCformWidgetState extends State<KYCformWidget> {
   TextEditingController emailAddressController;
   TextEditingController textController1;
-  TextEditingController myBioController;
+  TextEditingController textController3;
+  TextEditingController textController4;
+  TextEditingController textController5;
+  TextEditingController textController6;
+  TextEditingController textController7;
+  TextEditingController textController8;
+  TextEditingController textController9;
   final scaffoldKey = GlobalKey<ScaffoldState>();
 
   @override
@@ -23,7 +29,13 @@ class _KYCformWidgetState extends State<KYCformWidget> {
     super.initState();
     emailAddressController = TextEditingController(text: '[display_name]');
     textController1 = TextEditingController(text: '[display_name]');
-    myBioController = TextEditingController(text: '[bio]');
+    textController3 = TextEditingController();
+    textController4 = TextEditingController();
+    textController5 = TextEditingController();
+    textController6 = TextEditingController();
+    textController7 = TextEditingController();
+    textController8 = TextEditingController();
+    textController9 = TextEditingController();
   }
 
   @override
@@ -39,7 +51,7 @@ class _KYCformWidgetState extends State<KYCformWidget> {
           },
           child: Icon(
             Icons.arrow_back_rounded,
-            color: Colors.black,
+            color: Colors.white,
             size: 24,
           ),
         ),
@@ -47,13 +59,13 @@ class _KYCformWidgetState extends State<KYCformWidget> {
           'KYC',
           style: FlutterFlowTheme.bodyText1.override(
             fontFamily: 'Lexend Deca',
-            color: Color(0xFF14181B),
+            color: Colors.white,
             fontSize: 18,
             fontWeight: FontWeight.w500,
           ),
         ),
         actions: [],
-        centerTitle: true,
+        centerTitle: false,
         elevation: 0,
       ),
       backgroundColor: Colors.white,
@@ -167,54 +179,6 @@ class _KYCformWidgetState extends State<KYCformWidget> {
                 keyboardType: TextInputType.emailAddress,
               ),
             ),
-            Padding(
-              padding: EdgeInsetsDirectional.fromSTEB(20, 0, 20, 12),
-              child: TextFormField(
-                controller: myBioController,
-                obscureText: false,
-                decoration: InputDecoration(
-                  labelText: 'Bio',
-                  labelStyle: FlutterFlowTheme.bodyText1.override(
-                    fontFamily: 'Lexend Deca',
-                    color: Color(0xFF95A1AC),
-                    fontSize: 14,
-                    fontWeight: FontWeight.normal,
-                  ),
-                  hintText: 'A little about you...',
-                  hintStyle: FlutterFlowTheme.bodyText1.override(
-                    fontFamily: 'Lexend Deca',
-                    color: Color(0xFF95A1AC),
-                    fontSize: 14,
-                    fontWeight: FontWeight.normal,
-                  ),
-                  enabledBorder: OutlineInputBorder(
-                    borderSide: BorderSide(
-                      color: Color(0xFFDBE2E7),
-                      width: 2,
-                    ),
-                    borderRadius: BorderRadius.circular(8),
-                  ),
-                  focusedBorder: OutlineInputBorder(
-                    borderSide: BorderSide(
-                      color: Color(0xFFDBE2E7),
-                      width: 2,
-                    ),
-                    borderRadius: BorderRadius.circular(8),
-                  ),
-                  filled: true,
-                  fillColor: Colors.white,
-                  contentPadding: EdgeInsetsDirectional.fromSTEB(20, 24, 0, 24),
-                ),
-                style: FlutterFlowTheme.bodyText1.override(
-                  fontFamily: 'Lexend Deca',
-                  color: Color(0xFF14181B),
-                  fontSize: 14,
-                  fontWeight: FontWeight.normal,
-                ),
-                textAlign: TextAlign.start,
-                maxLines: 3,
-              ),
-            ),
             Align(
               alignment: AlignmentDirectional(0, 0.05),
               child: Padding(
@@ -227,7 +191,7 @@ class _KYCformWidgetState extends State<KYCformWidget> {
                   options: FFButtonOptions(
                     width: 340,
                     height: 60,
-                    color: Color(0xFF39D2C0),
+                    color: Color(0xFFEF5E5E),
                     textStyle: FlutterFlowTheme.subtitle2.override(
                       fontFamily: 'Lexend Deca',
                       color: Colors.white,
@@ -243,6 +207,209 @@ class _KYCformWidgetState extends State<KYCformWidget> {
                   ),
                 ),
               ),
+            ),
+            TextFormField(
+              controller: textController3,
+              obscureText: false,
+              decoration: InputDecoration(
+                hintText: '[Some hint text...]',
+                hintStyle: FlutterFlowTheme.bodyText1,
+                enabledBorder: UnderlineInputBorder(
+                  borderSide: BorderSide(
+                    color: Color(0x00000000),
+                    width: 1,
+                  ),
+                  borderRadius: const BorderRadius.only(
+                    topLeft: Radius.circular(4.0),
+                    topRight: Radius.circular(4.0),
+                  ),
+                ),
+                focusedBorder: UnderlineInputBorder(
+                  borderSide: BorderSide(
+                    color: Color(0x00000000),
+                    width: 1,
+                  ),
+                  borderRadius: const BorderRadius.only(
+                    topLeft: Radius.circular(4.0),
+                    topRight: Radius.circular(4.0),
+                  ),
+                ),
+              ),
+              style: FlutterFlowTheme.bodyText1,
+            ),
+            TextFormField(
+              controller: textController4,
+              obscureText: false,
+              decoration: InputDecoration(
+                hintText: '[Some hint text...]',
+                hintStyle: FlutterFlowTheme.bodyText1,
+                enabledBorder: UnderlineInputBorder(
+                  borderSide: BorderSide(
+                    color: Color(0x00000000),
+                    width: 1,
+                  ),
+                  borderRadius: const BorderRadius.only(
+                    topLeft: Radius.circular(4.0),
+                    topRight: Radius.circular(4.0),
+                  ),
+                ),
+                focusedBorder: UnderlineInputBorder(
+                  borderSide: BorderSide(
+                    color: Color(0x00000000),
+                    width: 1,
+                  ),
+                  borderRadius: const BorderRadius.only(
+                    topLeft: Radius.circular(4.0),
+                    topRight: Radius.circular(4.0),
+                  ),
+                ),
+              ),
+              style: FlutterFlowTheme.bodyText1,
+            ),
+            TextFormField(
+              controller: textController5,
+              obscureText: false,
+              decoration: InputDecoration(
+                hintText: '[Some hint text...]',
+                hintStyle: FlutterFlowTheme.bodyText1,
+                enabledBorder: UnderlineInputBorder(
+                  borderSide: BorderSide(
+                    color: Color(0x00000000),
+                    width: 1,
+                  ),
+                  borderRadius: const BorderRadius.only(
+                    topLeft: Radius.circular(4.0),
+                    topRight: Radius.circular(4.0),
+                  ),
+                ),
+                focusedBorder: UnderlineInputBorder(
+                  borderSide: BorderSide(
+                    color: Color(0x00000000),
+                    width: 1,
+                  ),
+                  borderRadius: const BorderRadius.only(
+                    topLeft: Radius.circular(4.0),
+                    topRight: Radius.circular(4.0),
+                  ),
+                ),
+              ),
+              style: FlutterFlowTheme.bodyText1,
+            ),
+            TextFormField(
+              controller: textController6,
+              obscureText: false,
+              decoration: InputDecoration(
+                hintText: '[Some hint text...]',
+                hintStyle: FlutterFlowTheme.bodyText1,
+                enabledBorder: UnderlineInputBorder(
+                  borderSide: BorderSide(
+                    color: Color(0x00000000),
+                    width: 1,
+                  ),
+                  borderRadius: const BorderRadius.only(
+                    topLeft: Radius.circular(4.0),
+                    topRight: Radius.circular(4.0),
+                  ),
+                ),
+                focusedBorder: UnderlineInputBorder(
+                  borderSide: BorderSide(
+                    color: Color(0x00000000),
+                    width: 1,
+                  ),
+                  borderRadius: const BorderRadius.only(
+                    topLeft: Radius.circular(4.0),
+                    topRight: Radius.circular(4.0),
+                  ),
+                ),
+              ),
+              style: FlutterFlowTheme.bodyText1,
+            ),
+            TextFormField(
+              controller: textController7,
+              obscureText: false,
+              decoration: InputDecoration(
+                hintText: '[Some hint text...]',
+                hintStyle: FlutterFlowTheme.bodyText1,
+                enabledBorder: UnderlineInputBorder(
+                  borderSide: BorderSide(
+                    color: Color(0x00000000),
+                    width: 1,
+                  ),
+                  borderRadius: const BorderRadius.only(
+                    topLeft: Radius.circular(4.0),
+                    topRight: Radius.circular(4.0),
+                  ),
+                ),
+                focusedBorder: UnderlineInputBorder(
+                  borderSide: BorderSide(
+                    color: Color(0x00000000),
+                    width: 1,
+                  ),
+                  borderRadius: const BorderRadius.only(
+                    topLeft: Radius.circular(4.0),
+                    topRight: Radius.circular(4.0),
+                  ),
+                ),
+              ),
+              style: FlutterFlowTheme.bodyText1,
+            ),
+            TextFormField(
+              controller: textController8,
+              obscureText: false,
+              decoration: InputDecoration(
+                hintText: '[Some hint text...]',
+                hintStyle: FlutterFlowTheme.bodyText1,
+                enabledBorder: UnderlineInputBorder(
+                  borderSide: BorderSide(
+                    color: Color(0x00000000),
+                    width: 1,
+                  ),
+                  borderRadius: const BorderRadius.only(
+                    topLeft: Radius.circular(4.0),
+                    topRight: Radius.circular(4.0),
+                  ),
+                ),
+                focusedBorder: UnderlineInputBorder(
+                  borderSide: BorderSide(
+                    color: Color(0x00000000),
+                    width: 1,
+                  ),
+                  borderRadius: const BorderRadius.only(
+                    topLeft: Radius.circular(4.0),
+                    topRight: Radius.circular(4.0),
+                  ),
+                ),
+              ),
+              style: FlutterFlowTheme.bodyText1,
+            ),
+            TextFormField(
+              controller: textController9,
+              obscureText: false,
+              decoration: InputDecoration(
+                hintText: '[Some hint text...]',
+                hintStyle: FlutterFlowTheme.bodyText1,
+                enabledBorder: UnderlineInputBorder(
+                  borderSide: BorderSide(
+                    color: Color(0x00000000),
+                    width: 1,
+                  ),
+                  borderRadius: const BorderRadius.only(
+                    topLeft: Radius.circular(4.0),
+                    topRight: Radius.circular(4.0),
+                  ),
+                ),
+                focusedBorder: UnderlineInputBorder(
+                  borderSide: BorderSide(
+                    color: Color(0x00000000),
+                    width: 1,
+                  ),
+                  borderRadius: const BorderRadius.only(
+                    topLeft: Radius.circular(4.0),
+                    topRight: Radius.circular(4.0),
+                  ),
+                ),
+              ),
+              style: FlutterFlowTheme.bodyText1,
             ),
           ],
         ),

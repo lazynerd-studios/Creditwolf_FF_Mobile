@@ -40,8 +40,8 @@ class _PhoneVerificationWidgetState extends State<PhoneVerificationWidget> {
           style: FlutterFlowTheme.title2.override(
             fontFamily: 'Lexend Deca',
             color: Colors.white,
-            fontSize: 22,
-            fontWeight: FontWeight.bold,
+            fontSize: 18,
+            fontWeight: FontWeight.w500,
           ),
         ),
         actions: [],

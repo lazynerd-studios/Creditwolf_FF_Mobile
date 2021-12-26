@@ -27,7 +27,7 @@ class _WithdrawalWidgetState extends State<WithdrawalWidget> {
     return Scaffold(
       key: scaffoldKey,
       appBar: AppBar(
-        backgroundColor: Colors.white,
+        backgroundColor: Color(0xFFEF5E5E),
         automaticallyImplyLeading: false,
         leading: InkWell(
           onTap: () async {
@@ -35,7 +35,7 @@ class _WithdrawalWidgetState extends State<WithdrawalWidget> {
           },
           child: Icon(
             Icons.arrow_back_rounded,
-            color: Color(0xFF82878C),
+            color: Colors.white,
             size: 24,
           ),
         ),
@@ -43,13 +43,13 @@ class _WithdrawalWidgetState extends State<WithdrawalWidget> {
           'Withdrawal',
           style: FlutterFlowTheme.subtitle1.override(
             fontFamily: 'Lexend Deca',
-            color: Color(0xFF151B1E),
+            color: Colors.white,
             fontSize: 18,
             fontWeight: FontWeight.w500,
           ),
         ),
         actions: [],
-        centerTitle: true,
+        centerTitle: false,
         elevation: 0,
       ),
       backgroundColor: Color(0xFFF7F7F8),
