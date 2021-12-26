@@ -80,7 +80,7 @@ class _KYCformWidgetState extends State<KYCformWidget> {
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: [
                   Text(
-                    'Hello World',
+                    'PLEASE FILL IN THE KYC FORM BELOW',
                     style: FlutterFlowTheme.bodyText1,
                   ),
                 ],
@@ -177,35 +177,6 @@ class _KYCformWidgetState extends State<KYCformWidget> {
                   fontWeight: FontWeight.normal,
                 ),
                 keyboardType: TextInputType.emailAddress,
-              ),
-            ),
-            Align(
-              alignment: AlignmentDirectional(0, 0.05),
-              child: Padding(
-                padding: EdgeInsetsDirectional.fromSTEB(0, 24, 0, 0),
-                child: FFButtonWidget(
-                  onPressed: () {
-                    print('Button pressed ...');
-                  },
-                  text: 'Save Changes',
-                  options: FFButtonOptions(
-                    width: 340,
-                    height: 60,
-                    color: Color(0xFFEF5E5E),
-                    textStyle: FlutterFlowTheme.subtitle2.override(
-                      fontFamily: 'Lexend Deca',
-                      color: Colors.white,
-                      fontSize: 16,
-                      fontWeight: FontWeight.normal,
-                    ),
-                    elevation: 2,
-                    borderSide: BorderSide(
-                      color: Colors.transparent,
-                      width: 1,
-                    ),
-                    borderRadius: 8,
-                  ),
-                ),
               ),
             ),
             TextFormField(
@@ -410,6 +381,35 @@ class _KYCformWidgetState extends State<KYCformWidget> {
                 ),
               ),
               style: FlutterFlowTheme.bodyText1,
+            ),
+            Align(
+              alignment: AlignmentDirectional(0, 0.05),
+              child: Padding(
+                padding: EdgeInsetsDirectional.fromSTEB(0, 24, 0, 0),
+                child: FFButtonWidget(
+                  onPressed: () {
+                    print('Button pressed ...');
+                  },
+                  text: 'Save Changes',
+                  options: FFButtonOptions(
+                    width: 340,
+                    height: 60,
+                    color: Color(0xFFEF5E5E),
+                    textStyle: FlutterFlowTheme.subtitle2.override(
+                      fontFamily: 'Lexend Deca',
+                      color: Colors.white,
+                      fontSize: 16,
+                      fontWeight: FontWeight.normal,
+                    ),
+                    elevation: 2,
+                    borderSide: BorderSide(
+                      color: Colors.transparent,
+                      width: 1,
+                    ),
+                    borderRadius: 8,
+                  ),
+                ),
+              ),
             ),
           ],
         ),
