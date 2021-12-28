@@ -14,15 +14,15 @@ class KYCformWidget extends StatefulWidget {
 }
 
 class _KYCformWidgetState extends State<KYCformWidget> {
-  String dropDownValue;
+  String dropDownValue1;
   TextEditingController addressController;
   TextEditingController cityController;
   TextEditingController stateController;
   TextEditingController dobController;
   TextEditingController phoneController;
+  String dropDownValue2;
   TextEditingController nokNameController;
   TextEditingController nokPhoneController;
-  TextEditingController textController8;
   final scaffoldKey = GlobalKey<ScaffoldState>();
 
   @override
@@ -35,7 +35,6 @@ class _KYCformWidgetState extends State<KYCformWidget> {
     phoneController = TextEditingController();
     nokNameController = TextEditingController();
     nokPhoneController = TextEditingController();
-    textController8 = TextEditingController();
   }
 
   @override
@@ -313,7 +312,8 @@ class _KYCformWidgetState extends State<KYCformWidget> {
                       padding: EdgeInsetsDirectional.fromSTEB(20, 0, 20, 12),
                       child: FlutterFlowDropDown(
                         options: ['Gender', 'Male', 'Female'].toList(),
-                        onChanged: (val) => setState(() => dropDownValue = val),
+                        onChanged: (val) =>
+                            setState(() => dropDownValue1 = val),
                         width: 280,
                         height: 50,
                         textStyle: FlutterFlowTheme.bodyText1.override(
@@ -325,7 +325,33 @@ class _KYCformWidgetState extends State<KYCformWidget> {
                         elevation: 2,
                         borderColor: Color(0xFFDBE2E7),
                         borderWidth: 2,
-                        borderRadius: 0,
+                        borderRadius: 8,
+                        margin: EdgeInsetsDirectional.fromSTEB(12, 4, 12, 4),
+                        hidesUnderline: true,
+                      ),
+                    ),
+                  ),
+                  Align(
+                    alignment: AlignmentDirectional(-1, 0),
+                    child: Padding(
+                      padding: EdgeInsetsDirectional.fromSTEB(20, 0, 20, 12),
+                      child: FlutterFlowDropDown(
+                        initialOption: dropDownValue2 ??= 'Relationsip stutus',
+                        options: ['Single', 'Married', 'Divorced'].toList(),
+                        onChanged: (val) =>
+                            setState(() => dropDownValue2 = val),
+                        width: 280,
+                        height: 50,
+                        textStyle: FlutterFlowTheme.bodyText1.override(
+                          fontFamily: 'Lexend Deca',
+                          color: Color(0xFF14181B),
+                          fontStyle: FontStyle.italic,
+                        ),
+                        fillColor: Colors.white,
+                        elevation: 2,
+                        borderColor: Color(0xFFDBE2E7),
+                        borderWidth: 2,
+                        borderRadius: 8,
                         margin: EdgeInsetsDirectional.fromSTEB(12, 4, 12, 4),
                         hidesUnderline: true,
                       ),
@@ -407,64 +433,29 @@ class _KYCformWidgetState extends State<KYCformWidget> {
                       ),
                     ),
                   ),
-                  Padding(
-                    padding: EdgeInsetsDirectional.fromSTEB(20, 0, 20, 12),
-                    child: TextFormField(
-                      controller: textController8,
-                      obscureText: false,
-                      decoration: InputDecoration(
-                        hintText: '[Some hint text...]',
-                        hintStyle: FlutterFlowTheme.bodyText1,
-                        enabledBorder: UnderlineInputBorder(
-                          borderSide: BorderSide(
-                            color: Color(0x00000000),
-                            width: 1,
-                          ),
-                          borderRadius: const BorderRadius.only(
-                            topLeft: Radius.circular(4.0),
-                            topRight: Radius.circular(4.0),
-                          ),
-                        ),
-                        focusedBorder: UnderlineInputBorder(
-                          borderSide: BorderSide(
-                            color: Color(0x00000000),
-                            width: 1,
-                          ),
-                          borderRadius: const BorderRadius.only(
-                            topLeft: Radius.circular(4.0),
-                            topRight: Radius.circular(4.0),
-                          ),
-                        ),
-                      ),
-                      style: FlutterFlowTheme.bodyText1,
-                    ),
-                  ),
                   Align(
                     alignment: AlignmentDirectional(0, 0.05),
-                    child: Padding(
-                      padding: EdgeInsetsDirectional.fromSTEB(0, 24, 0, 0),
-                      child: FFButtonWidget(
-                        onPressed: () {
-                          print('Button pressed ...');
-                        },
-                        text: 'Submit',
-                        options: FFButtonOptions(
-                          width: 340,
-                          height: 60,
-                          color: Color(0xFFEF5E5E),
-                          textStyle: FlutterFlowTheme.subtitle2.override(
-                            fontFamily: 'Lexend Deca',
-                            color: Colors.white,
-                            fontSize: 16,
-                            fontWeight: FontWeight.normal,
-                          ),
-                          elevation: 2,
-                          borderSide: BorderSide(
-                            color: Colors.transparent,
-                            width: 1,
-                          ),
-                          borderRadius: 8,
+                    child: FFButtonWidget(
+                      onPressed: () {
+                        print('Button pressed ...');
+                      },
+                      text: 'Submit',
+                      options: FFButtonOptions(
+                        width: 340,
+                        height: 60,
+                        color: Color(0xFFEF5E5E),
+                        textStyle: FlutterFlowTheme.subtitle2.override(
+                          fontFamily: 'Lexend Deca',
+                          color: Colors.white,
+                          fontSize: 16,
+                          fontWeight: FontWeight.normal,
                         ),
+                        elevation: 2,
+                        borderSide: BorderSide(
+                          color: Colors.transparent,
+                          width: 1,
+                        ),
+                        borderRadius: 8,
                       ),
                     ),
                   ),
