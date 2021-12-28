@@ -20,10 +20,9 @@ class _KYCformWidgetState extends State<KYCformWidget> {
   TextEditingController stateController;
   TextEditingController dobController;
   TextEditingController phoneController;
-  TextEditingController textController6;
-  TextEditingController textController7;
+  TextEditingController nokNameController;
+  TextEditingController nokPhoneController;
   TextEditingController textController8;
-  TextEditingController textController9;
   final scaffoldKey = GlobalKey<ScaffoldState>();
 
   @override
@@ -34,10 +33,9 @@ class _KYCformWidgetState extends State<KYCformWidget> {
     stateController = TextEditingController();
     dobController = TextEditingController();
     phoneController = TextEditingController();
-    textController6 = TextEditingController();
-    textController7 = TextEditingController();
+    nokNameController = TextEditingController();
+    nokPhoneController = TextEditingController();
     textController8 = TextEditingController();
-    textController9 = TextEditingController();
   }
 
   @override
@@ -100,7 +98,7 @@ class _KYCformWidgetState extends State<KYCformWidget> {
                         labelText: 'Home Address',
                         labelStyle: FlutterFlowTheme.bodyText1.override(
                           fontFamily: 'Lexend Deca',
-                          color: Color(0xFF95A1AC),
+                          color: Color(0xFF14181B),
                           fontSize: 14,
                           fontWeight: FontWeight.normal,
                         ),
@@ -336,10 +334,15 @@ class _KYCformWidgetState extends State<KYCformWidget> {
                   Padding(
                     padding: EdgeInsetsDirectional.fromSTEB(20, 0, 20, 12),
                     child: TextFormField(
-                      controller: textController6,
+                      controller: nokNameController,
                       obscureText: false,
                       decoration: InputDecoration(
-                        hintText: '[Some hint text...]',
+                        labelText: 'Next of Kin Fullname',
+                        labelStyle: FlutterFlowTheme.bodyText1.override(
+                          fontFamily: 'Poppins',
+                          color: Color(0xFF14181B),
+                        ),
+                        hintText: 'Next of Kin',
                         hintStyle: FlutterFlowTheme.bodyText1,
                         enabledBorder: OutlineInputBorder(
                           borderSide: BorderSide(
@@ -360,13 +363,54 @@ class _KYCformWidgetState extends State<KYCformWidget> {
                         contentPadding:
                             EdgeInsetsDirectional.fromSTEB(20, 24, 0, 24),
                       ),
-                      style: FlutterFlowTheme.bodyText1,
+                      style: FlutterFlowTheme.bodyText1.override(
+                        fontFamily: 'Lexend Deca',
+                        color: Color(0xFF14181B),
+                      ),
                     ),
                   ),
                   Padding(
                     padding: EdgeInsetsDirectional.fromSTEB(20, 0, 20, 12),
                     child: TextFormField(
-                      controller: textController7,
+                      controller: nokPhoneController,
+                      obscureText: false,
+                      decoration: InputDecoration(
+                        labelText: 'Next of Kin Number',
+                        labelStyle: FlutterFlowTheme.bodyText1.override(
+                          fontFamily: 'Lexend Deca',
+                        ),
+                        hintText: 'Phone Number',
+                        hintStyle: FlutterFlowTheme.bodyText1.override(
+                          fontFamily: 'Lexend Deca',
+                        ),
+                        enabledBorder: OutlineInputBorder(
+                          borderSide: BorderSide(
+                            color: Color(0xFFDBE2E7),
+                            width: 2,
+                          ),
+                          borderRadius: BorderRadius.circular(8),
+                        ),
+                        focusedBorder: OutlineInputBorder(
+                          borderSide: BorderSide(
+                            color: Color(0xFFDBE2E7),
+                            width: 2,
+                          ),
+                          borderRadius: BorderRadius.circular(8),
+                        ),
+                        filled: true,
+                        fillColor: Colors.white,
+                        contentPadding:
+                            EdgeInsetsDirectional.fromSTEB(20, 24, 0, 24),
+                      ),
+                      style: FlutterFlowTheme.bodyText1.override(
+                        fontFamily: 'Lexend Deca',
+                      ),
+                    ),
+                  ),
+                  Padding(
+                    padding: EdgeInsetsDirectional.fromSTEB(20, 0, 20, 12),
+                    child: TextFormField(
+                      controller: textController8,
                       obscureText: false,
                       decoration: InputDecoration(
                         hintText: '[Some hint text...]',
@@ -394,64 +438,6 @@ class _KYCformWidgetState extends State<KYCformWidget> {
                       ),
                       style: FlutterFlowTheme.bodyText1,
                     ),
-                  ),
-                  TextFormField(
-                    controller: textController8,
-                    obscureText: false,
-                    decoration: InputDecoration(
-                      hintText: '[Some hint text...]',
-                      hintStyle: FlutterFlowTheme.bodyText1,
-                      enabledBorder: UnderlineInputBorder(
-                        borderSide: BorderSide(
-                          color: Color(0x00000000),
-                          width: 1,
-                        ),
-                        borderRadius: const BorderRadius.only(
-                          topLeft: Radius.circular(4.0),
-                          topRight: Radius.circular(4.0),
-                        ),
-                      ),
-                      focusedBorder: UnderlineInputBorder(
-                        borderSide: BorderSide(
-                          color: Color(0x00000000),
-                          width: 1,
-                        ),
-                        borderRadius: const BorderRadius.only(
-                          topLeft: Radius.circular(4.0),
-                          topRight: Radius.circular(4.0),
-                        ),
-                      ),
-                    ),
-                    style: FlutterFlowTheme.bodyText1,
-                  ),
-                  TextFormField(
-                    controller: textController9,
-                    obscureText: false,
-                    decoration: InputDecoration(
-                      hintText: '[Some hint text...]',
-                      hintStyle: FlutterFlowTheme.bodyText1,
-                      enabledBorder: UnderlineInputBorder(
-                        borderSide: BorderSide(
-                          color: Color(0x00000000),
-                          width: 1,
-                        ),
-                        borderRadius: const BorderRadius.only(
-                          topLeft: Radius.circular(4.0),
-                          topRight: Radius.circular(4.0),
-                        ),
-                      ),
-                      focusedBorder: UnderlineInputBorder(
-                        borderSide: BorderSide(
-                          color: Color(0x00000000),
-                          width: 1,
-                        ),
-                        borderRadius: const BorderRadius.only(
-                          topLeft: Radius.circular(4.0),
-                          topRight: Radius.circular(4.0),
-                        ),
-                      ),
-                    ),
-                    style: FlutterFlowTheme.bodyText1,
                   ),
                   Align(
                     alignment: AlignmentDirectional(0, 0.05),
