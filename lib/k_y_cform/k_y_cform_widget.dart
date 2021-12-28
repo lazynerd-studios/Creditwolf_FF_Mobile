@@ -13,29 +13,27 @@ class KYCformWidget extends StatefulWidget {
 }
 
 class _KYCformWidgetState extends State<KYCformWidget> {
-  TextEditingController emailAddressController;
-  TextEditingController textController1;
-  TextEditingController textController3;
+  TextEditingController addressController;
+  TextEditingController cityController;
+  TextEditingController stateController;
   TextEditingController textController4;
   TextEditingController textController5;
   TextEditingController textController6;
   TextEditingController textController7;
   TextEditingController textController8;
-  TextEditingController textController9;
   final scaffoldKey = GlobalKey<ScaffoldState>();
 
   @override
   void initState() {
     super.initState();
-    emailAddressController = TextEditingController(text: '[display_city]');
-    textController1 = TextEditingController(text: '[display_address]');
-    textController3 = TextEditingController(text: '[display_state]');
+    addressController = TextEditingController(text: '[display_address]');
+    cityController = TextEditingController(text: '[display_city]');
+    stateController = TextEditingController(text: '[display_state]');
     textController4 = TextEditingController();
     textController5 = TextEditingController();
     textController6 = TextEditingController();
     textController7 = TextEditingController();
     textController8 = TextEditingController();
-    textController9 = TextEditingController();
   }
 
   @override
@@ -89,7 +87,7 @@ class _KYCformWidgetState extends State<KYCformWidget> {
             Padding(
               padding: EdgeInsetsDirectional.fromSTEB(20, 0, 20, 16),
               child: TextFormField(
-                controller: textController1,
+                controller: addressController,
                 obscureText: false,
                 decoration: InputDecoration(
                   labelText: 'Home Address',
@@ -135,7 +133,7 @@ class _KYCformWidgetState extends State<KYCformWidget> {
             Padding(
               padding: EdgeInsetsDirectional.fromSTEB(20, 0, 20, 12),
               child: TextFormField(
-                controller: emailAddressController,
+                controller: cityController,
                 obscureText: false,
                 decoration: InputDecoration(
                   labelText: 'City',
@@ -181,7 +179,7 @@ class _KYCformWidgetState extends State<KYCformWidget> {
             Padding(
               padding: EdgeInsetsDirectional.fromSTEB(20, 0, 20, 12),
               child: TextFormField(
-                controller: textController3,
+                controller: stateController,
                 obscureText: false,
                 decoration: InputDecoration(
                   labelText: 'State',
@@ -218,179 +216,165 @@ class _KYCformWidgetState extends State<KYCformWidget> {
                 ),
               ),
             ),
-            TextFormField(
-              controller: textController4,
-              obscureText: false,
-              decoration: InputDecoration(
-                hintText: '[Some hint text...]',
-                hintStyle: FlutterFlowTheme.bodyText1,
-                enabledBorder: UnderlineInputBorder(
-                  borderSide: BorderSide(
-                    color: Color(0x00000000),
-                    width: 1,
+            Padding(
+              padding: EdgeInsetsDirectional.fromSTEB(20, 0, 20, 12),
+              child: TextFormField(
+                controller: textController4,
+                obscureText: false,
+                decoration: InputDecoration(
+                  hintText: '[Some hint text...]',
+                  hintStyle: FlutterFlowTheme.bodyText1,
+                  enabledBorder: UnderlineInputBorder(
+                    borderSide: BorderSide(
+                      color: Color(0x00000000),
+                      width: 1,
+                    ),
+                    borderRadius: const BorderRadius.only(
+                      topLeft: Radius.circular(4.0),
+                      topRight: Radius.circular(4.0),
+                    ),
                   ),
-                  borderRadius: const BorderRadius.only(
-                    topLeft: Radius.circular(4.0),
-                    topRight: Radius.circular(4.0),
+                  focusedBorder: UnderlineInputBorder(
+                    borderSide: BorderSide(
+                      color: Color(0x00000000),
+                      width: 1,
+                    ),
+                    borderRadius: const BorderRadius.only(
+                      topLeft: Radius.circular(4.0),
+                      topRight: Radius.circular(4.0),
+                    ),
                   ),
                 ),
-                focusedBorder: UnderlineInputBorder(
-                  borderSide: BorderSide(
-                    color: Color(0x00000000),
-                    width: 1,
-                  ),
-                  borderRadius: const BorderRadius.only(
-                    topLeft: Radius.circular(4.0),
-                    topRight: Radius.circular(4.0),
-                  ),
-                ),
+                style: FlutterFlowTheme.bodyText1,
               ),
-              style: FlutterFlowTheme.bodyText1,
             ),
-            TextFormField(
-              controller: textController5,
-              obscureText: false,
-              decoration: InputDecoration(
-                hintText: '[Some hint text...]',
-                hintStyle: FlutterFlowTheme.bodyText1,
-                enabledBorder: UnderlineInputBorder(
-                  borderSide: BorderSide(
-                    color: Color(0x00000000),
-                    width: 1,
+            Padding(
+              padding: EdgeInsetsDirectional.fromSTEB(20, 0, 20, 12),
+              child: TextFormField(
+                controller: textController5,
+                obscureText: false,
+                decoration: InputDecoration(
+                  hintText: '[Some hint text...]',
+                  hintStyle: FlutterFlowTheme.bodyText1,
+                  enabledBorder: UnderlineInputBorder(
+                    borderSide: BorderSide(
+                      color: Color(0x00000000),
+                      width: 1,
+                    ),
+                    borderRadius: const BorderRadius.only(
+                      topLeft: Radius.circular(4.0),
+                      topRight: Radius.circular(4.0),
+                    ),
                   ),
-                  borderRadius: const BorderRadius.only(
-                    topLeft: Radius.circular(4.0),
-                    topRight: Radius.circular(4.0),
+                  focusedBorder: UnderlineInputBorder(
+                    borderSide: BorderSide(
+                      color: Color(0x00000000),
+                      width: 1,
+                    ),
+                    borderRadius: const BorderRadius.only(
+                      topLeft: Radius.circular(4.0),
+                      topRight: Radius.circular(4.0),
+                    ),
                   ),
                 ),
-                focusedBorder: UnderlineInputBorder(
-                  borderSide: BorderSide(
-                    color: Color(0x00000000),
-                    width: 1,
-                  ),
-                  borderRadius: const BorderRadius.only(
-                    topLeft: Radius.circular(4.0),
-                    topRight: Radius.circular(4.0),
-                  ),
-                ),
+                style: FlutterFlowTheme.bodyText1,
               ),
-              style: FlutterFlowTheme.bodyText1,
             ),
-            TextFormField(
-              controller: textController6,
-              obscureText: false,
-              decoration: InputDecoration(
-                hintText: '[Some hint text...]',
-                hintStyle: FlutterFlowTheme.bodyText1,
-                enabledBorder: UnderlineInputBorder(
-                  borderSide: BorderSide(
-                    color: Color(0x00000000),
-                    width: 1,
+            Padding(
+              padding: EdgeInsetsDirectional.fromSTEB(20, 0, 20, 12),
+              child: TextFormField(
+                controller: textController6,
+                obscureText: false,
+                decoration: InputDecoration(
+                  hintText: '[Some hint text...]',
+                  hintStyle: FlutterFlowTheme.bodyText1,
+                  enabledBorder: UnderlineInputBorder(
+                    borderSide: BorderSide(
+                      color: Color(0x00000000),
+                      width: 1,
+                    ),
+                    borderRadius: const BorderRadius.only(
+                      topLeft: Radius.circular(4.0),
+                      topRight: Radius.circular(4.0),
+                    ),
                   ),
-                  borderRadius: const BorderRadius.only(
-                    topLeft: Radius.circular(4.0),
-                    topRight: Radius.circular(4.0),
+                  focusedBorder: UnderlineInputBorder(
+                    borderSide: BorderSide(
+                      color: Color(0x00000000),
+                      width: 1,
+                    ),
+                    borderRadius: const BorderRadius.only(
+                      topLeft: Radius.circular(4.0),
+                      topRight: Radius.circular(4.0),
+                    ),
                   ),
                 ),
-                focusedBorder: UnderlineInputBorder(
-                  borderSide: BorderSide(
-                    color: Color(0x00000000),
-                    width: 1,
-                  ),
-                  borderRadius: const BorderRadius.only(
-                    topLeft: Radius.circular(4.0),
-                    topRight: Radius.circular(4.0),
-                  ),
-                ),
+                style: FlutterFlowTheme.bodyText1,
               ),
-              style: FlutterFlowTheme.bodyText1,
             ),
-            TextFormField(
-              controller: textController7,
-              obscureText: false,
-              decoration: InputDecoration(
-                hintText: '[Some hint text...]',
-                hintStyle: FlutterFlowTheme.bodyText1,
-                enabledBorder: UnderlineInputBorder(
-                  borderSide: BorderSide(
-                    color: Color(0x00000000),
-                    width: 1,
+            Padding(
+              padding: EdgeInsetsDirectional.fromSTEB(20, 0, 20, 12),
+              child: TextFormField(
+                controller: textController7,
+                obscureText: false,
+                decoration: InputDecoration(
+                  hintText: '[Some hint text...]',
+                  hintStyle: FlutterFlowTheme.bodyText1,
+                  enabledBorder: UnderlineInputBorder(
+                    borderSide: BorderSide(
+                      color: Color(0x00000000),
+                      width: 1,
+                    ),
+                    borderRadius: const BorderRadius.only(
+                      topLeft: Radius.circular(4.0),
+                      topRight: Radius.circular(4.0),
+                    ),
                   ),
-                  borderRadius: const BorderRadius.only(
-                    topLeft: Radius.circular(4.0),
-                    topRight: Radius.circular(4.0),
+                  focusedBorder: UnderlineInputBorder(
+                    borderSide: BorderSide(
+                      color: Color(0x00000000),
+                      width: 1,
+                    ),
+                    borderRadius: const BorderRadius.only(
+                      topLeft: Radius.circular(4.0),
+                      topRight: Radius.circular(4.0),
+                    ),
                   ),
                 ),
-                focusedBorder: UnderlineInputBorder(
-                  borderSide: BorderSide(
-                    color: Color(0x00000000),
-                    width: 1,
-                  ),
-                  borderRadius: const BorderRadius.only(
-                    topLeft: Radius.circular(4.0),
-                    topRight: Radius.circular(4.0),
-                  ),
-                ),
+                style: FlutterFlowTheme.bodyText1,
               ),
-              style: FlutterFlowTheme.bodyText1,
             ),
-            TextFormField(
-              controller: textController8,
-              obscureText: false,
-              decoration: InputDecoration(
-                hintText: '[Some hint text...]',
-                hintStyle: FlutterFlowTheme.bodyText1,
-                enabledBorder: UnderlineInputBorder(
-                  borderSide: BorderSide(
-                    color: Color(0x00000000),
-                    width: 1,
+            Padding(
+              padding: EdgeInsetsDirectional.fromSTEB(20, 0, 20, 12),
+              child: TextFormField(
+                controller: textController8,
+                obscureText: false,
+                decoration: InputDecoration(
+                  hintText: '[Some hint text...]',
+                  hintStyle: FlutterFlowTheme.bodyText1,
+                  enabledBorder: UnderlineInputBorder(
+                    borderSide: BorderSide(
+                      color: Color(0x00000000),
+                      width: 1,
+                    ),
+                    borderRadius: const BorderRadius.only(
+                      topLeft: Radius.circular(4.0),
+                      topRight: Radius.circular(4.0),
+                    ),
                   ),
-                  borderRadius: const BorderRadius.only(
-                    topLeft: Radius.circular(4.0),
-                    topRight: Radius.circular(4.0),
+                  focusedBorder: UnderlineInputBorder(
+                    borderSide: BorderSide(
+                      color: Color(0x00000000),
+                      width: 1,
+                    ),
+                    borderRadius: const BorderRadius.only(
+                      topLeft: Radius.circular(4.0),
+                      topRight: Radius.circular(4.0),
+                    ),
                   ),
                 ),
-                focusedBorder: UnderlineInputBorder(
-                  borderSide: BorderSide(
-                    color: Color(0x00000000),
-                    width: 1,
-                  ),
-                  borderRadius: const BorderRadius.only(
-                    topLeft: Radius.circular(4.0),
-                    topRight: Radius.circular(4.0),
-                  ),
-                ),
+                style: FlutterFlowTheme.bodyText1,
               ),
-              style: FlutterFlowTheme.bodyText1,
-            ),
-            TextFormField(
-              controller: textController9,
-              obscureText: false,
-              decoration: InputDecoration(
-                hintText: '[Some hint text...]',
-                hintStyle: FlutterFlowTheme.bodyText1,
-                enabledBorder: UnderlineInputBorder(
-                  borderSide: BorderSide(
-                    color: Color(0x00000000),
-                    width: 1,
-                  ),
-                  borderRadius: const BorderRadius.only(
-                    topLeft: Radius.circular(4.0),
-                    topRight: Radius.circular(4.0),
-                  ),
-                ),
-                focusedBorder: UnderlineInputBorder(
-                  borderSide: BorderSide(
-                    color: Color(0x00000000),
-                    width: 1,
-                  ),
-                  borderRadius: const BorderRadius.only(
-                    topLeft: Radius.circular(4.0),
-                    topRight: Radius.circular(4.0),
-                  ),
-                ),
-              ),
-              style: FlutterFlowTheme.bodyText1,
             ),
             Align(
               alignment: AlignmentDirectional(0, 0.05),
