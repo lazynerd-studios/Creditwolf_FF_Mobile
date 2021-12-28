@@ -16,7 +16,7 @@ class _KYCformWidgetState extends State<KYCformWidget> {
   TextEditingController addressController;
   TextEditingController cityController;
   TextEditingController stateController;
-  TextEditingController textController4;
+  TextEditingController dobController;
   TextEditingController textController5;
   TextEditingController textController6;
   TextEditingController textController7;
@@ -29,7 +29,7 @@ class _KYCformWidgetState extends State<KYCformWidget> {
     addressController = TextEditingController(text: '[display_address]');
     cityController = TextEditingController(text: '[display_city]');
     stateController = TextEditingController(text: '[display_state]');
-    textController4 = TextEditingController();
+    dobController = TextEditingController(text: '[display_dob]');
     textController5 = TextEditingController();
     textController6 = TextEditingController();
     textController7 = TextEditingController();
@@ -219,33 +219,41 @@ class _KYCformWidgetState extends State<KYCformWidget> {
             Padding(
               padding: EdgeInsetsDirectional.fromSTEB(20, 0, 20, 12),
               child: TextFormField(
-                controller: textController4,
+                controller: dobController,
                 obscureText: false,
                 decoration: InputDecoration(
-                  hintText: '[Some hint text...]',
-                  hintStyle: FlutterFlowTheme.bodyText1,
-                  enabledBorder: UnderlineInputBorder(
-                    borderSide: BorderSide(
-                      color: Color(0x00000000),
-                      width: 1,
-                    ),
-                    borderRadius: const BorderRadius.only(
-                      topLeft: Radius.circular(4.0),
-                      topRight: Radius.circular(4.0),
-                    ),
+                  labelText: 'Date of Birth',
+                  labelStyle: FlutterFlowTheme.bodyText1.override(
+                    fontFamily: 'Lexend Deca',
+                    color: Color(0xFF95A1AC),
                   ),
-                  focusedBorder: UnderlineInputBorder(
-                    borderSide: BorderSide(
-                      color: Color(0x00000000),
-                      width: 1,
-                    ),
-                    borderRadius: const BorderRadius.only(
-                      topLeft: Radius.circular(4.0),
-                      topRight: Radius.circular(4.0),
-                    ),
+                  hintText: 'dd/mm/yyyyy',
+                  hintStyle: FlutterFlowTheme.bodyText1.override(
+                    fontFamily: 'Lexend Deca',
+                    color: Color(0xFF14181B),
                   ),
+                  enabledBorder: OutlineInputBorder(
+                    borderSide: BorderSide(
+                      color: Color(0xFFDBE2E7),
+                      width: 2,
+                    ),
+                    borderRadius: BorderRadius.circular(8),
+                  ),
+                  focusedBorder: OutlineInputBorder(
+                    borderSide: BorderSide(
+                      color: Color(0xFFDBE2E7),
+                      width: 2,
+                    ),
+                    borderRadius: BorderRadius.circular(8),
+                  ),
+                  filled: true,
+                  fillColor: Colors.white,
+                  contentPadding: EdgeInsetsDirectional.fromSTEB(20, 24, 0, 24),
                 ),
-                style: FlutterFlowTheme.bodyText1,
+                style: FlutterFlowTheme.bodyText1.override(
+                  fontFamily: 'Lexend Deca',
+                  color: Color(0xFF14181B),
+                ),
               ),
             ),
             Padding(
@@ -256,26 +264,23 @@ class _KYCformWidgetState extends State<KYCformWidget> {
                 decoration: InputDecoration(
                   hintText: '[Some hint text...]',
                   hintStyle: FlutterFlowTheme.bodyText1,
-                  enabledBorder: UnderlineInputBorder(
+                  enabledBorder: OutlineInputBorder(
                     borderSide: BorderSide(
-                      color: Color(0x00000000),
-                      width: 1,
+                      color: Color(0xFFDBE2E7),
+                      width: 2,
                     ),
-                    borderRadius: const BorderRadius.only(
-                      topLeft: Radius.circular(4.0),
-                      topRight: Radius.circular(4.0),
-                    ),
+                    borderRadius: BorderRadius.circular(8),
                   ),
-                  focusedBorder: UnderlineInputBorder(
+                  focusedBorder: OutlineInputBorder(
                     borderSide: BorderSide(
-                      color: Color(0x00000000),
-                      width: 1,
+                      color: Color(0xFFDBE2E7),
+                      width: 2,
                     ),
-                    borderRadius: const BorderRadius.only(
-                      topLeft: Radius.circular(4.0),
-                      topRight: Radius.circular(4.0),
-                    ),
+                    borderRadius: BorderRadius.circular(8),
                   ),
+                  filled: true,
+                  fillColor: Colors.white,
+                  contentPadding: EdgeInsetsDirectional.fromSTEB(20, 24, 0, 24),
                 ),
                 style: FlutterFlowTheme.bodyText1,
               ),
@@ -288,26 +293,23 @@ class _KYCformWidgetState extends State<KYCformWidget> {
                 decoration: InputDecoration(
                   hintText: '[Some hint text...]',
                   hintStyle: FlutterFlowTheme.bodyText1,
-                  enabledBorder: UnderlineInputBorder(
+                  enabledBorder: OutlineInputBorder(
                     borderSide: BorderSide(
-                      color: Color(0x00000000),
-                      width: 1,
+                      color: Color(0xFFDBE2E7),
+                      width: 2,
                     ),
-                    borderRadius: const BorderRadius.only(
-                      topLeft: Radius.circular(4.0),
-                      topRight: Radius.circular(4.0),
-                    ),
+                    borderRadius: BorderRadius.circular(8),
                   ),
-                  focusedBorder: UnderlineInputBorder(
+                  focusedBorder: OutlineInputBorder(
                     borderSide: BorderSide(
-                      color: Color(0x00000000),
-                      width: 1,
+                      color: Color(0xFFDBE2E7),
+                      width: 2,
                     ),
-                    borderRadius: const BorderRadius.only(
-                      topLeft: Radius.circular(4.0),
-                      topRight: Radius.circular(4.0),
-                    ),
+                    borderRadius: BorderRadius.circular(8),
                   ),
+                  filled: true,
+                  fillColor: Colors.white,
+                  contentPadding: EdgeInsetsDirectional.fromSTEB(20, 24, 0, 24),
                 ),
                 style: FlutterFlowTheme.bodyText1,
               ),
