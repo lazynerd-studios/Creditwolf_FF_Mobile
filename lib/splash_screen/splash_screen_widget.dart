@@ -1,6 +1,5 @@
 import '../authentication/authentication_widget.dart';
 import '../flutter_flow/flutter_flow_animations.dart';
-import '../flutter_flow/flutter_flow_calendar.dart';
 import '../flutter_flow/flutter_flow_theme.dart';
 import '../flutter_flow/flutter_flow_util.dart';
 import 'package:flutter/material.dart';
@@ -16,8 +15,6 @@ class SplashScreenWidget extends StatefulWidget {
 
 class _SplashScreenWidgetState extends State<SplashScreenWidget>
     with TickerProviderStateMixin {
-  DateTimeRange calendarSelectedDay;
-  final scaffoldKey = GlobalKey<ScaffoldState>();
   final animationsMap = {
     'containerOnPageLoadAnimation': AnimationInfo(
       trigger: AnimationTrigger.onPageLoad,
@@ -38,6 +35,7 @@ class _SplashScreenWidgetState extends State<SplashScreenWidget>
       scale: 0.4,
     ),
   };
+  final scaffoldKey = GlobalKey<ScaffoldState>();
 
   @override
   void initState() {
@@ -46,11 +44,6 @@ class _SplashScreenWidgetState extends State<SplashScreenWidget>
       animationsMap.values
           .where((anim) => anim.trigger == AnimationTrigger.onPageLoad),
       this,
-    );
-
-    calendarSelectedDay = DateTimeRange(
-      start: DateTime.now().startOfDay,
-      end: DateTime.now().endOfDay,
     );
   }
 
@@ -95,19 +88,6 @@ class _SplashScreenWidgetState extends State<SplashScreenWidget>
                   fit: BoxFit.fitHeight,
                 ),
               ).animated([animationsMap['imageOnPageLoadAnimation']]),
-              FlutterFlowCalendar(
-                color: FlutterFlowTheme.primaryColor,
-                weekFormat: false,
-                weekStartsMonday: false,
-                onChange: (DateTimeRange newSelectedDate) {
-                  setState(() => calendarSelectedDay = newSelectedDate);
-                },
-                titleStyle: TextStyle(),
-                dayOfWeekStyle: TextStyle(),
-                dateStyle: TextStyle(),
-                selectedDateStyle: TextStyle(),
-                inactiveDateStyle: TextStyle(),
-              ),
             ],
           ).animated([animationsMap['columnOnPageLoadAnimation']]),
         ),
