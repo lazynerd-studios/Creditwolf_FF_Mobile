@@ -58,7 +58,7 @@ class _ForgotpasswordWidgetState extends State<ForgotpasswordWidget> {
         centerTitle: false,
         elevation: 0,
       ),
-      backgroundColor: Color(0xFF4B39EF),
+      backgroundColor: Color(0xFFEF5E5E),
       body: Container(
         width: MediaQuery.of(context).size.width,
         height: MediaQuery.of(context).size.height * 1,

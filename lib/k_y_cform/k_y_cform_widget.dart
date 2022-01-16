@@ -311,7 +311,7 @@ class _KYCformWidgetState extends State<KYCformWidget> {
                     child: Padding(
                       padding: EdgeInsetsDirectional.fromSTEB(20, 0, 20, 12),
                       child: FlutterFlowDropDown(
-                        options: ['Gender', 'Male', 'Female'].toList(),
+                        options: ['Male', 'Female'].toList(),
                         onChanged: (val) =>
                             setState(() => dropDownValue1 = val),
                         width: 280,
@@ -319,8 +319,8 @@ class _KYCformWidgetState extends State<KYCformWidget> {
                         textStyle: FlutterFlowTheme.bodyText1.override(
                           fontFamily: 'Lexend Deca',
                           color: Color(0xFF14181B),
-                          fontStyle: FontStyle.italic,
                         ),
+                        hintText: 'Gender',
                         fillColor: Colors.white,
                         elevation: 2,
                         borderColor: Color(0xFFDBE2E7),
@@ -336,7 +336,6 @@ class _KYCformWidgetState extends State<KYCformWidget> {
                     child: Padding(
                       padding: EdgeInsetsDirectional.fromSTEB(20, 0, 20, 12),
                       child: FlutterFlowDropDown(
-                        initialOption: dropDownValue2 ??= 'Relationsip stutus',
                         options: ['Single', 'Married', 'Divorced'].toList(),
                         onChanged: (val) =>
                             setState(() => dropDownValue2 = val),
@@ -345,8 +344,8 @@ class _KYCformWidgetState extends State<KYCformWidget> {
                         textStyle: FlutterFlowTheme.bodyText1.override(
                           fontFamily: 'Lexend Deca',
                           color: Color(0xFF14181B),
-                          fontStyle: FontStyle.italic,
                         ),
+                        hintText: 'Relationsip status',
                         fillColor: Colors.white,
                         elevation: 2,
                         borderColor: Color(0xFFDBE2E7),
