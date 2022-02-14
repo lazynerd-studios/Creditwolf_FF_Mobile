@@ -61,54 +61,59 @@ class _PhoneOTPWidgetState extends State<PhoneOTPWidget> {
               padding: EdgeInsetsDirectional.fromSTEB(20, 20, 20, 0),
               child: Text(
                 'A token has been sent to {Phone number.}. Please input it below to verify your phone number. ',
+                textAlign: TextAlign.center,
                 style: FlutterFlowTheme.of(context).bodyText1,
               ),
             ),
-            Padding(
-              padding: EdgeInsetsDirectional.fromSTEB(20, 20, 20, 0),
-              child: TextFormField(
-                controller: phoneNumberController,
-                obscureText: false,
-                decoration: InputDecoration(
-                  labelText: 'Enter the 6 digit code',
-                  labelStyle: FlutterFlowTheme.of(context).bodyText1.override(
+            Align(
+              alignment: AlignmentDirectional(0, 0),
+              child: Padding(
+                padding: EdgeInsetsDirectional.fromSTEB(20, 20, 20, 0),
+                child: TextFormField(
+                  controller: phoneNumberController,
+                  obscureText: false,
+                  decoration: InputDecoration(
+                    labelText: 'Enter the 6 digit code',
+                    labelStyle: FlutterFlowTheme.of(context).bodyText1.override(
+                          fontFamily: 'Lexend Deca',
+                          color: Color(0xFFEF5E5E),
+                          fontSize: 14,
+                          fontWeight: FontWeight.normal,
+                        ),
+                    hintText: '000000',
+                    hintStyle: FlutterFlowTheme.of(context).bodyText1.override(
+                          fontFamily: 'Lexend Deca',
+                          color: Color(0xFFEF5E5E),
+                          fontSize: 14,
+                          fontWeight: FontWeight.normal,
+                        ),
+                    enabledBorder: OutlineInputBorder(
+                      borderSide: BorderSide(
+                        color: Color(0xFFEF5E5E),
+                        width: 2,
+                      ),
+                      borderRadius: BorderRadius.circular(8),
+                    ),
+                    focusedBorder: OutlineInputBorder(
+                      borderSide: BorderSide(
+                        color: Color(0xFFEF5E5E),
+                        width: 2,
+                      ),
+                      borderRadius: BorderRadius.circular(8),
+                    ),
+                    filled: true,
+                    fillColor: Colors.white,
+                    contentPadding:
+                        EdgeInsetsDirectional.fromSTEB(20, 24, 20, 24),
+                  ),
+                  style: FlutterFlowTheme.of(context).bodyText1.override(
                         fontFamily: 'Lexend Deca',
                         color: Color(0xFFEF5E5E),
                         fontSize: 14,
                         fontWeight: FontWeight.normal,
                       ),
-                  hintText: '000000',
-                  hintStyle: FlutterFlowTheme.of(context).bodyText1.override(
-                        fontFamily: 'Lexend Deca',
-                        color: Color(0x98FFFFFF),
-                        fontSize: 14,
-                        fontWeight: FontWeight.normal,
-                      ),
-                  enabledBorder: OutlineInputBorder(
-                    borderSide: BorderSide(
-                      color: Color(0xFFEF5E5E),
-                      width: 2,
-                    ),
-                    borderRadius: BorderRadius.circular(8),
-                  ),
-                  focusedBorder: OutlineInputBorder(
-                    borderSide: BorderSide(
-                      color: Color(0xFFEF5E5E),
-                      width: 2,
-                    ),
-                    borderRadius: BorderRadius.circular(8),
-                  ),
-                  filled: true,
-                  fillColor: Colors.white,
-                  contentPadding:
-                      EdgeInsetsDirectional.fromSTEB(20, 24, 20, 24),
+                  textAlign: TextAlign.center,
                 ),
-                style: FlutterFlowTheme.of(context).bodyText1.override(
-                      fontFamily: 'Lexend Deca',
-                      color: Color(0xFFEF5E5E),
-                      fontSize: 14,
-                      fontWeight: FontWeight.normal,
-                    ),
               ),
             ),
             Padding(
