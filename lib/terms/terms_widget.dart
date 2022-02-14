@@ -24,12 +24,12 @@ class _TermsWidgetState extends State<TermsWidget> {
         automaticallyImplyLeading: true,
         title: Text(
           'Terms & Conditions',
-          style: FlutterFlowTheme.bodyText1.override(
-            fontFamily: 'Poppins',
-            color: Colors.white,
-            fontSize: 18,
-            fontWeight: FontWeight.w500,
-          ),
+          style: FlutterFlowTheme.of(context).bodyText1.override(
+                fontFamily: 'Poppins',
+                color: Colors.white,
+                fontSize: 18,
+                fontWeight: FontWeight.w500,
+              ),
         ),
         actions: [],
         centerTitle: false,

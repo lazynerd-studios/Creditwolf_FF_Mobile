@@ -37,12 +37,12 @@ class _PhoneVerificationWidgetState extends State<PhoneVerificationWidget> {
         ),
         title: Text(
           'Phone Verification',
-          style: FlutterFlowTheme.title2.override(
-            fontFamily: 'Lexend Deca',
-            color: Colors.white,
-            fontSize: 18,
-            fontWeight: FontWeight.w500,
-          ),
+          style: FlutterFlowTheme.of(context).title2.override(
+                fontFamily: 'Lexend Deca',
+                color: Colors.white,
+                fontSize: 18,
+                fontWeight: FontWeight.w500,
+              ),
         ),
         actions: [],
         centerTitle: false,
@@ -65,19 +65,19 @@ class _PhoneVerificationWidgetState extends State<PhoneVerificationWidget> {
                 obscureText: false,
                 decoration: InputDecoration(
                   labelText: '+2348012345678',
-                  labelStyle: FlutterFlowTheme.bodyText1.override(
-                    fontFamily: 'Lexend Deca',
-                    color: Color(0xFFEF5E5E),
-                    fontSize: 14,
-                    fontWeight: FontWeight.normal,
-                  ),
+                  labelStyle: FlutterFlowTheme.of(context).bodyText1.override(
+                        fontFamily: 'Lexend Deca',
+                        color: Color(0xFFEF5E5E),
+                        fontSize: 14,
+                        fontWeight: FontWeight.normal,
+                      ),
                   hintText: 'Please enter a valid number...',
-                  hintStyle: FlutterFlowTheme.bodyText1.override(
-                    fontFamily: 'Lexend Deca',
-                    color: Color(0xFFEF5E5E),
-                    fontSize: 14,
-                    fontWeight: FontWeight.normal,
-                  ),
+                  hintStyle: FlutterFlowTheme.of(context).bodyText1.override(
+                        fontFamily: 'Lexend Deca',
+                        color: Color(0xFFEF5E5E),
+                        fontSize: 14,
+                        fontWeight: FontWeight.normal,
+                      ),
                   enabledBorder: OutlineInputBorder(
                     borderSide: BorderSide(
                       color: Color(0xFFEF5E5E),
@@ -95,12 +95,12 @@ class _PhoneVerificationWidgetState extends State<PhoneVerificationWidget> {
                   contentPadding:
                       EdgeInsetsDirectional.fromSTEB(20, 24, 20, 24),
                 ),
-                style: FlutterFlowTheme.bodyText1.override(
-                  fontFamily: 'Lexend Deca',
-                  color: Color(0xFFEF5E5E),
-                  fontSize: 14,
-                  fontWeight: FontWeight.normal,
-                ),
+                style: FlutterFlowTheme.of(context).bodyText1.override(
+                      fontFamily: 'Lexend Deca',
+                      color: Color(0xFFEF5E5E),
+                      fontSize: 14,
+                      fontWeight: FontWeight.normal,
+                    ),
                 keyboardType: TextInputType.phone,
               ),
             ),
@@ -115,12 +115,12 @@ class _PhoneVerificationWidgetState extends State<PhoneVerificationWidget> {
                   width: 230,
                   height: 60,
                   color: Color(0xFFEF5E5E),
-                  textStyle: FlutterFlowTheme.subtitle2.override(
-                    fontFamily: 'Lexend Deca',
-                    color: Colors.white,
-                    fontSize: 16,
-                    fontWeight: FontWeight.w500,
-                  ),
+                  textStyle: FlutterFlowTheme.of(context).subtitle2.override(
+                        fontFamily: 'Lexend Deca',
+                        color: Colors.white,
+                        fontSize: 16,
+                        fontWeight: FontWeight.w500,
+                      ),
                   elevation: 3,
                   borderSide: BorderSide(
                     color: Colors.transparent,

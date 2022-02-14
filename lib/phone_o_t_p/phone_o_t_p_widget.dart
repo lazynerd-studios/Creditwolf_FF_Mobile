@@ -36,12 +36,12 @@ class _PhoneOTPWidgetState extends State<PhoneOTPWidget> {
         ),
         title: Text(
           'OTP Verification',
-          style: FlutterFlowTheme.title2.override(
-            fontFamily: 'Lexend Deca',
-            color: Colors.white,
-            fontSize: 22,
-            fontWeight: FontWeight.bold,
-          ),
+          style: FlutterFlowTheme.of(context).title2.override(
+                fontFamily: 'Lexend Deca',
+                color: Colors.white,
+                fontSize: 22,
+                fontWeight: FontWeight.bold,
+              ),
         ),
         actions: [],
         centerTitle: false,
@@ -59,24 +59,31 @@ class _PhoneOTPWidgetState extends State<PhoneOTPWidget> {
           children: [
             Padding(
               padding: EdgeInsetsDirectional.fromSTEB(20, 20, 20, 0),
+              child: Text(
+                'A token has been sent to {Phone number.}. Please input it below to verify your phone number. ',
+                style: FlutterFlowTheme.of(context).bodyText1,
+              ),
+            ),
+            Padding(
+              padding: EdgeInsetsDirectional.fromSTEB(20, 20, 20, 0),
               child: TextFormField(
                 controller: phoneNumberController,
                 obscureText: false,
                 decoration: InputDecoration(
                   labelText: 'Enter the 6 digit code',
-                  labelStyle: FlutterFlowTheme.bodyText1.override(
-                    fontFamily: 'Lexend Deca',
-                    color: Color(0xFFEF5E5E),
-                    fontSize: 14,
-                    fontWeight: FontWeight.normal,
-                  ),
+                  labelStyle: FlutterFlowTheme.of(context).bodyText1.override(
+                        fontFamily: 'Lexend Deca',
+                        color: Color(0xFFEF5E5E),
+                        fontSize: 14,
+                        fontWeight: FontWeight.normal,
+                      ),
                   hintText: '000000',
-                  hintStyle: FlutterFlowTheme.bodyText1.override(
-                    fontFamily: 'Lexend Deca',
-                    color: Color(0x98FFFFFF),
-                    fontSize: 14,
-                    fontWeight: FontWeight.normal,
-                  ),
+                  hintStyle: FlutterFlowTheme.of(context).bodyText1.override(
+                        fontFamily: 'Lexend Deca',
+                        color: Color(0x98FFFFFF),
+                        fontSize: 14,
+                        fontWeight: FontWeight.normal,
+                      ),
                   enabledBorder: OutlineInputBorder(
                     borderSide: BorderSide(
                       color: Color(0xFFEF5E5E),
@@ -96,12 +103,12 @@ class _PhoneOTPWidgetState extends State<PhoneOTPWidget> {
                   contentPadding:
                       EdgeInsetsDirectional.fromSTEB(20, 24, 20, 24),
                 ),
-                style: FlutterFlowTheme.bodyText1.override(
-                  fontFamily: 'Lexend Deca',
-                  color: Color(0xFFEF5E5E),
-                  fontSize: 14,
-                  fontWeight: FontWeight.normal,
-                ),
+                style: FlutterFlowTheme.of(context).bodyText1.override(
+                      fontFamily: 'Lexend Deca',
+                      color: Color(0xFFEF5E5E),
+                      fontSize: 14,
+                      fontWeight: FontWeight.normal,
+                    ),
               ),
             ),
             Padding(
@@ -115,12 +122,12 @@ class _PhoneOTPWidgetState extends State<PhoneOTPWidget> {
                   width: 230,
                   height: 60,
                   color: Color(0xFFEF5E5E),
-                  textStyle: FlutterFlowTheme.subtitle2.override(
-                    fontFamily: 'Lexend Deca',
-                    color: Colors.white,
-                    fontSize: 16,
-                    fontWeight: FontWeight.w500,
-                  ),
+                  textStyle: FlutterFlowTheme.of(context).subtitle2.override(
+                        fontFamily: 'Lexend Deca',
+                        color: Colors.white,
+                        fontSize: 16,
+                        fontWeight: FontWeight.w500,
+                      ),
                   elevation: 3,
                   borderSide: BorderSide(
                     color: Colors.transparent,
@@ -128,6 +135,26 @@ class _PhoneOTPWidgetState extends State<PhoneOTPWidget> {
                   ),
                   borderRadius: 8,
                 ),
+              ),
+            ),
+            Padding(
+              padding: EdgeInsetsDirectional.fromSTEB(20, 20, 20, 0),
+              child: Row(
+                mainAxisSize: MainAxisSize.max,
+                mainAxisAlignment: MainAxisAlignment.center,
+                children: [
+                  Text(
+                    'Did not receive token?',
+                    style: FlutterFlowTheme.of(context).bodyText1,
+                  ),
+                  Text(
+                    ' Resend',
+                    style: FlutterFlowTheme.of(context).bodyText1.override(
+                          fontFamily: 'Poppins',
+                          color: Color(0xFFEF5E5E),
+                        ),
+                  ),
+                ],
               ),
             ),
           ],

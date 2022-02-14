@@ -41,12 +41,12 @@ class _BVNVerificationWidgetState extends State<BVNVerificationWidget> {
         ),
         title: Text(
           'BVN Verification',
-          style: FlutterFlowTheme.subtitle1.override(
-            fontFamily: 'Lexend Deca',
-            color: Colors.white,
-            fontSize: 18,
-            fontWeight: FontWeight.w500,
-          ),
+          style: FlutterFlowTheme.of(context).subtitle1.override(
+                fontFamily: 'Lexend Deca',
+                color: Colors.white,
+                fontSize: 18,
+                fontWeight: FontWeight.w500,
+              ),
         ),
         actions: [],
         centerTitle: false,
@@ -83,21 +83,15 @@ class _BVNVerificationWidgetState extends State<BVNVerificationWidget> {
                                 obscureText: false,
                                 decoration: InputDecoration(
                                   labelText: 'Your BVN',
-                                  labelStyle:
-                                      FlutterFlowTheme.bodyText1.override(
-                                    fontFamily: 'Lexend Deca',
-                                    color: Color(0xFF090F13),
-                                    fontSize: 14,
-                                    fontWeight: FontWeight.normal,
-                                  ),
                                   hintText: 'What do people call you...?',
-                                  hintStyle:
-                                      FlutterFlowTheme.bodyText1.override(
-                                    fontFamily: 'Lexend Deca',
-                                    color: Color(0xFF8B97A2),
-                                    fontSize: 14,
-                                    fontWeight: FontWeight.normal,
-                                  ),
+                                  hintStyle: FlutterFlowTheme.of(context)
+                                      .bodyText1
+                                      .override(
+                                        fontFamily: 'Lexend Deca',
+                                        color: Color(0xFF8B97A2),
+                                        fontSize: 14,
+                                        fontWeight: FontWeight.normal,
+                                      ),
                                   enabledBorder: OutlineInputBorder(
                                     borderSide: BorderSide(
                                       color: Color(0xFFDBE2E7),
@@ -113,12 +107,14 @@ class _BVNVerificationWidgetState extends State<BVNVerificationWidget> {
                                     borderRadius: BorderRadius.circular(8),
                                   ),
                                 ),
-                                style: FlutterFlowTheme.bodyText1.override(
-                                  fontFamily: 'Lexend Deca',
-                                  color: Color(0xFF090F13),
-                                  fontSize: 14,
-                                  fontWeight: FontWeight.normal,
-                                ),
+                                style: FlutterFlowTheme.of(context)
+                                    .bodyText1
+                                    .override(
+                                      fontFamily: 'Lexend Deca',
+                                      color: Color(0xFF090F13),
+                                      fontSize: 14,
+                                      fontWeight: FontWeight.normal,
+                                    ),
                               ),
                             ),
                           ],
@@ -139,12 +135,14 @@ class _BVNVerificationWidgetState extends State<BVNVerificationWidget> {
                                 width: 230,
                                 height: 50,
                                 color: Color(0xFFEF5E5E),
-                                textStyle: FlutterFlowTheme.bodyText2.override(
-                                  fontFamily: 'Lexend Deca',
-                                  color: Colors.white,
-                                  fontSize: 14,
-                                  fontWeight: FontWeight.normal,
-                                ),
+                                textStyle: FlutterFlowTheme.of(context)
+                                    .bodyText2
+                                    .override(
+                                      fontFamily: 'Lexend Deca',
+                                      color: Colors.white,
+                                      fontSize: 14,
+                                      fontWeight: FontWeight.normal,
+                                    ),
                                 elevation: 3,
                                 borderSide: BorderSide(
                                   color: Colors.transparent,

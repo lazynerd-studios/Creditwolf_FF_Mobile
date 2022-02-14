@@ -48,12 +48,12 @@ class _ProfileWidgetState extends State<ProfileWidget> {
         ),
         title: Text(
           'Edit Profile',
-          style: FlutterFlowTheme.bodyText1.override(
-            fontFamily: 'Lexend Deca',
-            color: Colors.white,
-            fontSize: 18,
-            fontWeight: FontWeight.w500,
-          ),
+          style: FlutterFlowTheme.of(context).bodyText1.override(
+                fontFamily: 'Lexend Deca',
+                color: Colors.white,
+                fontSize: 18,
+                fontWeight: FontWeight.w500,
+              ),
         ),
         actions: [],
         centerTitle: false,
@@ -111,12 +111,13 @@ class _ProfileWidgetState extends State<ProfileWidget> {
                       width: 130,
                       height: 40,
                       color: Colors.white,
-                      textStyle: FlutterFlowTheme.bodyText1.override(
-                        fontFamily: 'Lexend Deca',
-                        color: Color(0xFFEF5E5E),
-                        fontSize: 14,
-                        fontWeight: FontWeight.normal,
-                      ),
+                      textStyle:
+                          FlutterFlowTheme.of(context).bodyText1.override(
+                                fontFamily: 'Lexend Deca',
+                                color: Color(0xFFEF5E5E),
+                                fontSize: 14,
+                                fontWeight: FontWeight.normal,
+                              ),
                       elevation: 2,
                       borderSide: BorderSide(
                         color: Colors.transparent,
@@ -135,19 +136,19 @@ class _ProfileWidgetState extends State<ProfileWidget> {
                 obscureText: false,
                 decoration: InputDecoration(
                   labelText: 'Full Name',
-                  labelStyle: FlutterFlowTheme.bodyText1.override(
-                    fontFamily: 'Lexend Deca',
-                    color: Color(0xFF95A1AC),
-                    fontSize: 14,
-                    fontWeight: FontWeight.normal,
-                  ),
+                  labelStyle: FlutterFlowTheme.of(context).bodyText1.override(
+                        fontFamily: 'Lexend Deca',
+                        color: Color(0xFF95A1AC),
+                        fontSize: 14,
+                        fontWeight: FontWeight.normal,
+                      ),
                   hintText: 'Your full name...',
-                  hintStyle: FlutterFlowTheme.bodyText1.override(
-                    fontFamily: 'Lexend Deca',
-                    color: Color(0xFF95A1AC),
-                    fontSize: 14,
-                    fontWeight: FontWeight.normal,
-                  ),
+                  hintStyle: FlutterFlowTheme.of(context).bodyText1.override(
+                        fontFamily: 'Lexend Deca',
+                        color: Color(0xFF95A1AC),
+                        fontSize: 14,
+                        fontWeight: FontWeight.normal,
+                      ),
                   enabledBorder: OutlineInputBorder(
                     borderSide: BorderSide(
                       color: Color(0xFF9B6D6D),
@@ -166,12 +167,12 @@ class _ProfileWidgetState extends State<ProfileWidget> {
                   fillColor: Colors.white,
                   contentPadding: EdgeInsetsDirectional.fromSTEB(20, 24, 0, 24),
                 ),
-                style: FlutterFlowTheme.bodyText1.override(
-                  fontFamily: 'Lexend Deca',
-                  color: Color(0xFF14181B),
-                  fontSize: 14,
-                  fontWeight: FontWeight.normal,
-                ),
+                style: FlutterFlowTheme.of(context).bodyText1.override(
+                      fontFamily: 'Lexend Deca',
+                      color: Color(0xFF14181B),
+                      fontSize: 14,
+                      fontWeight: FontWeight.normal,
+                    ),
               ),
             ),
             Padding(
@@ -181,19 +182,19 @@ class _ProfileWidgetState extends State<ProfileWidget> {
                 obscureText: false,
                 decoration: InputDecoration(
                   labelText: 'Email Address',
-                  labelStyle: FlutterFlowTheme.bodyText1.override(
-                    fontFamily: 'Lexend Deca',
-                    color: Color(0xFF95A1AC),
-                    fontSize: 14,
-                    fontWeight: FontWeight.normal,
-                  ),
+                  labelStyle: FlutterFlowTheme.of(context).bodyText1.override(
+                        fontFamily: 'Lexend Deca',
+                        color: Color(0xFF95A1AC),
+                        fontSize: 14,
+                        fontWeight: FontWeight.normal,
+                      ),
                   hintText: 'Your email..',
-                  hintStyle: FlutterFlowTheme.bodyText1.override(
-                    fontFamily: 'Lexend Deca',
-                    color: Color(0xFF95A1AC),
-                    fontSize: 14,
-                    fontWeight: FontWeight.normal,
-                  ),
+                  hintStyle: FlutterFlowTheme.of(context).bodyText1.override(
+                        fontFamily: 'Lexend Deca',
+                        color: Color(0xFF95A1AC),
+                        fontSize: 14,
+                        fontWeight: FontWeight.normal,
+                      ),
                   enabledBorder: OutlineInputBorder(
                     borderSide: BorderSide(
                       color: Color(0xFF9B6D6D),
@@ -212,12 +213,12 @@ class _ProfileWidgetState extends State<ProfileWidget> {
                   fillColor: Colors.white,
                   contentPadding: EdgeInsetsDirectional.fromSTEB(20, 24, 0, 24),
                 ),
-                style: FlutterFlowTheme.bodyText1.override(
-                  fontFamily: 'Lexend Deca',
-                  color: Color(0xFF14181B),
-                  fontSize: 14,
-                  fontWeight: FontWeight.normal,
-                ),
+                style: FlutterFlowTheme.of(context).bodyText1.override(
+                      fontFamily: 'Lexend Deca',
+                      color: Color(0xFF14181B),
+                      fontSize: 14,
+                      fontWeight: FontWeight.normal,
+                    ),
               ),
             ),
             Padding(
@@ -227,15 +228,15 @@ class _ProfileWidgetState extends State<ProfileWidget> {
                 obscureText: false,
                 decoration: InputDecoration(
                   labelText: 'Phone Number',
-                  labelStyle: FlutterFlowTheme.bodyText1.override(
-                    fontFamily: 'Lexend Deca',
-                    color: Color(0xFF14181B),
-                  ),
+                  labelStyle: FlutterFlowTheme.of(context).bodyText1.override(
+                        fontFamily: 'Lexend Deca',
+                        color: Color(0xFF14181B),
+                      ),
                   hintText: 'Your number...',
-                  hintStyle: FlutterFlowTheme.bodyText1.override(
-                    fontFamily: 'Lexend Deca',
-                    color: Color(0xFF14181B),
-                  ),
+                  hintStyle: FlutterFlowTheme.of(context).bodyText1.override(
+                        fontFamily: 'Lexend Deca',
+                        color: Color(0xFF14181B),
+                      ),
                   enabledBorder: OutlineInputBorder(
                     borderSide: BorderSide(
                       color: Color(0xFF9B6D6D),
@@ -254,10 +255,10 @@ class _ProfileWidgetState extends State<ProfileWidget> {
                   fillColor: Colors.white,
                   contentPadding: EdgeInsetsDirectional.fromSTEB(20, 24, 0, 24),
                 ),
-                style: FlutterFlowTheme.bodyText1.override(
-                  fontFamily: 'Lexend Deca',
-                  color: Color(0xFF14181B),
-                ),
+                style: FlutterFlowTheme.of(context).bodyText1.override(
+                      fontFamily: 'Lexend Deca',
+                      color: Color(0xFF14181B),
+                    ),
                 keyboardType: TextInputType.number,
               ),
             ),
@@ -268,15 +269,15 @@ class _ProfileWidgetState extends State<ProfileWidget> {
                 obscureText: false,
                 decoration: InputDecoration(
                   labelText: 'Number of Children',
-                  labelStyle: FlutterFlowTheme.bodyText1.override(
-                    fontFamily: 'Lexend Deca',
-                    color: Color(0xFF14181B),
-                  ),
+                  labelStyle: FlutterFlowTheme.of(context).bodyText1.override(
+                        fontFamily: 'Lexend Deca',
+                        color: Color(0xFF14181B),
+                      ),
                   hintText: 'Number of Children',
-                  hintStyle: FlutterFlowTheme.bodyText1.override(
-                    fontFamily: 'Lexend Deca',
-                    color: Color(0xFF14181B),
-                  ),
+                  hintStyle: FlutterFlowTheme.of(context).bodyText1.override(
+                        fontFamily: 'Lexend Deca',
+                        color: Color(0xFF14181B),
+                      ),
                   enabledBorder: OutlineInputBorder(
                     borderSide: BorderSide(
                       color: Color(0xFF9B6D6D),
@@ -295,10 +296,10 @@ class _ProfileWidgetState extends State<ProfileWidget> {
                   fillColor: Colors.white,
                   contentPadding: EdgeInsetsDirectional.fromSTEB(20, 24, 0, 24),
                 ),
-                style: FlutterFlowTheme.bodyText1.override(
-                  fontFamily: 'Lexend Deca',
-                  color: Color(0xFF14181B),
-                ),
+                style: FlutterFlowTheme.of(context).bodyText1.override(
+                      fontFamily: 'Lexend Deca',
+                      color: Color(0xFF14181B),
+                    ),
               ),
             ),
             Align(
@@ -314,12 +315,12 @@ class _ProfileWidgetState extends State<ProfileWidget> {
                     width: 340,
                     height: 60,
                     color: Color(0xFFEF5E5E),
-                    textStyle: FlutterFlowTheme.subtitle2.override(
-                      fontFamily: 'Lexend Deca',
-                      color: Colors.white,
-                      fontSize: 16,
-                      fontWeight: FontWeight.normal,
-                    ),
+                    textStyle: FlutterFlowTheme.of(context).subtitle2.override(
+                          fontFamily: 'Lexend Deca',
+                          color: Colors.white,
+                          fontSize: 16,
+                          fontWeight: FontWeight.normal,
+                        ),
                     elevation: 2,
                     borderSide: BorderSide(
                       color: Colors.transparent,

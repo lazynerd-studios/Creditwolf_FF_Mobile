@@ -41,12 +41,12 @@ class _LoanWidgetState extends State<LoanWidget> {
         ),
         title: Text(
           'Loan',
-          style: FlutterFlowTheme.subtitle1.override(
-            fontFamily: 'Lexend Deca',
-            color: Colors.white,
-            fontSize: 18,
-            fontWeight: FontWeight.w500,
-          ),
+          style: FlutterFlowTheme.of(context).subtitle1.override(
+                fontFamily: 'Lexend Deca',
+                color: Colors.white,
+                fontSize: 18,
+                fontWeight: FontWeight.w500,
+              ),
         ),
         actions: [],
         centerTitle: false,
@@ -74,6 +74,11 @@ class _LoanWidgetState extends State<LoanWidget> {
                           controller: textController,
                           obscureText: false,
                           decoration: InputDecoration(
+                            labelStyle: GoogleFonts.getFont(
+                              'DM Sans',
+                              color: Color(0xFF82878C),
+                              fontSize: 42,
+                            ),
                             hintText: ' Amount',
                             hintStyle: GoogleFonts.getFont(
                               'DM Sans',
@@ -128,12 +133,13 @@ class _LoanWidgetState extends State<LoanWidget> {
                       width: 230,
                       height: 50,
                       color: Color(0xFFEF5E5E),
-                      textStyle: FlutterFlowTheme.subtitle2.override(
-                        fontFamily: 'Lexend Deca',
-                        color: Colors.white,
-                        fontSize: 16,
-                        fontWeight: FontWeight.w500,
-                      ),
+                      textStyle:
+                          FlutterFlowTheme.of(context).subtitle2.override(
+                                fontFamily: 'Lexend Deca',
+                                color: Colors.white,
+                                fontSize: 16,
+                                fontWeight: FontWeight.w500,
+                              ),
                       elevation: 2,
                       borderSide: BorderSide(
                         color: Colors.transparent,

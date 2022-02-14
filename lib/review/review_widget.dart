@@ -49,12 +49,12 @@ class _ReviewWidgetState extends State<ReviewWidget> {
                 padding: EdgeInsetsDirectional.fromSTEB(0, 24, 0, 0),
                 child: Text(
                   'Under Review!',
-                  style: FlutterFlowTheme.title1.override(
-                    fontFamily: 'Lexend Deca',
-                    color: Color(0xFFEF5E5E),
-                    fontSize: 24,
-                    fontWeight: FontWeight.bold,
-                  ),
+                  style: FlutterFlowTheme.of(context).title1.override(
+                        fontFamily: 'Lexend Deca',
+                        color: Color(0xFFEF5E5E),
+                        fontSize: 24,
+                        fontWeight: FontWeight.bold,
+                      ),
                 ),
               ),
               Padding(
@@ -62,12 +62,12 @@ class _ReviewWidgetState extends State<ReviewWidget> {
                 child: Text(
                   'Dear customer, your loan application is currently under review',
                   textAlign: TextAlign.center,
-                  style: FlutterFlowTheme.bodyText2.override(
-                    fontFamily: 'Lexend Deca',
-                    color: Color(0xFF8B97A2),
-                    fontSize: 14,
-                    fontWeight: FontWeight.normal,
-                  ),
+                  style: FlutterFlowTheme.of(context).bodyText2.override(
+                        fontFamily: 'Lexend Deca',
+                        color: Color(0xFF8B97A2),
+                        fontSize: 14,
+                        fontWeight: FontWeight.normal,
+                      ),
                 ),
               ),
               Expanded(
@@ -86,12 +86,13 @@ class _ReviewWidgetState extends State<ReviewWidget> {
                           width: 230,
                           height: 50,
                           color: Color(0xFFEF5E5E),
-                          textStyle: FlutterFlowTheme.subtitle2.override(
-                            fontFamily: 'Lexend Deca',
-                            color: Colors.white,
-                            fontSize: 16,
-                            fontWeight: FontWeight.w500,
-                          ),
+                          textStyle:
+                              FlutterFlowTheme.of(context).subtitle2.override(
+                                    fontFamily: 'Lexend Deca',
+                                    color: Colors.white,
+                                    fontSize: 16,
+                                    fontWeight: FontWeight.w500,
+                                  ),
                           elevation: 0,
                           borderSide: BorderSide(
                             color: Colors.transparent,

@@ -38,12 +38,12 @@ class _SelectPaymentWidgetState extends State<SelectPaymentWidget> {
         ),
         title: Text(
           'Fund Account',
-          style: FlutterFlowTheme.subtitle1.override(
-            fontFamily: 'Lexend Deca',
-            color: Colors.white,
-            fontSize: 18,
-            fontWeight: FontWeight.w500,
-          ),
+          style: FlutterFlowTheme.of(context).subtitle1.override(
+                fontFamily: 'Lexend Deca',
+                color: Colors.white,
+                fontSize: 18,
+                fontWeight: FontWeight.w500,
+              ),
         ),
         actions: [],
         centerTitle: false,
@@ -107,12 +107,13 @@ class _SelectPaymentWidgetState extends State<SelectPaymentWidget> {
                                       ),
                                       Text(
                                         'Pay with Flutterwave',
-                                        style:
-                                            FlutterFlowTheme.bodyText1.override(
-                                          fontFamily: 'Lexend Deca',
-                                          fontSize: 15,
-                                          fontWeight: FontWeight.normal,
-                                        ),
+                                        style: FlutterFlowTheme.of(context)
+                                            .bodyText1
+                                            .override(
+                                              fontFamily: 'Lexend Deca',
+                                              fontSize: 15,
+                                              fontWeight: FontWeight.normal,
+                                            ),
                                       ),
                                     ],
                                   ),

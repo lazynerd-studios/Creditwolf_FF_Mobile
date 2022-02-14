@@ -70,23 +70,25 @@ class _AccountWidgetState extends State<AccountWidget> {
                         children: [
                           Text(
                             '[display_name]',
-                            style: FlutterFlowTheme.title3.override(
-                              fontFamily: 'Lexend Deca',
-                              color: Colors.white,
-                              fontSize: 20,
-                              fontWeight: FontWeight.bold,
-                            ),
+                            style: FlutterFlowTheme.of(context).title3.override(
+                                  fontFamily: 'Lexend Deca',
+                                  color: Colors.white,
+                                  fontSize: 20,
+                                  fontWeight: FontWeight.bold,
+                                ),
                           ),
                           Padding(
                             padding: EdgeInsetsDirectional.fromSTEB(0, 4, 0, 0),
                             child: Text(
                               'BVN (unverified)',
-                              style: FlutterFlowTheme.bodyText1.override(
-                                fontFamily: 'Lexend Deca',
-                                color: Colors.white,
-                                fontSize: 14,
-                                fontWeight: FontWeight.normal,
-                              ),
+                              style: FlutterFlowTheme.of(context)
+                                  .bodyText1
+                                  .override(
+                                    fontFamily: 'Lexend Deca',
+                                    color: Colors.white,
+                                    fontSize: 14,
+                                    fontWeight: FontWeight.normal,
+                                  ),
                             ),
                           ),
                         ],
@@ -146,12 +148,14 @@ class _AccountWidgetState extends State<AccountWidget> {
                             children: [
                               Text(
                                 'Edit Profile',
-                                style: FlutterFlowTheme.bodyText1.override(
-                                  fontFamily: 'Lexend Deca',
-                                  color: Colors.white,
-                                  fontSize: 14,
-                                  fontWeight: FontWeight.normal,
-                                ),
+                                style: FlutterFlowTheme.of(context)
+                                    .bodyText1
+                                    .override(
+                                      fontFamily: 'Lexend Deca',
+                                      color: Colors.white,
+                                      fontSize: 14,
+                                      fontWeight: FontWeight.normal,
+                                    ),
                               ),
                               FlutterFlowIconButton(
                                 borderColor: Colors.transparent,
@@ -207,12 +211,13 @@ class _AccountWidgetState extends State<AccountWidget> {
                         children: [
                           Text(
                             'Change Password',
-                            style: FlutterFlowTheme.bodyText1.override(
-                              fontFamily: 'Lexend Deca',
-                              color: Colors.white,
-                              fontSize: 14,
-                              fontWeight: FontWeight.normal,
-                            ),
+                            style:
+                                FlutterFlowTheme.of(context).bodyText1.override(
+                                      fontFamily: 'Lexend Deca',
+                                      color: Colors.white,
+                                      fontSize: 14,
+                                      fontWeight: FontWeight.normal,
+                                    ),
                           ),
                           FlutterFlowIconButton(
                             borderColor: Colors.transparent,
@@ -275,10 +280,12 @@ class _AccountWidgetState extends State<AccountWidget> {
                           children: [
                             Text(
                               'Cards',
-                              style: FlutterFlowTheme.bodyText1.override(
-                                fontFamily: 'Lexend Deca',
-                                color: Colors.white,
-                              ),
+                              style: FlutterFlowTheme.of(context)
+                                  .bodyText1
+                                  .override(
+                                    fontFamily: 'Lexend Deca',
+                                    color: Colors.white,
+                                  ),
                             ),
                             FlutterFlowIconButton(
                               borderColor: Colors.transparent,
@@ -333,12 +340,13 @@ class _AccountWidgetState extends State<AccountWidget> {
                         children: [
                           Text(
                             'Help (FAQ)',
-                            style: FlutterFlowTheme.bodyText1.override(
-                              fontFamily: 'Lexend Deca',
-                              color: Colors.white,
-                              fontSize: 14,
-                              fontWeight: FontWeight.normal,
-                            ),
+                            style:
+                                FlutterFlowTheme.of(context).bodyText1.override(
+                                      fontFamily: 'Lexend Deca',
+                                      color: Colors.white,
+                                      fontSize: 14,
+                                      fontWeight: FontWeight.normal,
+                                    ),
                           ),
                           FlutterFlowIconButton(
                             borderColor: Colors.transparent,
@@ -397,12 +405,14 @@ class _AccountWidgetState extends State<AccountWidget> {
                           children: [
                             Text(
                               'Terms of Services',
-                              style: FlutterFlowTheme.bodyText1.override(
-                                fontFamily: 'Lexend Deca',
-                                color: Colors.white,
-                                fontSize: 14,
-                                fontWeight: FontWeight.normal,
-                              ),
+                              style: FlutterFlowTheme.of(context)
+                                  .bodyText1
+                                  .override(
+                                    fontFamily: 'Lexend Deca',
+                                    color: Colors.white,
+                                    fontSize: 14,
+                                    fontWeight: FontWeight.normal,
+                                  ),
                             ),
                             FlutterFlowIconButton(
                               borderColor: Colors.transparent,
@@ -442,12 +452,12 @@ class _AccountWidgetState extends State<AccountWidget> {
                 width: 110,
                 height: 50,
                 color: Color(0xFFEF5E5E),
-                textStyle: FlutterFlowTheme.subtitle2.override(
-                  fontFamily: 'Lexend Deca',
-                  color: Colors.white,
-                  fontSize: 16,
-                  fontWeight: FontWeight.w500,
-                ),
+                textStyle: FlutterFlowTheme.of(context).subtitle2.override(
+                      fontFamily: 'Lexend Deca',
+                      color: Colors.white,
+                      fontSize: 16,
+                      fontWeight: FontWeight.w500,
+                    ),
                 elevation: 0,
                 borderSide: BorderSide(
                   color: Color(0xFFEF5E5E),

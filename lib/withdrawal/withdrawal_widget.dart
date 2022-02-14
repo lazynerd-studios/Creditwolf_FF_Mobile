@@ -41,12 +41,12 @@ class _WithdrawalWidgetState extends State<WithdrawalWidget> {
         ),
         title: Text(
           'Withdrawal',
-          style: FlutterFlowTheme.subtitle1.override(
-            fontFamily: 'Lexend Deca',
-            color: Colors.white,
-            fontSize: 18,
-            fontWeight: FontWeight.w500,
-          ),
+          style: FlutterFlowTheme.of(context).subtitle1.override(
+                fontFamily: 'Lexend Deca',
+                color: Colors.white,
+                fontSize: 18,
+                fontWeight: FontWeight.w500,
+              ),
         ),
         actions: [],
         centerTitle: false,
@@ -81,12 +81,22 @@ class _WithdrawalWidgetState extends State<WithdrawalWidget> {
                               obscureText: false,
                               decoration: InputDecoration(
                                 labelText: 'Amount',
-                                labelStyle: FlutterFlowTheme.bodyText2.override(
-                                  fontFamily: 'Lexend Deca',
-                                  color: Color(0xFF0F181F),
-                                  fontSize: 14,
-                                  fontWeight: FontWeight.normal,
-                                ),
+                                labelStyle: FlutterFlowTheme.of(context)
+                                    .bodyText2
+                                    .override(
+                                      fontFamily: 'Lexend Deca',
+                                      color: Color(0xFF0F181F),
+                                      fontSize: 14,
+                                      fontWeight: FontWeight.normal,
+                                    ),
+                                hintStyle: FlutterFlowTheme.of(context)
+                                    .bodyText2
+                                    .override(
+                                      fontFamily: 'Lexend Deca',
+                                      color: Color(0xFF0F181F),
+                                      fontSize: 14,
+                                      fontWeight: FontWeight.normal,
+                                    ),
                                 enabledBorder: OutlineInputBorder(
                                   borderSide: BorderSide(
                                     color: Color(0xFFDCE0E4),
@@ -102,12 +112,14 @@ class _WithdrawalWidgetState extends State<WithdrawalWidget> {
                                   borderRadius: BorderRadius.circular(8),
                                 ),
                               ),
-                              style: FlutterFlowTheme.bodyText2.override(
-                                fontFamily: 'Lexend Deca',
-                                color: Color(0xFF0F181F),
-                                fontSize: 14,
-                                fontWeight: FontWeight.normal,
-                              ),
+                              style: FlutterFlowTheme.of(context)
+                                  .bodyText2
+                                  .override(
+                                    fontFamily: 'Lexend Deca',
+                                    color: Color(0xFF0F181F),
+                                    fontSize: 14,
+                                    fontWeight: FontWeight.normal,
+                                  ),
                               textAlign: TextAlign.center,
                               maxLines: 4,
                               keyboardType: TextInputType.number,
@@ -134,12 +146,13 @@ class _WithdrawalWidgetState extends State<WithdrawalWidget> {
                       width: 230,
                       height: 50,
                       color: Color(0xFFEF5E5E),
-                      textStyle: FlutterFlowTheme.subtitle2.override(
-                        fontFamily: 'Lexend Deca',
-                        color: Colors.white,
-                        fontSize: 16,
-                        fontWeight: FontWeight.w500,
-                      ),
+                      textStyle:
+                          FlutterFlowTheme.of(context).subtitle2.override(
+                                fontFamily: 'Lexend Deca',
+                                color: Colors.white,
+                                fontSize: 16,
+                                fontWeight: FontWeight.w500,
+                              ),
                       elevation: 2,
                       borderSide: BorderSide(
                         color: Colors.transparent,

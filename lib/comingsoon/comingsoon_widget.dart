@@ -35,12 +35,12 @@ class _ComingsoonWidgetState extends State<ComingsoonWidget> {
               padding: EdgeInsetsDirectional.fromSTEB(0, 24, 0, 0),
               child: Text(
                 'Coming Soon',
-                style: FlutterFlowTheme.title1.override(
-                  fontFamily: 'Lexend Deca',
-                  color: Color(0xFFEF5E5E),
-                  fontSize: 24,
-                  fontWeight: FontWeight.bold,
-                ),
+                style: FlutterFlowTheme.of(context).title1.override(
+                      fontFamily: 'Lexend Deca',
+                      color: Color(0xFFEF5E5E),
+                      fontSize: 24,
+                      fontWeight: FontWeight.bold,
+                    ),
               ),
             ),
             Row(

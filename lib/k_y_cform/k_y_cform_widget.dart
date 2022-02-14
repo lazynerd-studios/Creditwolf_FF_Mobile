@@ -56,12 +56,12 @@ class _KYCformWidgetState extends State<KYCformWidget> {
         ),
         title: Text(
           'KYC',
-          style: FlutterFlowTheme.bodyText1.override(
-            fontFamily: 'Lexend Deca',
-            color: Colors.white,
-            fontSize: 18,
-            fontWeight: FontWeight.w500,
-          ),
+          style: FlutterFlowTheme.of(context).bodyText1.override(
+                fontFamily: 'Lexend Deca',
+                color: Colors.white,
+                fontSize: 18,
+                fontWeight: FontWeight.w500,
+              ),
         ),
         actions: [],
         centerTitle: false,
@@ -83,7 +83,7 @@ class _KYCformWidgetState extends State<KYCformWidget> {
                       children: [
                         Text(
                           'PLEASE FILL IN THE KYC FORM BELOW',
-                          style: FlutterFlowTheme.bodyText1,
+                          style: FlutterFlowTheme.of(context).bodyText1,
                         ),
                       ],
                     ),
@@ -95,19 +95,21 @@ class _KYCformWidgetState extends State<KYCformWidget> {
                       obscureText: false,
                       decoration: InputDecoration(
                         labelText: 'Home Address',
-                        labelStyle: FlutterFlowTheme.bodyText1.override(
-                          fontFamily: 'Lexend Deca',
-                          color: Color(0xFF14181B),
-                          fontSize: 14,
-                          fontWeight: FontWeight.normal,
-                        ),
+                        labelStyle:
+                            FlutterFlowTheme.of(context).bodyText1.override(
+                                  fontFamily: 'Lexend Deca',
+                                  color: Color(0xFF14181B),
+                                  fontSize: 14,
+                                  fontWeight: FontWeight.normal,
+                                ),
                         hintText: 'Your Home Address...',
-                        hintStyle: FlutterFlowTheme.bodyText1.override(
-                          fontFamily: 'Lexend Deca',
-                          color: Color(0xFF95A1AC),
-                          fontSize: 14,
-                          fontWeight: FontWeight.normal,
-                        ),
+                        hintStyle:
+                            FlutterFlowTheme.of(context).bodyText1.override(
+                                  fontFamily: 'Lexend Deca',
+                                  color: Color(0xFF95A1AC),
+                                  fontSize: 14,
+                                  fontWeight: FontWeight.normal,
+                                ),
                         enabledBorder: OutlineInputBorder(
                           borderSide: BorderSide(
                             color: Color(0xFFDBE2E7),
@@ -127,12 +129,12 @@ class _KYCformWidgetState extends State<KYCformWidget> {
                         contentPadding:
                             EdgeInsetsDirectional.fromSTEB(20, 24, 0, 24),
                       ),
-                      style: FlutterFlowTheme.bodyText1.override(
-                        fontFamily: 'Lexend Deca',
-                        color: Color(0xFF14181B),
-                        fontSize: 14,
-                        fontWeight: FontWeight.normal,
-                      ),
+                      style: FlutterFlowTheme.of(context).bodyText1.override(
+                            fontFamily: 'Lexend Deca',
+                            color: Color(0xFF14181B),
+                            fontSize: 14,
+                            fontWeight: FontWeight.normal,
+                          ),
                     ),
                   ),
                   Padding(
@@ -142,19 +144,21 @@ class _KYCformWidgetState extends State<KYCformWidget> {
                       obscureText: false,
                       decoration: InputDecoration(
                         labelText: 'City',
-                        labelStyle: FlutterFlowTheme.bodyText1.override(
-                          fontFamily: 'Lexend Deca',
-                          color: Color(0xFF14181B),
-                          fontSize: 14,
-                          fontWeight: FontWeight.normal,
-                        ),
+                        labelStyle:
+                            FlutterFlowTheme.of(context).bodyText1.override(
+                                  fontFamily: 'Lexend Deca',
+                                  color: Color(0xFF14181B),
+                                  fontSize: 14,
+                                  fontWeight: FontWeight.normal,
+                                ),
                         hintText: 'Your city..',
-                        hintStyle: FlutterFlowTheme.bodyText1.override(
-                          fontFamily: 'Lexend Deca',
-                          color: Color(0xFF95A1AC),
-                          fontSize: 14,
-                          fontWeight: FontWeight.normal,
-                        ),
+                        hintStyle:
+                            FlutterFlowTheme.of(context).bodyText1.override(
+                                  fontFamily: 'Lexend Deca',
+                                  color: Color(0xFF95A1AC),
+                                  fontSize: 14,
+                                  fontWeight: FontWeight.normal,
+                                ),
                         enabledBorder: OutlineInputBorder(
                           borderSide: BorderSide(
                             color: Color(0xFFDBE2E7),
@@ -174,12 +178,12 @@ class _KYCformWidgetState extends State<KYCformWidget> {
                         contentPadding:
                             EdgeInsetsDirectional.fromSTEB(20, 24, 0, 24),
                       ),
-                      style: FlutterFlowTheme.bodyText1.override(
-                        fontFamily: 'Lexend Deca',
-                        color: Color(0xFF14181B),
-                        fontSize: 14,
-                        fontWeight: FontWeight.normal,
-                      ),
+                      style: FlutterFlowTheme.of(context).bodyText1.override(
+                            fontFamily: 'Lexend Deca',
+                            color: Color(0xFF14181B),
+                            fontSize: 14,
+                            fontWeight: FontWeight.normal,
+                          ),
                     ),
                   ),
                   Padding(
@@ -189,15 +193,17 @@ class _KYCformWidgetState extends State<KYCformWidget> {
                       obscureText: false,
                       decoration: InputDecoration(
                         labelText: 'State',
-                        labelStyle: FlutterFlowTheme.bodyText1.override(
-                          fontFamily: 'Lexend Deca',
-                          color: Color(0xFF14181B),
-                        ),
+                        labelStyle:
+                            FlutterFlowTheme.of(context).bodyText1.override(
+                                  fontFamily: 'Lexend Deca',
+                                  color: Color(0xFF14181B),
+                                ),
                         hintText: '[Your state...]',
-                        hintStyle: FlutterFlowTheme.bodyText1.override(
-                          fontFamily: 'Lexend Deca',
-                          color: Color(0xFF14181B),
-                        ),
+                        hintStyle:
+                            FlutterFlowTheme.of(context).bodyText1.override(
+                                  fontFamily: 'Lexend Deca',
+                                  color: Color(0xFF14181B),
+                                ),
                         enabledBorder: OutlineInputBorder(
                           borderSide: BorderSide(
                             color: Color(0xFFDBE2E7),
@@ -217,10 +223,10 @@ class _KYCformWidgetState extends State<KYCformWidget> {
                         contentPadding:
                             EdgeInsetsDirectional.fromSTEB(20, 24, 0, 24),
                       ),
-                      style: FlutterFlowTheme.bodyText1.override(
-                        fontFamily: 'Lexend Deca',
-                        color: Color(0xFF14181B),
-                      ),
+                      style: FlutterFlowTheme.of(context).bodyText1.override(
+                            fontFamily: 'Lexend Deca',
+                            color: Color(0xFF14181B),
+                          ),
                     ),
                   ),
                   Padding(
@@ -230,15 +236,17 @@ class _KYCformWidgetState extends State<KYCformWidget> {
                       obscureText: false,
                       decoration: InputDecoration(
                         labelText: 'Date of Birth',
-                        labelStyle: FlutterFlowTheme.bodyText1.override(
-                          fontFamily: 'Lexend Deca',
-                          color: Color(0xFF14181B),
-                        ),
+                        labelStyle:
+                            FlutterFlowTheme.of(context).bodyText1.override(
+                                  fontFamily: 'Lexend Deca',
+                                  color: Color(0xFF14181B),
+                                ),
                         hintText: 'dd/mm/yyyyy',
-                        hintStyle: FlutterFlowTheme.bodyText1.override(
-                          fontFamily: 'Lexend Deca',
-                          color: Color(0xFF14181B),
-                        ),
+                        hintStyle:
+                            FlutterFlowTheme.of(context).bodyText1.override(
+                                  fontFamily: 'Lexend Deca',
+                                  color: Color(0xFF14181B),
+                                ),
                         enabledBorder: OutlineInputBorder(
                           borderSide: BorderSide(
                             color: Color(0xFFDBE2E7),
@@ -258,10 +266,10 @@ class _KYCformWidgetState extends State<KYCformWidget> {
                         contentPadding:
                             EdgeInsetsDirectional.fromSTEB(20, 24, 0, 24),
                       ),
-                      style: FlutterFlowTheme.bodyText1.override(
-                        fontFamily: 'Lexend Deca',
-                        color: Color(0xFF14181B),
-                      ),
+                      style: FlutterFlowTheme.of(context).bodyText1.override(
+                            fontFamily: 'Lexend Deca',
+                            color: Color(0xFF14181B),
+                          ),
                     ),
                   ),
                   Padding(
@@ -271,15 +279,7 @@ class _KYCformWidgetState extends State<KYCformWidget> {
                       obscureText: false,
                       decoration: InputDecoration(
                         labelText: 'Phone Number',
-                        labelStyle: FlutterFlowTheme.bodyText1.override(
-                          fontFamily: 'Lexend Deca',
-                          color: Color(0xFF14181B),
-                        ),
                         hintText: '08012345678',
-                        hintStyle: FlutterFlowTheme.bodyText1.override(
-                          fontFamily: 'Lexend Deca',
-                          color: Color(0xFF14181B),
-                        ),
                         enabledBorder: OutlineInputBorder(
                           borderSide: BorderSide(
                             color: Color(0xFFDBE2E7),
@@ -299,10 +299,10 @@ class _KYCformWidgetState extends State<KYCformWidget> {
                         contentPadding:
                             EdgeInsetsDirectional.fromSTEB(20, 24, 0, 24),
                       ),
-                      style: FlutterFlowTheme.bodyText1.override(
-                        fontFamily: 'Lexend Deca',
-                        color: Color(0xFF14181B),
-                      ),
+                      style: FlutterFlowTheme.of(context).bodyText1.override(
+                            fontFamily: 'Lexend Deca',
+                            color: Color(0xFF14181B),
+                          ),
                       keyboardType: TextInputType.phone,
                     ),
                   ),
@@ -316,10 +316,11 @@ class _KYCformWidgetState extends State<KYCformWidget> {
                             setState(() => dropDownValue1 = val),
                         width: 280,
                         height: 50,
-                        textStyle: FlutterFlowTheme.bodyText1.override(
-                          fontFamily: 'Lexend Deca',
-                          color: Color(0xFF14181B),
-                        ),
+                        textStyle:
+                            FlutterFlowTheme.of(context).bodyText1.override(
+                                  fontFamily: 'Lexend Deca',
+                                  color: Color(0xFF14181B),
+                                ),
                         hintText: 'Gender',
                         fillColor: Colors.white,
                         elevation: 2,
@@ -341,10 +342,11 @@ class _KYCformWidgetState extends State<KYCformWidget> {
                             setState(() => dropDownValue2 = val),
                         width: 280,
                         height: 50,
-                        textStyle: FlutterFlowTheme.bodyText1.override(
-                          fontFamily: 'Lexend Deca',
-                          color: Color(0xFF14181B),
-                        ),
+                        textStyle:
+                            FlutterFlowTheme.of(context).bodyText1.override(
+                                  fontFamily: 'Lexend Deca',
+                                  color: Color(0xFF14181B),
+                                ),
                         hintText: 'Relationsip status',
                         fillColor: Colors.white,
                         elevation: 2,
@@ -363,12 +365,13 @@ class _KYCformWidgetState extends State<KYCformWidget> {
                       obscureText: false,
                       decoration: InputDecoration(
                         labelText: 'Next of Kin Fullname',
-                        labelStyle: FlutterFlowTheme.bodyText1.override(
-                          fontFamily: 'Poppins',
-                          color: Color(0xFF14181B),
-                        ),
+                        labelStyle:
+                            FlutterFlowTheme.of(context).bodyText1.override(
+                                  fontFamily: 'Poppins',
+                                  color: Color(0xFF14181B),
+                                ),
                         hintText: 'Next of Kin',
-                        hintStyle: FlutterFlowTheme.bodyText1,
+                        hintStyle: FlutterFlowTheme.of(context).bodyText1,
                         enabledBorder: OutlineInputBorder(
                           borderSide: BorderSide(
                             color: Color(0xFFDBE2E7),
@@ -388,10 +391,10 @@ class _KYCformWidgetState extends State<KYCformWidget> {
                         contentPadding:
                             EdgeInsetsDirectional.fromSTEB(20, 24, 0, 24),
                       ),
-                      style: FlutterFlowTheme.bodyText1.override(
-                        fontFamily: 'Lexend Deca',
-                        color: Color(0xFF14181B),
-                      ),
+                      style: FlutterFlowTheme.of(context).bodyText1.override(
+                            fontFamily: 'Lexend Deca',
+                            color: Color(0xFF14181B),
+                          ),
                     ),
                   ),
                   Padding(
@@ -401,13 +404,7 @@ class _KYCformWidgetState extends State<KYCformWidget> {
                       obscureText: false,
                       decoration: InputDecoration(
                         labelText: 'Next of Kin Number',
-                        labelStyle: FlutterFlowTheme.bodyText1.override(
-                          fontFamily: 'Lexend Deca',
-                        ),
                         hintText: 'Phone Number',
-                        hintStyle: FlutterFlowTheme.bodyText1.override(
-                          fontFamily: 'Lexend Deca',
-                        ),
                         enabledBorder: OutlineInputBorder(
                           borderSide: BorderSide(
                             color: Color(0xFFDBE2E7),
@@ -427,9 +424,9 @@ class _KYCformWidgetState extends State<KYCformWidget> {
                         contentPadding:
                             EdgeInsetsDirectional.fromSTEB(20, 24, 0, 24),
                       ),
-                      style: FlutterFlowTheme.bodyText1.override(
-                        fontFamily: 'Lexend Deca',
-                      ),
+                      style: FlutterFlowTheme.of(context).bodyText1.override(
+                            fontFamily: 'Lexend Deca',
+                          ),
                     ),
                   ),
                   Align(
@@ -443,12 +440,13 @@ class _KYCformWidgetState extends State<KYCformWidget> {
                         width: 340,
                         height: 60,
                         color: Color(0xFFEF5E5E),
-                        textStyle: FlutterFlowTheme.subtitle2.override(
-                          fontFamily: 'Lexend Deca',
-                          color: Colors.white,
-                          fontSize: 16,
-                          fontWeight: FontWeight.normal,
-                        ),
+                        textStyle:
+                            FlutterFlowTheme.of(context).subtitle2.override(
+                                  fontFamily: 'Lexend Deca',
+                                  color: Colors.white,
+                                  fontSize: 16,
+                                  fontWeight: FontWeight.normal,
+                                ),
                         elevation: 2,
                         borderSide: BorderSide(
                           color: Colors.transparent,
