@@ -7,7 +7,7 @@ import 'package:flutter_spinkit/flutter_spinkit.dart';
 import 'package:google_fonts/google_fonts.dart';
 
 class SplashScreenWidget extends StatefulWidget {
-  SplashScreenWidget({Key key}) : super(key: key);
+  const SplashScreenWidget({Key key}) : super(key: key);
 
   @override
   _SplashScreenWidgetState createState() => _SplashScreenWidgetState();
@@ -21,18 +21,37 @@ class _SplashScreenWidgetState extends State<SplashScreenWidget>
       duration: 1000,
       delay: 1000,
       fadeIn: true,
+      initialState: AnimationState(
+        opacity: 0,
+      ),
+      finalState: AnimationState(
+        opacity: 1,
+      ),
     ),
     'columnOnPageLoadAnimation': AnimationInfo(
       trigger: AnimationTrigger.onPageLoad,
       duration: 100,
       fadeIn: true,
+      initialState: AnimationState(
+        opacity: 0,
+      ),
+      finalState: AnimationState(
+        opacity: 1,
+      ),
     ),
     'imageOnPageLoadAnimation': AnimationInfo(
       trigger: AnimationTrigger.onPageLoad,
       duration: 600,
       delay: 1100,
       fadeIn: true,
-      scale: 0.4,
+      initialState: AnimationState(
+        scale: 0.4,
+        opacity: 0,
+      ),
+      finalState: AnimationState(
+        scale: 1,
+        opacity: 1,
+      ),
     ),
   };
   final scaffoldKey = GlobalKey<ScaffoldState>();
@@ -71,12 +90,23 @@ class _SplashScreenWidgetState extends State<SplashScreenWidget>
             mainAxisSize: MainAxisSize.max,
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
-              Image.asset(
-                'assets/images/ic_logo.png',
-                width: 180,
-                height: 160,
-                fit: BoxFit.fitHeight,
-              ).animated([animationsMap['imageOnPageLoadAnimation']])
+              InkWell(
+                onTap: () async {
+                  await Navigator.pushAndRemoveUntil(
+                    context,
+                    MaterialPageRoute(
+                      builder: (context) => AuthenticationWidget(),
+                    ),
+                    (r) => false,
+                  );
+                },
+                child: Image.asset(
+                  'assets/images/ic_logo.png',
+                  width: 180,
+                  height: 160,
+                  fit: BoxFit.fitHeight,
+                ),
+              ).animated([animationsMap['imageOnPageLoadAnimation']]),
             ],
           ).animated([animationsMap['columnOnPageLoadAnimation']]),
         ),

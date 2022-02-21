@@ -1,4 +1,4 @@
-# creditwolf
+# Creditwolf
 
 A new Flutter project.
 

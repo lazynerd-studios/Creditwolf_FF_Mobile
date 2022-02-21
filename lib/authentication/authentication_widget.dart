@@ -3,13 +3,12 @@ import '../flutter_flow/flutter_flow_util.dart';
 import '../flutter_flow/flutter_flow_widgets.dart';
 import '../forgotpassword/forgotpassword_widget.dart';
 import '../main.dart';
-import '../verify/verify_widget.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_spinkit/flutter_spinkit.dart';
 import 'package:google_fonts/google_fonts.dart';
 
 class AuthenticationWidget extends StatefulWidget {
-  AuthenticationWidget({Key key}) : super(key: key);
+  const AuthenticationWidget({Key key}) : super(key: key);
 
   @override
   _AuthenticationWidgetState createState() => _AuthenticationWidgetState();
@@ -20,15 +19,13 @@ class _AuthenticationWidgetState extends State<AuthenticationWidget> {
   bool confirmPasswordVisibility;
   TextEditingController createEmailController;
   TextEditingController createFullnameController;
+  TextEditingController textController5;
   TextEditingController createPasswordController;
   bool createPasswordVisibility;
   bool termSwitchListValue;
-  bool _loadingButton3 = false;
   TextEditingController loginEmailAddressController;
   TextEditingController loginPasswordController;
   bool loginPasswordVisibility;
-  bool _loadingButton1 = false;
-  bool _loadingButton2 = false;
   final formKey = GlobalKey<FormState>();
   final scaffoldKey = GlobalKey<ScaffoldState>();
 
@@ -39,6 +36,7 @@ class _AuthenticationWidgetState extends State<AuthenticationWidget> {
     confirmPasswordVisibility = false;
     createEmailController = TextEditingController();
     createFullnameController = TextEditingController();
+    textController5 = TextEditingController();
     createPasswordController = TextEditingController();
     createPasswordVisibility = false;
     loginEmailAddressController = TextEditingController();
@@ -48,12 +46,13 @@ class _AuthenticationWidgetState extends State<AuthenticationWidget> {
 
   @override
   Widget build(BuildContext context) {
-    return Form(
-      key: formKey,
-      child: Scaffold(
-        key: scaffoldKey,
-        backgroundColor: Color(0xE7FFFFFF),
-        body: Column(
+    return Scaffold(
+      key: scaffoldKey,
+      backgroundColor: Color(0xE7FFFFFF),
+      body: Form(
+        key: formKey,
+        autovalidateMode: AutovalidateMode.disabled,
+        child: Column(
           mainAxisSize: MainAxisSize.max,
           children: [
             Padding(
@@ -67,7 +66,7 @@ class _AuthenticationWidgetState extends State<AuthenticationWidget> {
                     width: 200,
                     height: 100,
                     fit: BoxFit.fitHeight,
-                  )
+                  ),
                 ],
               ),
             ),
@@ -90,7 +89,7 @@ class _AuthenticationWidgetState extends State<AuthenticationWidget> {
                         ),
                         Tab(
                           text: 'Sign up',
-                        )
+                        ),
                       ],
                     ),
                     Expanded(
@@ -116,14 +115,15 @@ class _AuthenticationWidgetState extends State<AuthenticationWidget> {
                                       children: [
                                         Text(
                                           'Login',
-                                          style:
-                                              FlutterFlowTheme.title1.override(
-                                            fontFamily: 'Lexend Deca',
-                                            color: Colors.white,
-                                            fontSize: 24,
-                                            fontWeight: FontWeight.bold,
-                                          ),
-                                        )
+                                          style: FlutterFlowTheme.of(context)
+                                              .title1
+                                              .override(
+                                                fontFamily: 'Lexend Deca',
+                                                color: Colors.white,
+                                                fontSize: 24,
+                                                fontWeight: FontWeight.bold,
+                                              ),
+                                        ),
                                       ],
                                     ),
                                   ),
@@ -138,14 +138,15 @@ class _AuthenticationWidgetState extends State<AuthenticationWidget> {
                                         Text(
                                           'Enter your details to continue.',
                                           textAlign: TextAlign.center,
-                                          style: FlutterFlowTheme.bodyText2
+                                          style: FlutterFlowTheme.of(context)
+                                              .bodyText2
                                               .override(
-                                            fontFamily: 'Lexend Deca',
-                                            color: Color(0x77FFFFFF),
-                                            fontSize: 14,
-                                            fontWeight: FontWeight.normal,
-                                          ),
-                                        )
+                                                fontFamily: 'Lexend Deca',
+                                                color: Color(0x77FFFFFF),
+                                                fontSize: 14,
+                                                fontWeight: FontWeight.normal,
+                                              ),
+                                        ),
                                       ],
                                     ),
                                   ),
@@ -164,24 +165,28 @@ class _AuthenticationWidgetState extends State<AuthenticationWidget> {
                                             obscureText: false,
                                             decoration: InputDecoration(
                                               labelText: 'Email Address',
-                                              labelStyle: FlutterFlowTheme
+                                              labelStyle: FlutterFlowTheme.of(
+                                                      context)
                                                   .bodyText1
                                                   .override(
-                                                fontFamily: 'Lexend Deca',
-                                                color: Color(0xFF95A1AC),
-                                                fontSize: 14,
-                                                fontWeight: FontWeight.normal,
-                                              ),
+                                                    fontFamily: 'Lexend Deca',
+                                                    color: Color(0xFF95A1AC),
+                                                    fontSize: 14,
+                                                    fontWeight:
+                                                        FontWeight.normal,
+                                                  ),
                                               hintText:
                                                   'Enter your email here...',
-                                              hintStyle: FlutterFlowTheme
+                                              hintStyle: FlutterFlowTheme.of(
+                                                      context)
                                                   .bodyText1
                                                   .override(
-                                                fontFamily: 'Lexend Deca',
-                                                color: Color(0xFF95A1AC),
-                                                fontSize: 14,
-                                                fontWeight: FontWeight.normal,
-                                              ),
+                                                    fontFamily: 'Lexend Deca',
+                                                    color: Color(0xFF95A1AC),
+                                                    fontSize: 14,
+                                                    fontWeight:
+                                                        FontWeight.normal,
+                                                  ),
                                               enabledBorder: OutlineInputBorder(
                                                 borderSide: BorderSide(
                                                   color: Color(0xFFDBE2E7),
@@ -201,15 +206,16 @@ class _AuthenticationWidgetState extends State<AuthenticationWidget> {
                                               filled: true,
                                               fillColor: Colors.white,
                                             ),
-                                            style: FlutterFlowTheme.bodyText1
+                                            style: FlutterFlowTheme.of(context)
+                                                .bodyText1
                                                 .override(
-                                              fontFamily: 'Lexend Deca',
-                                              color: Color(0xFF2B343A),
-                                              fontSize: 14,
-                                              fontWeight: FontWeight.normal,
-                                            ),
+                                                  fontFamily: 'Lexend Deca',
+                                                  color: Color(0xFF2B343A),
+                                                  fontSize: 14,
+                                                  fontWeight: FontWeight.normal,
+                                                ),
                                           ),
-                                        )
+                                        ),
                                       ],
                                     ),
                                   ),
@@ -228,24 +234,28 @@ class _AuthenticationWidgetState extends State<AuthenticationWidget> {
                                                 !loginPasswordVisibility,
                                             decoration: InputDecoration(
                                               labelText: 'Password',
-                                              labelStyle: FlutterFlowTheme
+                                              labelStyle: FlutterFlowTheme.of(
+                                                      context)
                                                   .bodyText1
                                                   .override(
-                                                fontFamily: 'Lexend Deca',
-                                                color: Color(0xFF95A1AC),
-                                                fontSize: 14,
-                                                fontWeight: FontWeight.normal,
-                                              ),
+                                                    fontFamily: 'Lexend Deca',
+                                                    color: Color(0xFF95A1AC),
+                                                    fontSize: 14,
+                                                    fontWeight:
+                                                        FontWeight.normal,
+                                                  ),
                                               hintText:
                                                   'Enter your email here...',
-                                              hintStyle: FlutterFlowTheme
+                                              hintStyle: FlutterFlowTheme.of(
+                                                      context)
                                                   .bodyText1
                                                   .override(
-                                                fontFamily: 'Lexend Deca',
-                                                color: Color(0xFF95A1AC),
-                                                fontSize: 14,
-                                                fontWeight: FontWeight.normal,
-                                              ),
+                                                    fontFamily: 'Lexend Deca',
+                                                    color: Color(0xFF95A1AC),
+                                                    fontSize: 14,
+                                                    fontWeight:
+                                                        FontWeight.normal,
+                                                  ),
                                               enabledBorder: OutlineInputBorder(
                                                 borderSide: BorderSide(
                                                   color: Color(0xFFDBE2E7),
@@ -280,15 +290,16 @@ class _AuthenticationWidgetState extends State<AuthenticationWidget> {
                                                 ),
                                               ),
                                             ),
-                                            style: FlutterFlowTheme.bodyText1
+                                            style: FlutterFlowTheme.of(context)
+                                                .bodyText1
                                                 .override(
-                                              fontFamily: 'Lexend Deca',
-                                              color: Color(0xFF2B343A),
-                                              fontSize: 14,
-                                              fontWeight: FontWeight.normal,
-                                            ),
+                                                  fontFamily: 'Lexend Deca',
+                                                  color: Color(0xFF2B343A),
+                                                  fontSize: 14,
+                                                  fontWeight: FontWeight.normal,
+                                                ),
                                           ),
-                                        )
+                                        ),
                                       ],
                                     ),
                                   ),
@@ -297,32 +308,27 @@ class _AuthenticationWidgetState extends State<AuthenticationWidget> {
                                         0, 16, 0, 0),
                                     child: FFButtonWidget(
                                       onPressed: () async {
-                                        setState(() => _loadingButton1 = true);
-                                        try {
-                                          await Navigator.push(
-                                            context,
-                                            MaterialPageRoute(
-                                              builder: (context) => NavBarPage(
-                                                  initialPage: 'Home'),
-                                            ),
-                                          );
-                                        } finally {
-                                          setState(
-                                              () => _loadingButton1 = false);
-                                        }
+                                        await Navigator.push(
+                                          context,
+                                          MaterialPageRoute(
+                                            builder: (context) =>
+                                                NavBarPage(initialPage: 'Home'),
+                                          ),
+                                        );
                                       },
                                       text: 'Login',
                                       options: FFButtonOptions(
                                         width: 230,
                                         height: 50,
                                         color: Colors.white,
-                                        textStyle:
-                                            FlutterFlowTheme.subtitle2.override(
-                                          fontFamily: 'Lexend Deca',
-                                          color: Color(0xFFEF5E5E),
-                                          fontSize: 16,
-                                          fontWeight: FontWeight.w500,
-                                        ),
+                                        textStyle: FlutterFlowTheme.of(context)
+                                            .subtitle2
+                                            .override(
+                                              fontFamily: 'Lexend Deca',
+                                              color: Color(0xFFEF5E5E),
+                                              fontSize: 16,
+                                              fontWeight: FontWeight.w500,
+                                            ),
                                         elevation: 3,
                                         borderSide: BorderSide(
                                           color: Colors.transparent,
@@ -330,7 +336,6 @@ class _AuthenticationWidgetState extends State<AuthenticationWidget> {
                                         ),
                                         borderRadius: 8,
                                       ),
-                                      loading: _loadingButton1,
                                     ),
                                   ),
                                   Padding(
@@ -338,33 +343,28 @@ class _AuthenticationWidgetState extends State<AuthenticationWidget> {
                                         0, 20, 0, 0),
                                     child: FFButtonWidget(
                                       onPressed: () async {
-                                        setState(() => _loadingButton2 = true);
-                                        try {
-                                          await Navigator.pushAndRemoveUntil(
-                                            context,
-                                            MaterialPageRoute(
-                                              builder: (context) =>
-                                                  ForgotpasswordWidget(),
-                                            ),
-                                            (r) => false,
-                                          );
-                                        } finally {
-                                          setState(
-                                              () => _loadingButton2 = false);
-                                        }
+                                        await Navigator.pushAndRemoveUntil(
+                                          context,
+                                          MaterialPageRoute(
+                                            builder: (context) =>
+                                                ForgotpasswordWidget(),
+                                          ),
+                                          (r) => false,
+                                        );
                                       },
                                       text: 'Forgot Password?',
                                       options: FFButtonOptions(
                                         width: 200,
                                         height: 30,
                                         color: Color(0x00FFFFFF),
-                                        textStyle:
-                                            FlutterFlowTheme.subtitle2.override(
-                                          fontFamily: 'Lexend Deca',
-                                          color: Colors.white,
-                                          fontSize: 16,
-                                          fontWeight: FontWeight.w500,
-                                        ),
+                                        textStyle: FlutterFlowTheme.of(context)
+                                            .subtitle2
+                                            .override(
+                                              fontFamily: 'Lexend Deca',
+                                              color: Colors.white,
+                                              fontSize: 16,
+                                              fontWeight: FontWeight.w500,
+                                            ),
                                         elevation: 0,
                                         borderSide: BorderSide(
                                           color: Colors.transparent,
@@ -372,9 +372,8 @@ class _AuthenticationWidgetState extends State<AuthenticationWidget> {
                                         ),
                                         borderRadius: 0,
                                       ),
-                                      loading: _loadingButton2,
                                     ),
-                                  )
+                                  ),
                                 ],
                               ),
                             ),
@@ -399,14 +398,15 @@ class _AuthenticationWidgetState extends State<AuthenticationWidget> {
                                       children: [
                                         Text(
                                           'Sign up',
-                                          style:
-                                              FlutterFlowTheme.title1.override(
-                                            fontFamily: 'Lexend Deca',
-                                            color: Colors.white,
-                                            fontSize: 24,
-                                            fontWeight: FontWeight.bold,
-                                          ),
-                                        )
+                                          style: FlutterFlowTheme.of(context)
+                                              .title1
+                                              .override(
+                                                fontFamily: 'Lexend Deca',
+                                                color: Colors.white,
+                                                fontSize: 24,
+                                                fontWeight: FontWeight.bold,
+                                              ),
+                                        ),
                                       ],
                                     ),
                                   ),
@@ -421,14 +421,15 @@ class _AuthenticationWidgetState extends State<AuthenticationWidget> {
                                         Text(
                                           'Enter your information below to get started.',
                                           textAlign: TextAlign.center,
-                                          style: FlutterFlowTheme.bodyText2
+                                          style: FlutterFlowTheme.of(context)
+                                              .bodyText2
                                               .override(
-                                            fontFamily: 'Lexend Deca',
-                                            color: Color(0x77FFFFFF),
-                                            fontSize: 14,
-                                            fontWeight: FontWeight.normal,
-                                          ),
-                                        )
+                                                fontFamily: 'Lexend Deca',
+                                                color: Color(0x77FFFFFF),
+                                                fontSize: 14,
+                                                fontWeight: FontWeight.normal,
+                                              ),
+                                        ),
                                       ],
                                     ),
                                   ),
@@ -447,20 +448,22 @@ class _AuthenticationWidgetState extends State<AuthenticationWidget> {
                                             obscureText: false,
                                             decoration: InputDecoration(
                                               labelText: 'Full Name',
-                                              labelStyle: FlutterFlowTheme
+                                              labelStyle: FlutterFlowTheme.of(
+                                                      context)
                                                   .bodyText1
                                                   .override(
-                                                fontFamily: 'Lexend Deca',
-                                                color: Color(0xFF95A1AC),
-                                              ),
+                                                    fontFamily: 'Lexend Deca',
+                                                    color: Color(0xFF95A1AC),
+                                                  ),
                                               hintText:
                                                   'Enter Your Full Name here',
-                                              hintStyle: FlutterFlowTheme
+                                              hintStyle: FlutterFlowTheme.of(
+                                                      context)
                                                   .bodyText1
                                                   .override(
-                                                fontFamily: 'Lexend Deca',
-                                                color: Color(0xFF2B343A),
-                                              ),
+                                                    fontFamily: 'Lexend Deca',
+                                                    color: Color(0xFF2B343A),
+                                                  ),
                                               enabledBorder: OutlineInputBorder(
                                                 borderSide: BorderSide(
                                                   color: Color(0xFFDBE2E7),
@@ -480,11 +483,12 @@ class _AuthenticationWidgetState extends State<AuthenticationWidget> {
                                               filled: true,
                                               fillColor: Colors.white,
                                             ),
-                                            style: FlutterFlowTheme.bodyText1
+                                            style: FlutterFlowTheme.of(context)
+                                                .bodyText1
                                                 .override(
-                                              fontFamily: 'Lexend Deca',
-                                              color: Color(0xFF2B343A),
-                                            ),
+                                                  fontFamily: 'Lexend Deca',
+                                                  color: Color(0xFF2B343A),
+                                                ),
                                             validator: (val) {
                                               if (val.isEmpty) {
                                                 return 'Field is required';
@@ -493,7 +497,7 @@ class _AuthenticationWidgetState extends State<AuthenticationWidget> {
                                               return null;
                                             },
                                           ),
-                                        )
+                                        ),
                                       ],
                                     ),
                                   ),
@@ -511,24 +515,28 @@ class _AuthenticationWidgetState extends State<AuthenticationWidget> {
                                             obscureText: false,
                                             decoration: InputDecoration(
                                               labelText: 'Email Address',
-                                              labelStyle: FlutterFlowTheme
+                                              labelStyle: FlutterFlowTheme.of(
+                                                      context)
                                                   .bodyText1
                                                   .override(
-                                                fontFamily: 'Lexend Deca',
-                                                color: Color(0xFF95A1AC),
-                                                fontSize: 14,
-                                                fontWeight: FontWeight.normal,
-                                              ),
+                                                    fontFamily: 'Lexend Deca',
+                                                    color: Color(0xFF95A1AC),
+                                                    fontSize: 14,
+                                                    fontWeight:
+                                                        FontWeight.normal,
+                                                  ),
                                               hintText:
                                                   'Enter your email here...',
-                                              hintStyle: FlutterFlowTheme
+                                              hintStyle: FlutterFlowTheme.of(
+                                                      context)
                                                   .bodyText1
                                                   .override(
-                                                fontFamily: 'Lexend Deca',
-                                                color: Color(0xFF95A1AC),
-                                                fontSize: 14,
-                                                fontWeight: FontWeight.normal,
-                                              ),
+                                                    fontFamily: 'Lexend Deca',
+                                                    color: Color(0xFF95A1AC),
+                                                    fontSize: 14,
+                                                    fontWeight:
+                                                        FontWeight.normal,
+                                                  ),
                                               enabledBorder: OutlineInputBorder(
                                                 borderSide: BorderSide(
                                                   color: Color(0xFFDBE2E7),
@@ -548,13 +556,14 @@ class _AuthenticationWidgetState extends State<AuthenticationWidget> {
                                               filled: true,
                                               fillColor: Colors.white,
                                             ),
-                                            style: FlutterFlowTheme.bodyText1
+                                            style: FlutterFlowTheme.of(context)
+                                                .bodyText1
                                                 .override(
-                                              fontFamily: 'Lexend Deca',
-                                              color: Color(0xFF2B343A),
-                                              fontSize: 14,
-                                              fontWeight: FontWeight.normal,
-                                            ),
+                                                  fontFamily: 'Lexend Deca',
+                                                  color: Color(0xFF2B343A),
+                                                  fontSize: 14,
+                                                  fontWeight: FontWeight.normal,
+                                                ),
                                             keyboardType:
                                                 TextInputType.emailAddress,
                                             validator: (val) {
@@ -565,7 +574,67 @@ class _AuthenticationWidgetState extends State<AuthenticationWidget> {
                                               return null;
                                             },
                                           ),
-                                        )
+                                        ),
+                                      ],
+                                    ),
+                                  ),
+                                  Padding(
+                                    padding: EdgeInsetsDirectional.fromSTEB(
+                                        20, 16, 20, 0),
+                                    child: Row(
+                                      mainAxisSize: MainAxisSize.max,
+                                      mainAxisAlignment:
+                                          MainAxisAlignment.center,
+                                      children: [
+                                        Expanded(
+                                          child: TextFormField(
+                                            controller: textController5,
+                                            obscureText: false,
+                                            decoration: InputDecoration(
+                                              labelText: 'Phone Number',
+                                              labelStyle: FlutterFlowTheme.of(
+                                                      context)
+                                                  .bodyText1
+                                                  .override(
+                                                    fontFamily: 'Lexend Deca',
+                                                    color: Color(0xFF95A1AC),
+                                                  ),
+                                              hintText:
+                                                  'Enter yhour phone number here...',
+                                              hintStyle: FlutterFlowTheme.of(
+                                                      context)
+                                                  .bodyText1
+                                                  .override(
+                                                    fontFamily: 'Lexend Deca',
+                                                    color: Color(0xFF2B343A),
+                                                  ),
+                                              enabledBorder: OutlineInputBorder(
+                                                borderSide: BorderSide(
+                                                  color: Color(0xFFDBE2E7),
+                                                  width: 2,
+                                                ),
+                                                borderRadius:
+                                                    BorderRadius.circular(8),
+                                              ),
+                                              focusedBorder: OutlineInputBorder(
+                                                borderSide: BorderSide(
+                                                  color: Color(0xFFDBE2E7),
+                                                  width: 2,
+                                                ),
+                                                borderRadius:
+                                                    BorderRadius.circular(8),
+                                              ),
+                                              filled: true,
+                                              fillColor: Colors.white,
+                                            ),
+                                            style: FlutterFlowTheme.of(context)
+                                                .bodyText1
+                                                .override(
+                                                  fontFamily: 'Lexend Deca',
+                                                  color: Color(0xFF2B343A),
+                                                ),
+                                          ),
+                                        ),
                                       ],
                                     ),
                                   ),
@@ -585,23 +654,27 @@ class _AuthenticationWidgetState extends State<AuthenticationWidget> {
                                                 !createPasswordVisibility,
                                             decoration: InputDecoration(
                                               labelText: 'Password',
-                                              labelStyle: FlutterFlowTheme
+                                              labelStyle: FlutterFlowTheme.of(
+                                                      context)
                                                   .bodyText1
                                                   .override(
-                                                fontFamily: 'Lexend Deca',
-                                                color: Color(0xFF95A1AC),
-                                                fontSize: 14,
-                                                fontWeight: FontWeight.normal,
-                                              ),
+                                                    fontFamily: 'Lexend Deca',
+                                                    color: Color(0xFF95A1AC),
+                                                    fontSize: 14,
+                                                    fontWeight:
+                                                        FontWeight.normal,
+                                                  ),
                                               hintText: 'Enter your password',
-                                              hintStyle: FlutterFlowTheme
+                                              hintStyle: FlutterFlowTheme.of(
+                                                      context)
                                                   .bodyText1
                                                   .override(
-                                                fontFamily: 'Lexend Deca',
-                                                color: Color(0xFF95A1AC),
-                                                fontSize: 14,
-                                                fontWeight: FontWeight.normal,
-                                              ),
+                                                    fontFamily: 'Lexend Deca',
+                                                    color: Color(0xFF95A1AC),
+                                                    fontSize: 14,
+                                                    fontWeight:
+                                                        FontWeight.normal,
+                                                  ),
                                               enabledBorder: OutlineInputBorder(
                                                 borderSide: BorderSide(
                                                   color: Color(0xFFDBE2E7),
@@ -636,15 +709,16 @@ class _AuthenticationWidgetState extends State<AuthenticationWidget> {
                                                 ),
                                               ),
                                             ),
-                                            style: FlutterFlowTheme.bodyText1
+                                            style: FlutterFlowTheme.of(context)
+                                                .bodyText1
                                                 .override(
-                                              fontFamily: 'Lexend Deca',
-                                              color: Color(0xFF2B343A),
-                                              fontSize: 14,
-                                              fontWeight: FontWeight.normal,
-                                            ),
+                                                  fontFamily: 'Lexend Deca',
+                                                  color: Color(0xFF2B343A),
+                                                  fontSize: 14,
+                                                  fontWeight: FontWeight.normal,
+                                                ),
                                           ),
-                                        )
+                                        ),
                                       ],
                                     ),
                                   ),
@@ -664,24 +738,28 @@ class _AuthenticationWidgetState extends State<AuthenticationWidget> {
                                                 !confirmPasswordVisibility,
                                             decoration: InputDecoration(
                                               labelText: 'Confirm Password',
-                                              labelStyle: FlutterFlowTheme
+                                              labelStyle: FlutterFlowTheme.of(
+                                                      context)
                                                   .bodyText1
                                                   .override(
-                                                fontFamily: 'Lexend Deca',
-                                                color: Color(0xFF95A1AC),
-                                                fontSize: 14,
-                                                fontWeight: FontWeight.normal,
-                                              ),
+                                                    fontFamily: 'Lexend Deca',
+                                                    color: Color(0xFF95A1AC),
+                                                    fontSize: 14,
+                                                    fontWeight:
+                                                        FontWeight.normal,
+                                                  ),
                                               hintText:
                                                   'Enter the same password as above.',
-                                              hintStyle: FlutterFlowTheme
+                                              hintStyle: FlutterFlowTheme.of(
+                                                      context)
                                                   .bodyText1
                                                   .override(
-                                                fontFamily: 'Lexend Deca',
-                                                color: Color(0xFF95A1AC),
-                                                fontSize: 14,
-                                                fontWeight: FontWeight.normal,
-                                              ),
+                                                    fontFamily: 'Lexend Deca',
+                                                    color: Color(0xFF95A1AC),
+                                                    fontSize: 14,
+                                                    fontWeight:
+                                                        FontWeight.normal,
+                                                  ),
                                               enabledBorder: OutlineInputBorder(
                                                 borderSide: BorderSide(
                                                   color: Color(0xFFDBE2E7),
@@ -716,15 +794,16 @@ class _AuthenticationWidgetState extends State<AuthenticationWidget> {
                                                 ),
                                               ),
                                             ),
-                                            style: FlutterFlowTheme.bodyText1
+                                            style: FlutterFlowTheme.of(context)
+                                                .bodyText1
                                                 .override(
-                                              fontFamily: 'Lexend Deca',
-                                              color: Color(0xFF2B343A),
-                                              fontSize: 14,
-                                              fontWeight: FontWeight.normal,
-                                            ),
+                                                  fontFamily: 'Lexend Deca',
+                                                  color: Color(0xFF2B343A),
+                                                  fontSize: 14,
+                                                  fontWeight: FontWeight.normal,
+                                                ),
                                           ),
-                                        )
+                                        ),
                                       ],
                                     ),
                                   ),
@@ -745,13 +824,16 @@ class _AuthenticationWidgetState extends State<AuthenticationWidget> {
                                                     newValue),
                                             title: Text(
                                               'I read and agree to Terms & Conditions and Privacy Policy',
-                                              style: FlutterFlowTheme.title3
+                                              style: FlutterFlowTheme.of(
+                                                      context)
+                                                  .title3
                                                   .override(
-                                                fontFamily: 'Lexend Deca',
-                                                color: Color(0xE7FFFFFF),
-                                                fontSize: 14,
-                                                fontWeight: FontWeight.normal,
-                                              ),
+                                                    fontFamily: 'Lexend Deca',
+                                                    color: Color(0xE7FFFFFF),
+                                                    fontSize: 14,
+                                                    fontWeight:
+                                                        FontWeight.normal,
+                                                  ),
                                             ),
                                             tileColor: Color(0xE7FFFFFF),
                                             activeColor: Color(0xFFEF5E5E),
@@ -760,7 +842,7 @@ class _AuthenticationWidgetState extends State<AuthenticationWidget> {
                                             controlAffinity:
                                                 ListTileControlAffinity.leading,
                                           ),
-                                        )
+                                        ),
                                       ],
                                     ),
                                   ),
@@ -768,33 +850,22 @@ class _AuthenticationWidgetState extends State<AuthenticationWidget> {
                                     padding: EdgeInsetsDirectional.fromSTEB(
                                         0, 15, 0, 0),
                                     child: FFButtonWidget(
-                                      onPressed: () async {
-                                        setState(() => _loadingButton3 = true);
-                                        try {
-                                          await Navigator.push(
-                                            context,
-                                            MaterialPageRoute(
-                                              builder: (context) =>
-                                                  VerifyWidget(),
-                                            ),
-                                          );
-                                        } finally {
-                                          setState(
-                                              () => _loadingButton3 = false);
-                                        }
+                                      onPressed: () {
+                                        print('loginButton pressed ...');
                                       },
                                       text: 'Create Account',
                                       options: FFButtonOptions(
                                         width: 230,
                                         height: 50,
                                         color: Color(0xE7FFFFFF),
-                                        textStyle:
-                                            FlutterFlowTheme.subtitle2.override(
-                                          fontFamily: 'Lexend Deca',
-                                          color: Color(0xFFEF5E5E),
-                                          fontSize: 16,
-                                          fontWeight: FontWeight.w500,
-                                        ),
+                                        textStyle: FlutterFlowTheme.of(context)
+                                            .subtitle2
+                                            .override(
+                                              fontFamily: 'Lexend Deca',
+                                              color: Color(0xFFEF5E5E),
+                                              fontSize: 16,
+                                              fontWeight: FontWeight.w500,
+                                            ),
                                         elevation: 3,
                                         borderSide: BorderSide(
                                           color: Colors.transparent,
@@ -802,20 +873,19 @@ class _AuthenticationWidgetState extends State<AuthenticationWidget> {
                                         ),
                                         borderRadius: 8,
                                       ),
-                                      loading: _loadingButton3,
                                     ),
-                                  )
+                                  ),
                                 ],
                               ),
                             ),
-                          )
+                          ),
                         ],
                       ),
                     ),
                   ],
                 ),
               ),
-            )
+            ),
           ],
         ),
       ),

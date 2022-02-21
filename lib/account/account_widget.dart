@@ -1,4 +1,5 @@
 import '../authentication/authentication_widget.dart';
+import '../comingsoon/comingsoon_widget.dart';
 import '../flutter_flow/flutter_flow_icon_button.dart';
 import '../flutter_flow/flutter_flow_theme.dart';
 import '../flutter_flow/flutter_flow_util.dart';
@@ -9,14 +10,13 @@ import 'package:flutter_spinkit/flutter_spinkit.dart';
 import 'package:google_fonts/google_fonts.dart';
 
 class AccountWidget extends StatefulWidget {
-  AccountWidget({Key key}) : super(key: key);
+  const AccountWidget({Key key}) : super(key: key);
 
   @override
   _AccountWidgetState createState() => _AccountWidgetState();
 }
 
 class _AccountWidgetState extends State<AccountWidget> {
-  bool _loadingButton = false;
   final scaffoldKey = GlobalKey<ScaffoldState>();
 
   @override
@@ -69,30 +69,32 @@ class _AccountWidgetState extends State<AccountWidget> {
                         crossAxisAlignment: CrossAxisAlignment.start,
                         children: [
                           Text(
-                            '[Username]',
-                            style: FlutterFlowTheme.title3.override(
-                              fontFamily: 'Lexend Deca',
-                              color: Colors.white,
-                              fontSize: 20,
-                              fontWeight: FontWeight.bold,
-                            ),
+                            '[display_name]',
+                            style: FlutterFlowTheme.of(context).title3.override(
+                                  fontFamily: 'Lexend Deca',
+                                  color: Colors.white,
+                                  fontSize: 20,
+                                  fontWeight: FontWeight.bold,
+                                ),
                           ),
                           Padding(
                             padding: EdgeInsetsDirectional.fromSTEB(0, 4, 0, 0),
                             child: Text(
-                              '[Email_Address]',
-                              style: FlutterFlowTheme.bodyText1.override(
-                                fontFamily: 'Lexend Deca',
-                                color: Color(0xB4FFFFFF),
-                                fontSize: 14,
-                                fontWeight: FontWeight.normal,
-                              ),
+                              'BVN (unverified)',
+                              style: FlutterFlowTheme.of(context)
+                                  .bodyText1
+                                  .override(
+                                    fontFamily: 'Lexend Deca',
+                                    color: Colors.white,
+                                    fontSize: 14,
+                                    fontWeight: FontWeight.normal,
+                                  ),
                             ),
-                          )
+                          ),
                         ],
                       ),
                     ),
-                  )
+                  ),
                 ],
               ),
             ),
@@ -131,38 +133,50 @@ class _AccountWidgetState extends State<AccountWidget> {
                       ),
                       child: Padding(
                         padding: EdgeInsetsDirectional.fromSTEB(16, 0, 4, 0),
-                        child: Row(
-                          mainAxisSize: MainAxisSize.max,
-                          mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                          children: [
-                            Text(
-                              'Edit Profile',
-                              style: FlutterFlowTheme.bodyText1.override(
-                                fontFamily: 'Lexend Deca',
-                                color: Colors.white,
-                                fontSize: 14,
-                                fontWeight: FontWeight.normal,
+                        child: InkWell(
+                          onTap: () async {
+                            await Navigator.push(
+                              context,
+                              MaterialPageRoute(
+                                builder: (context) => ProfileWidget(),
                               ),
-                            ),
-                            FlutterFlowIconButton(
-                              borderColor: Colors.transparent,
-                              borderRadius: 30,
-                              buttonSize: 46,
-                              icon: Icon(
-                                Icons.chevron_right_rounded,
-                                color: Colors.white,
-                                size: 20,
+                            );
+                          },
+                          child: Row(
+                            mainAxisSize: MainAxisSize.max,
+                            mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                            children: [
+                              Text(
+                                'Edit Profile',
+                                style: FlutterFlowTheme.of(context)
+                                    .bodyText1
+                                    .override(
+                                      fontFamily: 'Lexend Deca',
+                                      color: Colors.white,
+                                      fontSize: 14,
+                                      fontWeight: FontWeight.normal,
+                                    ),
                               ),
-                              onPressed: () {
-                                print('IconButton pressed ...');
-                              },
-                            )
-                          ],
+                              FlutterFlowIconButton(
+                                borderColor: Colors.transparent,
+                                borderRadius: 30,
+                                buttonSize: 46,
+                                icon: Icon(
+                                  Icons.chevron_right_rounded,
+                                  color: Colors.white,
+                                  size: 20,
+                                ),
+                                onPressed: () {
+                                  print('IconButton pressed ...');
+                                },
+                              ),
+                            ],
+                          ),
                         ),
                       ),
                     ),
                   ),
-                )
+                ),
               ],
             ),
           ),
@@ -197,12 +211,13 @@ class _AccountWidgetState extends State<AccountWidget> {
                         children: [
                           Text(
                             'Change Password',
-                            style: FlutterFlowTheme.bodyText1.override(
-                              fontFamily: 'Lexend Deca',
-                              color: Colors.white,
-                              fontSize: 14,
-                              fontWeight: FontWeight.normal,
-                            ),
+                            style:
+                                FlutterFlowTheme.of(context).bodyText1.override(
+                                      fontFamily: 'Lexend Deca',
+                                      color: Colors.white,
+                                      fontSize: 14,
+                                      fontWeight: FontWeight.normal,
+                                    ),
                           ),
                           FlutterFlowIconButton(
                             borderColor: Colors.transparent,
@@ -216,12 +231,12 @@ class _AccountWidgetState extends State<AccountWidget> {
                             onPressed: () {
                               print('IconButton pressed ...');
                             },
-                          )
+                          ),
                         ],
                       ),
                     ),
                   ),
-                )
+                ),
               ],
             ),
           ),
@@ -250,35 +265,47 @@ class _AccountWidgetState extends State<AccountWidget> {
                     ),
                     child: Padding(
                       padding: EdgeInsetsDirectional.fromSTEB(16, 0, 4, 0),
-                      child: Row(
-                        mainAxisSize: MainAxisSize.max,
-                        mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                        children: [
-                          Text(
-                            'Cards',
-                            style: FlutterFlowTheme.bodyText1.override(
-                              fontFamily: 'Lexend Deca',
-                              color: Colors.white,
+                      child: InkWell(
+                        onTap: () async {
+                          await Navigator.push(
+                            context,
+                            MaterialPageRoute(
+                              builder: (context) => ComingsoonWidget(),
                             ),
-                          ),
-                          FlutterFlowIconButton(
-                            borderColor: Colors.transparent,
-                            borderRadius: 30,
-                            buttonSize: 46,
-                            icon: Icon(
-                              Icons.chevron_right_rounded,
-                              color: Colors.white,
-                              size: 20,
+                          );
+                        },
+                        child: Row(
+                          mainAxisSize: MainAxisSize.max,
+                          mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                          children: [
+                            Text(
+                              'Cards',
+                              style: FlutterFlowTheme.of(context)
+                                  .bodyText1
+                                  .override(
+                                    fontFamily: 'Lexend Deca',
+                                    color: Colors.white,
+                                  ),
                             ),
-                            onPressed: () {
-                              print('IconButton pressed ...');
-                            },
-                          )
-                        ],
+                            FlutterFlowIconButton(
+                              borderColor: Colors.transparent,
+                              borderRadius: 30,
+                              buttonSize: 46,
+                              icon: Icon(
+                                Icons.chevron_right_rounded,
+                                color: Colors.white,
+                                size: 20,
+                              ),
+                              onPressed: () {
+                                print('IconButton pressed ...');
+                              },
+                            ),
+                          ],
+                        ),
                       ),
                     ),
                   ),
-                )
+                ),
               ],
             ),
           ),
@@ -313,12 +340,13 @@ class _AccountWidgetState extends State<AccountWidget> {
                         children: [
                           Text(
                             'Help (FAQ)',
-                            style: FlutterFlowTheme.bodyText1.override(
-                              fontFamily: 'Lexend Deca',
-                              color: Colors.white,
-                              fontSize: 14,
-                              fontWeight: FontWeight.normal,
-                            ),
+                            style:
+                                FlutterFlowTheme.of(context).bodyText1.override(
+                                      fontFamily: 'Lexend Deca',
+                                      color: Colors.white,
+                                      fontSize: 14,
+                                      fontWeight: FontWeight.normal,
+                                    ),
                           ),
                           FlutterFlowIconButton(
                             borderColor: Colors.transparent,
@@ -332,12 +360,12 @@ class _AccountWidgetState extends State<AccountWidget> {
                             onPressed: () {
                               print('IconButton pressed ...');
                             },
-                          )
+                          ),
                         ],
                       ),
                     ),
                   ),
-                )
+                ),
               ],
             ),
           ),
@@ -366,37 +394,45 @@ class _AccountWidgetState extends State<AccountWidget> {
                     ),
                     child: Padding(
                       padding: EdgeInsetsDirectional.fromSTEB(16, 0, 4, 0),
-                      child: Row(
-                        mainAxisSize: MainAxisSize.max,
-                        mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                        children: [
-                          Text(
-                            'Terms of Services',
-                            style: FlutterFlowTheme.bodyText1.override(
-                              fontFamily: 'Lexend Deca',
-                              color: Colors.white,
-                              fontSize: 14,
-                              fontWeight: FontWeight.normal,
+                      child: InkWell(
+                        onTap: () async {
+                          await launchURL(
+                              'https://creditwolfinc.com/?page_id=3985');
+                        },
+                        child: Row(
+                          mainAxisSize: MainAxisSize.max,
+                          mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                          children: [
+                            Text(
+                              'Terms of Services',
+                              style: FlutterFlowTheme.of(context)
+                                  .bodyText1
+                                  .override(
+                                    fontFamily: 'Lexend Deca',
+                                    color: Colors.white,
+                                    fontSize: 14,
+                                    fontWeight: FontWeight.normal,
+                                  ),
                             ),
-                          ),
-                          FlutterFlowIconButton(
-                            borderColor: Colors.transparent,
-                            borderRadius: 30,
-                            buttonSize: 46,
-                            icon: Icon(
-                              Icons.chevron_right_rounded,
-                              color: Colors.white,
-                              size: 20,
+                            FlutterFlowIconButton(
+                              borderColor: Colors.transparent,
+                              borderRadius: 30,
+                              buttonSize: 46,
+                              icon: Icon(
+                                Icons.chevron_right_rounded,
+                                color: Colors.white,
+                                size: 20,
+                              ),
+                              onPressed: () {
+                                print('IconButton pressed ...');
+                              },
                             ),
-                            onPressed: () {
-                              print('IconButton pressed ...');
-                            },
-                          )
-                        ],
+                          ],
+                        ),
                       ),
                     ),
                   ),
-                )
+                ),
               ],
             ),
           ),
@@ -404,29 +440,24 @@ class _AccountWidgetState extends State<AccountWidget> {
             padding: EdgeInsetsDirectional.fromSTEB(0, 24, 0, 40),
             child: FFButtonWidget(
               onPressed: () async {
-                setState(() => _loadingButton = true);
-                try {
-                  await Navigator.push(
-                    context,
-                    MaterialPageRoute(
-                      builder: (context) => AuthenticationWidget(),
-                    ),
-                  );
-                } finally {
-                  setState(() => _loadingButton = false);
-                }
+                await Navigator.push(
+                  context,
+                  MaterialPageRoute(
+                    builder: (context) => AuthenticationWidget(),
+                  ),
+                );
               },
               text: 'Log Out',
               options: FFButtonOptions(
                 width: 110,
                 height: 50,
                 color: Color(0xFFEF5E5E),
-                textStyle: FlutterFlowTheme.subtitle2.override(
-                  fontFamily: 'Lexend Deca',
-                  color: Colors.white,
-                  fontSize: 16,
-                  fontWeight: FontWeight.w500,
-                ),
+                textStyle: FlutterFlowTheme.of(context).subtitle2.override(
+                      fontFamily: 'Lexend Deca',
+                      color: Colors.white,
+                      fontSize: 16,
+                      fontWeight: FontWeight.w500,
+                    ),
                 elevation: 0,
                 borderSide: BorderSide(
                   color: Color(0xFFEF5E5E),
@@ -434,9 +465,8 @@ class _AccountWidgetState extends State<AccountWidget> {
                 ),
                 borderRadius: 8,
               ),
-              loading: _loadingButton,
             ),
-          )
+          ),
         ],
       ),
     );

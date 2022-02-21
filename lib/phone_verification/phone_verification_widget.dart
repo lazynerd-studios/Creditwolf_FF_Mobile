@@ -1,4 +1,3 @@
-import '../authentication/authentication_widget.dart';
 import '../flutter_flow/flutter_flow_theme.dart';
 import '../flutter_flow/flutter_flow_util.dart';
 import '../flutter_flow/flutter_flow_widgets.dart';
@@ -6,14 +5,15 @@ import 'package:flutter/material.dart';
 import 'package:flutter_spinkit/flutter_spinkit.dart';
 import 'package:google_fonts/google_fonts.dart';
 
-class ForgotpasswordWidget extends StatefulWidget {
-  const ForgotpasswordWidget({Key key}) : super(key: key);
+class PhoneVerificationWidget extends StatefulWidget {
+  const PhoneVerificationWidget({Key key}) : super(key: key);
 
   @override
-  _ForgotpasswordWidgetState createState() => _ForgotpasswordWidgetState();
+  _PhoneVerificationWidgetState createState() =>
+      _PhoneVerificationWidgetState();
 }
 
-class _ForgotpasswordWidgetState extends State<ForgotpasswordWidget> {
+class _PhoneVerificationWidgetState extends State<PhoneVerificationWidget> {
   TextEditingController phoneNumberController;
   final scaffoldKey = GlobalKey<ScaffoldState>();
 
@@ -30,23 +30,13 @@ class _ForgotpasswordWidgetState extends State<ForgotpasswordWidget> {
       appBar: AppBar(
         backgroundColor: Color(0xFFEF5E5E),
         automaticallyImplyLeading: false,
-        leading: InkWell(
-          onTap: () async {
-            await Navigator.push(
-              context,
-              MaterialPageRoute(
-                builder: (context) => AuthenticationWidget(),
-              ),
-            );
-          },
-          child: Icon(
-            Icons.chevron_left_rounded,
-            color: Colors.white,
-            size: 32,
-          ),
+        leading: Icon(
+          Icons.chevron_left_rounded,
+          color: Colors.white,
+          size: 32,
         ),
         title: Text(
-          'Forgot Password',
+          'Phone Verification',
           style: FlutterFlowTheme.of(context).title2.override(
                 fontFamily: 'Lexend Deca',
                 color: Colors.white,
@@ -58,18 +48,12 @@ class _ForgotpasswordWidgetState extends State<ForgotpasswordWidget> {
         centerTitle: false,
         elevation: 0,
       ),
-      backgroundColor: Color(0xFFEF5E5E),
+      backgroundColor: Colors.white,
       body: Container(
         width: MediaQuery.of(context).size.width,
         height: MediaQuery.of(context).size.height * 1,
         decoration: BoxDecoration(
-          color: Color(0xFFEF5E5E),
-          image: DecorationImage(
-            fit: BoxFit.fitWidth,
-            image: Image.asset(
-              'assets/images/pattern.png',
-            ).image,
-          ),
+          color: Colors.white,
         ),
         child: Column(
           mainAxisSize: MainAxisSize.max,
@@ -80,66 +64,60 @@ class _ForgotpasswordWidgetState extends State<ForgotpasswordWidget> {
                 controller: phoneNumberController,
                 obscureText: false,
                 decoration: InputDecoration(
-                  labelText: 'Enter Email Address',
+                  labelText: '+2348012345678',
                   labelStyle: FlutterFlowTheme.of(context).bodyText1.override(
                         fontFamily: 'Lexend Deca',
-                        color: Color(0x98FFFFFF),
+                        color: Color(0xFFEF5E5E),
                         fontSize: 14,
                         fontWeight: FontWeight.normal,
                       ),
-                  hintText: 'Please enter a valid email...',
+                  hintText: 'Please enter a valid number...',
                   hintStyle: FlutterFlowTheme.of(context).bodyText1.override(
                         fontFamily: 'Lexend Deca',
-                        color: Color(0x98FFFFFF),
+                        color: Color(0xFFEF5E5E),
                         fontSize: 14,
                         fontWeight: FontWeight.normal,
                       ),
                   enabledBorder: OutlineInputBorder(
                     borderSide: BorderSide(
-                      color: Color(0x00000000),
-                      width: 1,
+                      color: Color(0xFFEF5E5E),
+                      width: 2,
                     ),
                     borderRadius: BorderRadius.circular(8),
                   ),
                   focusedBorder: OutlineInputBorder(
                     borderSide: BorderSide(
-                      color: Color(0x00000000),
-                      width: 1,
+                      color: Color(0xFFEF5E5E),
+                      width: 2,
                     ),
                     borderRadius: BorderRadius.circular(8),
                   ),
-                  filled: true,
-                  fillColor: Color(0xFFBD353B),
                   contentPadding:
                       EdgeInsetsDirectional.fromSTEB(20, 24, 20, 24),
                 ),
                 style: FlutterFlowTheme.of(context).bodyText1.override(
                       fontFamily: 'Lexend Deca',
-                      color: Colors.white,
+                      color: Color(0xFFEF5E5E),
                       fontSize: 14,
                       fontWeight: FontWeight.normal,
                     ),
-                keyboardType: TextInputType.emailAddress,
+                keyboardType: TextInputType.phone,
               ),
             ),
             Padding(
-              padding: EdgeInsetsDirectional.fromSTEB(0, 15, 0, 0),
+              padding: EdgeInsetsDirectional.fromSTEB(0, 24, 0, 0),
               child: FFButtonWidget(
                 onPressed: () {
                   print('Button-Login pressed ...');
                 },
-                text: 'Recover',
-                icon: Icon(
-                  Icons.lock_outlined,
-                  size: 15,
-                ),
+                text: 'Submit',
                 options: FFButtonOptions(
                   width: 230,
                   height: 60,
-                  color: Colors.white,
+                  color: Color(0xFFEF5E5E),
                   textStyle: FlutterFlowTheme.of(context).subtitle2.override(
                         fontFamily: 'Lexend Deca',
-                        color: Color(0xFFEF5E5E),
+                        color: Colors.white,
                         fontSize: 16,
                         fontWeight: FontWeight.w500,
                       ),

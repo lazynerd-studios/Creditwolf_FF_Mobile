@@ -1,0 +1,159 @@
+import '../flutter_flow/flutter_flow_theme.dart';
+import '../flutter_flow/flutter_flow_util.dart';
+import '../flutter_flow/flutter_flow_widgets.dart';
+import 'package:flutter/material.dart';
+import 'package:flutter_spinkit/flutter_spinkit.dart';
+import 'package:google_fonts/google_fonts.dart';
+
+class LoanWidget extends StatefulWidget {
+  const LoanWidget({Key key}) : super(key: key);
+
+  @override
+  _LoanWidgetState createState() => _LoanWidgetState();
+}
+
+class _LoanWidgetState extends State<LoanWidget> {
+  TextEditingController textController;
+  final scaffoldKey = GlobalKey<ScaffoldState>();
+
+  @override
+  void initState() {
+    super.initState();
+    textController = TextEditingController();
+  }
+
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      key: scaffoldKey,
+      appBar: AppBar(
+        backgroundColor: Color(0xFFEF5E5E),
+        automaticallyImplyLeading: false,
+        leading: InkWell(
+          onTap: () async {
+            Navigator.pop(context);
+          },
+          child: Icon(
+            Icons.arrow_back_rounded,
+            color: Colors.white,
+            size: 24,
+          ),
+        ),
+        title: Text(
+          'Loan',
+          style: FlutterFlowTheme.of(context).subtitle1.override(
+                fontFamily: 'Lexend Deca',
+                color: Colors.white,
+                fontSize: 18,
+                fontWeight: FontWeight.w500,
+              ),
+        ),
+        actions: [],
+        centerTitle: false,
+        elevation: 0,
+      ),
+      backgroundColor: Color(0xFFF7F7F8),
+      body: SafeArea(
+        child: Column(
+          mainAxisSize: MainAxisSize.max,
+          children: [
+            Row(
+              mainAxisSize: MainAxisSize.max,
+              children: [
+                Container(
+                  width: MediaQuery.of(context).size.width,
+                  height: 100,
+                  decoration: BoxDecoration(
+                    color: Colors.white,
+                  ),
+                  child: Row(
+                    mainAxisSize: MainAxisSize.min,
+                    children: [
+                      Expanded(
+                        child: TextFormField(
+                          controller: textController,
+                          obscureText: false,
+                          decoration: InputDecoration(
+                            labelStyle: GoogleFonts.getFont(
+                              'DM Sans',
+                              color: Color(0xFF82878C),
+                              fontSize: 42,
+                            ),
+                            hintText: ' Amount',
+                            hintStyle: GoogleFonts.getFont(
+                              'DM Sans',
+                              color: Color(0xFF8B97A2),
+                              fontSize: 42,
+                            ),
+                            enabledBorder: UnderlineInputBorder(
+                              borderSide: BorderSide(
+                                color: Color(0x00000000),
+                                width: 1,
+                              ),
+                              borderRadius: const BorderRadius.only(
+                                topLeft: Radius.circular(4.0),
+                                topRight: Radius.circular(4.0),
+                              ),
+                            ),
+                            focusedBorder: UnderlineInputBorder(
+                              borderSide: BorderSide(
+                                color: Color(0x00000000),
+                                width: 1,
+                              ),
+                              borderRadius: const BorderRadius.only(
+                                topLeft: Radius.circular(4.0),
+                                topRight: Radius.circular(4.0),
+                              ),
+                            ),
+                          ),
+                          style: GoogleFonts.getFont(
+                            'DM Sans',
+                            color: Color(0xE9AFABAB),
+                            fontSize: 32,
+                          ),
+                          textAlign: TextAlign.center,
+                        ),
+                      ),
+                    ],
+                  ),
+                ),
+              ],
+            ),
+            Row(
+              mainAxisSize: MainAxisSize.min,
+              children: [
+                Padding(
+                  padding: EdgeInsetsDirectional.fromSTEB(0, 20, 0, 0),
+                  child: FFButtonWidget(
+                    onPressed: () {
+                      print('Button pressed ...');
+                    },
+                    text: 'Submit',
+                    options: FFButtonOptions(
+                      width: 230,
+                      height: 50,
+                      color: Color(0xFFEF5E5E),
+                      textStyle:
+                          FlutterFlowTheme.of(context).subtitle2.override(
+                                fontFamily: 'Lexend Deca',
+                                color: Colors.white,
+                                fontSize: 16,
+                                fontWeight: FontWeight.w500,
+                              ),
+                      elevation: 2,
+                      borderSide: BorderSide(
+                        color: Colors.transparent,
+                        width: 1,
+                      ),
+                      borderRadius: 8,
+                    ),
+                  ),
+                ),
+              ],
+            ),
+          ],
+        ),
+      ),
+    );
+  }
+}
