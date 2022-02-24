@@ -70,7 +70,7 @@ class _SplashScreenWidgetState extends State<SplashScreenWidget>
             Align(
               alignment: AlignmentDirectional(0, 0),
               child: Lottie.network(
-                'https://assets4.lottiefiles.com/packages/lf20_gkitsafr.json',
+                'https://assets5.lottiefiles.com/private_files/lf30_iijyd4u7.json',
                 width: 180,
                 height: 160,
                 fit: BoxFit.fitHeight,
