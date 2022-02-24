@@ -1,4 +1,3 @@
-import '../authentication/authentication_widget.dart';
 import '../flutter_flow/flutter_flow_animations.dart';
 import '../flutter_flow/flutter_flow_theme.dart';
 import '../flutter_flow/flutter_flow_util.dart';
@@ -71,34 +70,24 @@ class _SplashScreenWidgetState extends State<SplashScreenWidget>
     return Scaffold(
       key: scaffoldKey,
       backgroundColor: Color(0xFF1E2429),
-      body: InkWell(
-        onTap: () async {
-          await Navigator.push(
-            context,
-            MaterialPageRoute(
-              builder: (context) => AuthenticationWidget(),
-            ),
-          );
-        },
-        child: Container(
-          width: double.infinity,
-          height: double.infinity,
-          decoration: BoxDecoration(
-            color: Colors.white,
-          ),
-          child: Column(
-            mainAxisSize: MainAxisSize.max,
-            mainAxisAlignment: MainAxisAlignment.center,
-            children: [
-              Image.asset(
-                'assets/images/ic_logo.png',
-                width: 180,
-                height: 160,
-                fit: BoxFit.fitHeight,
-              ).animated([animationsMap['imageOnPageLoadAnimation']]),
-            ],
-          ).animated([animationsMap['columnOnPageLoadAnimation']]),
+      body: Container(
+        width: double.infinity,
+        height: double.infinity,
+        decoration: BoxDecoration(
+          color: Colors.white,
         ),
+        child: Column(
+          mainAxisSize: MainAxisSize.max,
+          mainAxisAlignment: MainAxisAlignment.center,
+          children: [
+            Image.asset(
+              'assets/images/ic_logo.png',
+              width: 180,
+              height: 160,
+              fit: BoxFit.fitHeight,
+            ).animated([animationsMap['imageOnPageLoadAnimation']]),
+          ],
+        ).animated([animationsMap['columnOnPageLoadAnimation']]),
       ).animated([animationsMap['containerOnPageLoadAnimation']]),
     );
   }
