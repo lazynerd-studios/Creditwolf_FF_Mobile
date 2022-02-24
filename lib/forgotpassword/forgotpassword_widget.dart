@@ -64,12 +64,6 @@ class _ForgotpasswordWidgetState extends State<ForgotpasswordWidget> {
         height: MediaQuery.of(context).size.height * 1,
         decoration: BoxDecoration(
           color: Color(0xFFEF5E5E),
-          image: DecorationImage(
-            fit: BoxFit.fitWidth,
-            image: Image.asset(
-              'assets/images/pattern.png',
-            ).image,
-          ),
         ),
         child: Column(
           mainAxisSize: MainAxisSize.max,

@@ -1,7 +1,7 @@
+import '../account/account_widget.dart';
 import '../flutter_flow/flutter_flow_theme.dart';
 import '../flutter_flow/flutter_flow_util.dart';
 import '../flutter_flow/flutter_flow_widgets.dart';
-import '../main.dart';
 import '../select_payment/select_payment_widget.dart';
 import '../withdrawal/withdrawal_widget.dart';
 import 'package:flutter/material.dart';
@@ -46,7 +46,7 @@ class _HomeWidgetState extends State<HomeWidget> {
                                 type: PageTransitionType.leftToRight,
                                 duration: Duration(milliseconds: 100),
                                 reverseDuration: Duration(milliseconds: 100),
-                                child: NavBarPage(initialPage: 'Account'),
+                                child: AccountWidget(),
                               ),
                             );
                           },
