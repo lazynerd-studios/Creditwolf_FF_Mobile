@@ -1,4 +1,4 @@
-package com.flutterflow.creditwolf
+package com.voltwolf.creditwolf
 
 import io.flutter.embedding.android.FlutterActivity
 
