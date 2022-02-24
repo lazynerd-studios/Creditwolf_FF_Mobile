@@ -4,6 +4,7 @@ import '../flutter_flow/flutter_flow_util.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_spinkit/flutter_spinkit.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:lottie/lottie.dart';
 
 class SplashScreenWidget extends StatefulWidget {
   const SplashScreenWidget({Key key}) : super(key: key);
@@ -38,20 +39,6 @@ class _SplashScreenWidgetState extends State<SplashScreenWidget>
         opacity: 1,
       ),
     ),
-    'imageOnPageLoadAnimation': AnimationInfo(
-      trigger: AnimationTrigger.onPageLoad,
-      duration: 600,
-      delay: 1100,
-      fadeIn: true,
-      initialState: AnimationState(
-        scale: 0.4,
-        opacity: 0,
-      ),
-      finalState: AnimationState(
-        scale: 1,
-        opacity: 1,
-      ),
-    ),
   };
   final scaffoldKey = GlobalKey<ScaffoldState>();
 
@@ -80,12 +67,16 @@ class _SplashScreenWidgetState extends State<SplashScreenWidget>
           mainAxisSize: MainAxisSize.max,
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
-            Image.asset(
-              'assets/images/ic_logo.png',
-              width: 180,
-              height: 160,
-              fit: BoxFit.fitHeight,
-            ).animated([animationsMap['imageOnPageLoadAnimation']]),
+            Align(
+              alignment: AlignmentDirectional(0, 0),
+              child: Lottie.network(
+                'https://assets4.lottiefiles.com/packages/lf20_gkitsafr.json',
+                width: 180,
+                height: 160,
+                fit: BoxFit.fitHeight,
+                animate: true,
+              ),
+            ),
           ],
         ).animated([animationsMap['columnOnPageLoadAnimation']]),
       ).animated([animationsMap['containerOnPageLoadAnimation']]),
