@@ -13,8 +13,8 @@ class LoanWidget extends StatefulWidget {
 }
 
 class _LoanWidgetState extends State<LoanWidget> {
-  TextEditingController textController;
   final scaffoldKey = GlobalKey<ScaffoldState>();
+  TextEditingController textController;
 
   @override
   void initState() {

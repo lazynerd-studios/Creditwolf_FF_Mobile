@@ -13,8 +13,8 @@ class BVNVerificationWidget extends StatefulWidget {
 }
 
 class _BVNVerificationWidgetState extends State<BVNVerificationWidget> {
-  TextEditingController textController;
   final scaffoldKey = GlobalKey<ScaffoldState>();
+  TextEditingController textController;
 
   @override
   void initState() {

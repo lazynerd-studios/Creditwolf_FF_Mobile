@@ -13,11 +13,11 @@ class ProfileWidget extends StatefulWidget {
 }
 
 class _ProfileWidgetState extends State<ProfileWidget> {
+  final scaffoldKey = GlobalKey<ScaffoldState>();
   TextEditingController childrenNumberController;
   TextEditingController emailAddressController;
   TextEditingController fullNameController;
   TextEditingController phoneNumberController;
-  final scaffoldKey = GlobalKey<ScaffoldState>();
 
   @override
   void initState() {

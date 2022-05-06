@@ -29,16 +29,15 @@ dependencies:
   cached_network_image: 3.1.0+1
   flutter_html: 2.2.1
   flutter_spinkit: 4.1.2+1
-  font_awesome_flutter: 8.11.0
-  google_fonts: 2.1.0
+  font_awesome_flutter: 10.1.0
+  google_fonts: 2.2.0
   intl: 0.17.0
-  json_path: 0.2.1
+  json_path: 0.3.1
   lottie: 1.2.1
   page_transition: 2.0.4
   shared_preferences: 2.0.11
   timeago: 3.1.0
   url_launcher: 6.0.15
-  webviewx: 0.1.0
 
 
   # The following adds the Cupertino Icons font to your application.
@@ -82,6 +81,7 @@ flutter:
     - assets/lottie_animations/
     - assets/rive_animations/
     - assets/pdfs/
+
 
   # An image asset can refer to one or more resolution-specific "variants", see
   # https://flutter.dev/assets-and-images/#resolution-aware.

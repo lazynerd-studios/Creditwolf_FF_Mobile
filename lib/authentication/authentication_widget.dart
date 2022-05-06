@@ -15,6 +15,7 @@ class AuthenticationWidget extends StatefulWidget {
 }
 
 class _AuthenticationWidgetState extends State<AuthenticationWidget> {
+  bool termSwitchListValue;
   TextEditingController confirmPasswordController;
   bool confirmPasswordVisibility;
   TextEditingController createEmailController;
@@ -22,7 +23,6 @@ class _AuthenticationWidgetState extends State<AuthenticationWidget> {
   TextEditingController textController5;
   TextEditingController createPasswordController;
   bool createPasswordVisibility;
-  bool termSwitchListValue;
   TextEditingController loginEmailAddressController;
   TextEditingController loginPasswordController;
   bool loginPasswordVisibility;
@@ -489,7 +489,7 @@ class _AuthenticationWidgetState extends State<AuthenticationWidget> {
                                                   color: Color(0xFF2B343A),
                                                 ),
                                             validator: (val) {
-                                              if (val.isEmpty) {
+                                              if (val == null || val.isEmpty) {
                                                 return 'Field is required';
                                               }
 
@@ -566,7 +566,7 @@ class _AuthenticationWidgetState extends State<AuthenticationWidget> {
                                             keyboardType:
                                                 TextInputType.emailAddress,
                                             validator: (val) {
-                                              if (val.isEmpty) {
+                                              if (val == null || val.isEmpty) {
                                                 return 'Field is required';
                                               }
 

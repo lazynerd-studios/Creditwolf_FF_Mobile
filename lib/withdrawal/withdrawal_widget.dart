@@ -13,8 +13,8 @@ class WithdrawalWidget extends StatefulWidget {
 }
 
 class _WithdrawalWidgetState extends State<WithdrawalWidget> {
-  TextEditingController textController;
   final scaffoldKey = GlobalKey<ScaffoldState>();
+  TextEditingController textController;
 
   @override
   void initState() {

@@ -13,8 +13,8 @@ class AmountWidget extends StatefulWidget {
 }
 
 class _AmountWidgetState extends State<AmountWidget> {
-  TextEditingController textController;
   final scaffoldKey = GlobalKey<ScaffoldState>();
+  TextEditingController textController;
 
   @override
   void initState() {

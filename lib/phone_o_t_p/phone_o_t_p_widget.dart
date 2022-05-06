@@ -13,8 +13,8 @@ class PhoneOTPWidget extends StatefulWidget {
 }
 
 class _PhoneOTPWidgetState extends State<PhoneOTPWidget> {
-  TextEditingController phoneNumberController;
   final scaffoldKey = GlobalKey<ScaffoldState>();
+  TextEditingController phoneNumberController;
 
   @override
   void initState() {
@@ -126,7 +126,7 @@ class _PhoneOTPWidgetState extends State<PhoneOTPWidget> {
                 options: FFButtonOptions(
                   width: 230,
                   height: 60,
-                  color: Color(0xFFEF5E5E),
+                  color: Color(0xFF021524),
                   textStyle: FlutterFlowTheme.of(context).subtitle2.override(
                         fontFamily: 'Lexend Deca',
                         color: Colors.white,

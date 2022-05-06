@@ -14,8 +14,8 @@ class ForgotpasswordWidget extends StatefulWidget {
 }
 
 class _ForgotpasswordWidgetState extends State<ForgotpasswordWidget> {
-  TextEditingController phoneNumberController;
   final scaffoldKey = GlobalKey<ScaffoldState>();
+  TextEditingController phoneNumberController;
 
   @override
   void initState() {

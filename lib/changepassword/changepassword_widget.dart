@@ -14,14 +14,14 @@ class ChangepasswordWidget extends StatefulWidget {
 }
 
 class _ChangepasswordWidgetState extends State<ChangepasswordWidget> {
+  final formKey = GlobalKey<FormState>();
+  final scaffoldKey = GlobalKey<ScaffoldState>();
   TextEditingController oldpasswordController;
   bool oldpasswordVisibility;
   TextEditingController textController2;
   bool passwordVisibility1;
   TextEditingController textController3;
   bool passwordVisibility2;
-  final formKey = GlobalKey<FormState>();
-  final scaffoldKey = GlobalKey<ScaffoldState>();
 
   @override
   void initState() {

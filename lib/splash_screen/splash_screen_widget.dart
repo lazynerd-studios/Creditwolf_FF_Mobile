@@ -71,9 +71,10 @@ class _SplashScreenWidgetState extends State<SplashScreenWidget>
               alignment: AlignmentDirectional(0, 0),
               child: Lottie.asset(
                 'assets/lottie_animations/lf30_editor_i0vxceu2.json',
-                width: 180,
-                height: 160,
+                width: 200,
+                height: 200,
                 fit: BoxFit.fitHeight,
+                reverse: true,
                 animate: true,
               ),
             ),

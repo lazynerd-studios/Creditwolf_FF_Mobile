@@ -14,8 +14,8 @@ class PhoneVerificationWidget extends StatefulWidget {
 }
 
 class _PhoneVerificationWidgetState extends State<PhoneVerificationWidget> {
-  TextEditingController phoneNumberController;
   final scaffoldKey = GlobalKey<ScaffoldState>();
+  TextEditingController phoneNumberController;
 
   @override
   void initState() {
